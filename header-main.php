@@ -23,6 +23,7 @@
 </head>
 
 <body>
+	<section id="hero">
   <nav class="navbar hiddn navbar-mr navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -45,3 +46,16 @@
       </div>
     </div>
   </nav>
+
+	<div class="container">
+    <a href=""><h2 class="logo mr">MR<span class="kaluzny">KALUZNY</span></h2></a>
+  </div>
+
+  <div class="wrapper"></div>
+  <div class="container">
+    <div class="row">
+        <h2 class="text-center white" id="subtitle">Hi! My name is <a><strong>Wojciech Kałużny</strong></a>.<br> I love to Design &amp; Code.</h2>
+    </div>
+    <div class="wrapper"></div>
+  </div>
+</section>
