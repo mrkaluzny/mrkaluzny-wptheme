@@ -36,13 +36,7 @@
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mr">MR<span class="kaluzny">KALUZNY</span></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="http://blog.mrkaluzny.pl">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav') ); ?>
       </div>
     </div>
   </nav>
