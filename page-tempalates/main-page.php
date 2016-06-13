@@ -31,7 +31,7 @@ get_header('main'); ?>
   </div>
 </section>
 
-<div class="wrapper"></div>
+
 
 <?php
 get_footer();
