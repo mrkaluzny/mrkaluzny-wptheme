@@ -33,6 +33,12 @@ get_header('main'); ?>
 
 <div class="wrapper"></div>
 
+<section>
+  <div class="container">
+    Test!
+  </div>
+</section>
+
 <?php
 get_footer();
 ?>
