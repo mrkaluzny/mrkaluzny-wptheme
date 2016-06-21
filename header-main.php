@@ -23,7 +23,11 @@
 </head>
 
 <body>
-	<section id="hero">
+	<section id="hero" class="img-swap" data-img="<?php
+$attachments = get_children( array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' =>'image') );
+foreach ( $attachments as $attachment_id => $attachment ) {
+	echo wp_get_attachment_url( $attachment_id, 'medium' );
+} ?>">
   <nav class="navbar hiddn navbar-mr navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
