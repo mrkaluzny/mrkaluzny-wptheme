@@ -25,13 +25,12 @@ function mrkaluzny_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '// %s', 'post date', 'mrkaluzny' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( '// %s', 'post date', 'mrkaluzny' ),  $time_string
 	);
 
 	$byline = sprintf(
 		esc_html_x( 'Written by %s', 'post author', 'mrkaluzny' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		'<span class="author vcard">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="posted-on">' . $byline . '</span><span class="byline"> ' . $posted_on . '</span>'; // WPCS: XSS OK.
