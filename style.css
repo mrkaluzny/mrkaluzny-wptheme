@@ -211,7 +211,7 @@ article a {
     text-decoration: none;
 }
 
-
+article {margin-bottom: 70px;}
 .article-small {
     font-size: 0.7em;
 }
@@ -225,3 +225,4 @@ article a {
 }
 
 .hero-def {min-height: 200px; margin-top: 0px;}
+.hero-article {min-height: 350px; margin-top: 0px;}

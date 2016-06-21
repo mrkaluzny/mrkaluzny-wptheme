@@ -7,17 +7,17 @@
  * @package mrkaluzny
  */
 
-get_header(); ?>
+get_header('single'); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+<div class="wrapper"></div>
+	<div class="container">
+		<div class="row justify">
+			<div class="col-md-9 col-xs-12">
 		<?php
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -26,10 +26,12 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
-
-		</main><!-- #main -->
+	</div>
+		</div><!-- #main -->
 	</div><!-- #primary -->
+
+	<div class="wrapper"></div>
 
 <?php
 get_sidebar();
-get_footer();
+get_footer('default');
