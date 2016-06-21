@@ -171,6 +171,8 @@ figure:hover figcaption {
     margin-top: 100px;
 }
 
+.sub-def {padding:90px;}
+
 
 /** BLOG **/
 .article-photo {
@@ -207,4 +209,4 @@ article a {
     margin-top: 50px;
 }
 
-.hero-def {min-height: 200px;}
+.hero-def {min-height: 200px; margin-top: 0px;}

@@ -43,10 +43,14 @@
     </div>
   </nav>
 
+	<div class="container">
+
+  </div>
+
   <div class="wrapper"></div>
   <div class="container">
     <div class="row">
-        <h2 class="text-center white" id="subtitle"><?php wp_title(); ?></h2>
+        <h2 class="text-center white sub-def"><?php wp_title(''); ?></h2>
     </div>
     <div class="wrapper"></div>
   </div>
