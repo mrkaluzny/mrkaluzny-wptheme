@@ -4,6 +4,7 @@
  * @package mrkaluzny
  */
 
-get_header('main'); ?>
+get_header('default'); ?>
 
-<?php get_footer(); ?>
+
+<?php get_footer('default'); ?>
