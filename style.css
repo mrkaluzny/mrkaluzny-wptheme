@@ -53,31 +53,6 @@ body {
     min-height: 500px;
 }
 
-#hero-wirtualnebiuro {
-    background-image: url(../portfolio/wirtualne_biuro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-#hero-casa {
-    background-image: url(../portfolio/casa-morretti.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-#hero-zk {
-    background-image: url(../portfolio/zk.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-
 .mar-side-50 {
     margin: 0px 50px 0px 50px
 }
@@ -106,6 +81,7 @@ body {
 #portfolio{
     background-color: antiquewhite;
 }
+
 .portfolio-items {
     margin: 0px;
     padding: 0px;
@@ -166,18 +142,6 @@ figure:hover figcaption {
 }
 
 #hero a:hover {
-    text-decoration: none;
-}
-
-#hero-wirtualnebiuro a:hover {
-    text-decoration: none;
-}
-
-#hero-casa a:hover {
-    text-decoration: none;
-}
-
-#hero-zk a:hover {
     text-decoration: none;
 }
 
@@ -243,10 +207,4 @@ article a {
     margin-top: 50px;
 }
 
-#hero-blog {
-    background-image: url(http://mrkaluzny.pl/assets/img/9XDWBXHCR5.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 200px;
-}
+.hero-def {min-height: 200px;}
