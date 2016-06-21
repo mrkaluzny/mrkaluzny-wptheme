@@ -5,7 +5,7 @@
  */
 
 get_header('portfolio'); ?>
-
+<div class="wrapper"></div>
 <section class="welcome" id="about">
   <div class="container">
     <div class="row">
