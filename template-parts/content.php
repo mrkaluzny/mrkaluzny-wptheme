@@ -8,21 +8,20 @@
  */
 
 ?>
-<div class="container">
 	<div class="col-xs-12">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="article-title">', '</h1>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<p class="article-small">
 			<?php mrkaluzny_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</p<!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
@@ -31,7 +30,7 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'mrkaluzny' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( '<div class="btn button">Continue reading <span class="meta-nav">&rarr;</span></div>', 'mrkaluzny' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
@@ -41,9 +40,5 @@
 			) );
 		?>
 	</div>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php mrkaluzny_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="wrapper"></div>
 </article><!-- #post-## -->
