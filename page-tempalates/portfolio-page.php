@@ -27,9 +27,9 @@ get_header('default'); ?>
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-xs-3"></div>
-      <div class="col-xs-12 col-sm-6 mar-side-50">
-        <div id="filters" class="button-group mar-side-50 clearfix">
+      <div class="col-xs-1 col-sm-3 col-md-4"></div>
+      <div class="col-xs-10 col-sm-6 col-md-4">
+        <div id="filters" class="button-group clearfix">
           <button class="btn button is-checked" data-filter="*">All</button>
           <button class="btn button" data-filter=".branding">Branding</button>
           <button class="btn button" data-filter=".mobile">Mobile</button>
@@ -37,7 +37,7 @@ get_header('default'); ?>
           <button class="btn button last" data-filter=".design">Design</button>
         </div><!--//filters-->
       </div>
-      <div class="col-xs-3"></div>
+      <div class="col-xs-1 col-sm-3 col-md-4"></div>
     </div>
   </div>
 </section>
@@ -69,5 +69,7 @@ get_header('default'); ?>
     </div></div>
   </div>
 </section>
+
+<div class="wrapper"></div>
 
 <?php get_footer('default'); ?>
