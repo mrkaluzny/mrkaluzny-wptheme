@@ -15,6 +15,7 @@
 			if ( is_single() ) {
 				the_title( '<h1 class="article-title">', '</h1>' );
 			} else {
+				the_post_thumbnail('post-thumbnail', array( 'class'	=> "img-responsive"));;
 				the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 

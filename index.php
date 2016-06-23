@@ -12,7 +12,9 @@
  * @package mrkaluzny
  */
 
-get_header('default'); ?>
+get_header('blog'); ?>
+
+<div class="wrapper"></div>
 
 <section id="blog">
 	<div class="container">
