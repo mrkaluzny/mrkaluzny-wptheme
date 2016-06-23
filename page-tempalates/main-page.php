@@ -42,6 +42,44 @@ get_header('main'); ?>
   </div>
 </section>
 
+
+
+<section id="blog-query">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center mar-side-50">Newest Articles</h2>
+        <h4 class="text-center mar-side-50">Take a look at some of my latest articles. Still hot!</h4>
+      </div>
+    </div>
+    <div class="wrapper"></div>
+    <div class="row">
+      <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
+      if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
+        <div class="col-md-4 blog-post">
+          <?php the_post_thumbnail('post-thumbnail', array( 'class'	=> "img-responsive"));
+                the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
+          <p class="article-small">
+            <?php mrkaluzny_posted_on(); ?>
+          </p>
+          <?php
+      			the_content( sprintf(
+      				/* translators: %s: Name of current post. */
+      				wp_kses( __( '<div class="btn button">Continue reading <span class="meta-nav">&rarr;</span></div>', 'mrkaluzny' ), array( 'span' => array( 'class' => array() ) ) ),
+      				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+      			) );
+
+      			wp_link_pages( array(
+      				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mrkaluzny' ),
+      				'after'  => '</div>',
+      			) );
+      		?>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
+  </div>
+</section>
+
 <?php
 get_footer();
 ?>

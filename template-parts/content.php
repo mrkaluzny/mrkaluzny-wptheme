@@ -22,7 +22,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<p class="article-small">
 			<?php mrkaluzny_posted_on(); ?>
-		</p<!-- .entry-meta -->
+		</p><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->

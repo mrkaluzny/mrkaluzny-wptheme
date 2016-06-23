@@ -266,3 +266,6 @@ article {margin-bottom: 70px;}
 /* hero classes */
 .hero-def {min-height: 200px; margin-top: 0px;}
 .hero-article {min-height: 350px; margin-top: 0px;}
+
+#blog-query {padding: 50px 0px; background-color:#f4f4f4;}
+.blog-post {margin-bottom: 40px;}
