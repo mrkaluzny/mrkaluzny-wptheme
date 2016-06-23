@@ -48,6 +48,9 @@ get_header('blog'); ?>
 
 		endif; ?>
 		</div>
+		<div class="col-md-3 hidden-xs hidden-sm">
+			<?php get_sidebar(); ?>
+		</div>
 		</div>
 	</div> <!-- Container -->
 </section>

@@ -27,11 +27,13 @@ get_header('single'); ?>
 		endwhile; // End of the loop.
 		?>
 	</div>
+	<div class="col-md-3 hidden-xs hidden-sm">
+		<?php get_sidebar(); ?>
+	</div>
 		</div><!-- #main -->
 	</div><!-- #primary -->
 
 	<div class="wrapper"></div>
 
 <?php
-get_sidebar();
 get_footer('default');
