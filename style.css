@@ -273,3 +273,8 @@ article {margin-bottom: 70px;}
 .welcome, #contact {padding: 100px 0px;}
 .portfolio-cta {padding:130px 50px; margin-top: 60px;}
 .btn-cta {margin-top: 30px;}
+
+/* google-map */
+#module-maps {position: relative; height: 450px; width: 100%; margin-bottom: -20px;}
+#map {height: 100%; width: 100%;}
+#map img {max-width: none;}

@@ -46,7 +46,7 @@
     </div>
 
   </div>
-  <p class="copyright text-center">Created by <a href="http://mrkaluzny.pl">Wojciech Kałużny</a>
+  <p class="copyright text-center">Created by <a href="http://mrkaluzny.com">Wojciech Kałużny</a>
     <br> &copy;<?php echo date('Y'); ?> All rights reserved
   </p>
 </footer>
