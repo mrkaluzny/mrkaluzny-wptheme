@@ -267,5 +267,9 @@ article {margin-bottom: 70px;}
 .hero-def {min-height: 200px; margin-top: 0px;}
 .hero-article {min-height: 350px; margin-top: 0px;}
 
-#blog-query {padding: 50px 0px; background-color:#f4f4f4;}
+#blog-query {padding: 100px 0px 50px 0px; background-color:#f4f4f4;}
 .blog-post {margin-bottom: 40px;}
+
+.welcome, #contact {padding: 100px 0px;}
+.portfolio-cta {padding:130px 50px; margin-top: 60px;}
+.btn-cta {margin-top: 30px;}

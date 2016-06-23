@@ -31,16 +31,20 @@ get_header('main'); ?>
   </div>
 </section>
 
-<div class="wrapper"></div>
 
-<seciton id="portfolio-cta" class="img-swap" data-img="<?php the_field('portfolio-img'); ?>">
+<div class="img-swap portfolio-cta" data-img="<?php the_field('portfolio-img'); ?>">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-xs-12 col-sm-6">
+        <h2><?php the_field('cta-heading'); ?></h2>
+        <h4><?php the_field('cta-message'); ?></h4>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <a href="http://mrkaluzny.com/portfolio" class="btn button btn-cta">Check out my portfolio!</a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 
 
@@ -76,6 +80,19 @@ get_header('main'); ?>
       		?>
         </div>
       <?php endwhile; endif; ?>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h1>Contact me!</h1>
+        <h3>I live in <strong>Poznan, Poland.</strong></h3>
+        <h3>Want to get in touch?</h3><br><br>
+        <a href="http://mrkaluzny.com/contact" class="btn button"><h4>Hell yeah!</h4></a>
+      </div>
     </div>
   </div>
 </section>
