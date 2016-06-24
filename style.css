@@ -77,14 +77,13 @@ body {
     text-align: justify;
 }
 
-.portfolio{
+.portfolio {
     background-color: blue;
 }
 
 .portfolio-item {
     margin: 0px;
     padding: 0px;
-    display: block;
 }
 
 .portfolio-text {
@@ -98,7 +97,6 @@ body {
 .portfolio-items {
     margin: 0px;
     padding: 0px;
-    display: block;
 }
 
 
@@ -136,7 +134,7 @@ figcaption {
     display: none;
     position: absolute;
     text-align: center;
-    top: 40px;
+    top: 60px;
     left: 20px;
     right: 20px;
     bottom: 50px;
@@ -207,9 +205,7 @@ figure:hover figcaption {
     font-family: 'Source Sans Pro';
 }
 
-article a {
-    text-decoration: none;
-}
+article a {text-decoration: none;}
 
 article {margin-bottom: 70px;}
 .article-small {
@@ -278,3 +274,33 @@ article {margin-bottom: 70px;}
 #module-maps {position: relative; height: 450px; width: 100%; margin-bottom: -20px;}
 #map {height: 100%; width: 100%;}
 #map img {max-width: none;}
+
+
+
+.item-sub {color:transparent; transition: 1s; height:100%; padding-top: 90px;}
+.item-sub:hover {color: #14CC60;background: rgba(255,255,255,0.92);}
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.isotope {
+  margin-left: 20px;
+  max-width: 100%;
+  padding: 0px;
+}
+
+.item {
+  float: left;
+  padding:0px;
+  width: 350px;
+  height: 250px;
+}
+
+@media screen and (max-width: 700px){
+  .item {width: 440px;}
+}
+
+.item-width2 { width: 430px; }
+.item-height2 { height: 430px; }

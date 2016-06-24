@@ -46,8 +46,8 @@ get_header('default'); ?>
 
 <section>
   <div class="container">
-    <div class="col-md-12">
-      <div class="portfolio-items items-wrapper isotope">
+    <div class="row">
+      <div class="isotope">
     <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".$post->ID." AND post_type = 'page' ORDER BY menu_order", 'OBJECT');
     if ( $child_pages ) :
       foreach ( $child_pages as $pageChild ) :
@@ -56,17 +56,16 @@ get_header('default'); ?>
         $tags = get_field('tags', $pageChild->ID);
         $class = get_field('class', $pageChild->ID);
         if($thumbnail == "") continue; // Skip pages without a thumbnail ?>
-        <div class="item <?php echo $class ?>">
-        <figure class="col-md-4 col-sm-6 portfolio-item">
-          <a href="<?= get_permalink($pageChild->ID) ?>"><img class="img-responsive" src="<?= $thumbnail ?>">
-            <figcaption>
-              <h3><?= $pageChild->post_title ?></h3>
-              <p class="caption"><?php echo $tags ?></p>
-            </figcaption>
-          </figure></a>
-        </div>
+        <a href="<?= get_permalink($pageChild->ID) ?>">
+        <div class="item <?php echo $class ?> img-swap" data-img="<?= $thumbnail ?>">
+          <div class="col-xs-12 item-sub text-center">
+            <h3><?= $pageChild->post_title ?></h3>
+            <p class="caption"><?php echo $tags ?></p>
+          </div>
+        </div></a>
 <?php endforeach; endif; ?>
-    </div></div>
+</div>
+  </div>
   </div>
 </section>
 

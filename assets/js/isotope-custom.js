@@ -26,4 +26,6 @@ $(document).ready(function() {
     });
     });
 
+    $container.isotope({ masonry: {columnWidth: 350} })
+
 });
