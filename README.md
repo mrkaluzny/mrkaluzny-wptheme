@@ -1,1 +1,2 @@
-# mrkaluzny WordPress theme
+# WordPress Theme mrkaluzny
+![Screenshot](screenshot.png)
