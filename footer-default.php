@@ -54,7 +54,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://mrkaluzny.pl/cdn/img-swap/img-swap.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCBcjGAn-pARjZUvCFxiIlEcalbbp5FNUc"></script>
 <script src="<?php echo(get_template_directory_uri()); ?>/assets/js/isotope.pkgd.min.js"></script>
 <script src="<?php echo(get_template_directory_uri()); ?>/assets/js/isotope-custom.js"></script>
 <script src="<?php echo(get_template_directory_uri()); ?>/assets/js/imagesloaded.js"></script>

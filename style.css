@@ -48,18 +48,6 @@ body {
   border: 2px solid #14CC60;
 }
 
-.button-white {
-	background-color: #14CC60;
-	color: white;
-	border: 2px solid #14CC60;
-	transition: 1s;
-}
-
-.button-white:hover {
-	background-color: white;
-	border: 2px solid #14CC60;
-}
-
 .mr {
     font-family: 'Work Sans', sans-serif;
     font-weight: 100;
@@ -221,8 +209,14 @@ article a {text-decoration: none;}
 
 article {margin-bottom: 70px;}
 .article-small {
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
+
+.article-small .author, .article-small .entry-date  {
+    color: #14CC60;
+    font-weight: 400;
+}
+
 
 .article-title {
     font-size: 2.4em;
@@ -237,7 +231,7 @@ article {margin-bottom: 70px;}
 .article-title > a {color:#292F36;}
 .article-title:hover > a {color:#292F36; text-decoration: none;}
 .more-link {
-  margin-top: 20px !important;
+  margin-top: 40px !important;
   padding: 5px;
   background-color: #14CC60;
   color: white;
@@ -316,3 +310,53 @@ article {margin-bottom: 70px;}
 
 .item-width2 { width: 430px; }
 .item-height2 { height: 430px; }
+
+/* ABOUT */
+
+.about-con {
+    background-color:rgb(244,244,244);
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid #e2e5e9;
+}
+
+.information > h2,h3,h4 {
+    text-align: center;
+}
+
+.information, .skills {
+    margin-bottom: 25px;
+}
+
+.skills {
+    text-align: center;
+}
+.skills > div {
+    display: inline-block;
+    margin: 5px;
+    background-color: #14CC60;
+    padding: 5px 10px;
+    color: white;
+}
+
+.work, .certificate {
+    margin: 20px 0px;
+}
+
+.work :first-child {
+    font-size: 105%;
+    font-weight: 400;
+}
+
+.work :nth-child(3) {
+    margin-bottom: 10px;
+}
+
+.certificate :first-child {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.certificate :nth-child(2) {
+    margin-bottom: 10px;
+}
