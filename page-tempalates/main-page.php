@@ -60,7 +60,7 @@ get_header('main'); ?>
     <div class="row">
       <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
       if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
-        <div class="col-md-4 blog-post">
+        <div class="col-md-4 col-sm-6 col-xs-12 blog-post">
           <?php the_post_thumbnail('post-thumbnail', array( 'class'	=> "img-responsive"));
                 the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
           <p class="article-small">
