@@ -1,4 +1,4 @@
-
+@import 'vars';
 /** <WELCOME SECTION> **************************************************** ************************/
 .welcome {
   padding: 90px 0;
@@ -147,7 +147,7 @@
 
           .content {
             width: 90%;
-            color: @darkblack;
+            color: $darkblack;
             margin: 0;
             position: absolute;
             top: 50%;
@@ -188,7 +188,7 @@
   padding-bottom: 12px;
   .information {
     padding: 110px;
-    background-color: lighten(@black,10%);
+    background-color: lighten($black,10%);
     background-image: url('../img/bcg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -207,7 +207,7 @@
         color: white;
       }
       p {
-        color: @grey;
+        color: $grey;
       }
     }
   }
@@ -223,7 +223,7 @@
     width: 585px;
     float: right;
 
-    @media screen only and (max-width: 968px) {
+    @media screen and (max-width: 968px) {
       width: 100%;
       float: none;
       text-align: center;

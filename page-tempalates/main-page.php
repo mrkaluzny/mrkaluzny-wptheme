@@ -4,7 +4,7 @@
  * @package mrkaluzny
  */
 
-get_header('main'); ?>
+get_header(); ?>
 
 <div class="wrapper"></div>
 

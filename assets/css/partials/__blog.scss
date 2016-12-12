@@ -4,7 +4,7 @@
 
 .article {
   padding: 20px 0;
-  color: @black !important;
+  color: $black !important;
 }
 .article-photo {
     width: 100%;
@@ -30,7 +30,7 @@ article a {
 
 .article-small {
     font-size: 1em;
-    color: @grey;
+    color: $grey;
 }
 
 .article-title {
