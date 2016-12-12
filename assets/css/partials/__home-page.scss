@@ -1,0 +1,258 @@
+
+/** <WELCOME SECTION> **************************************************** ************************/
+.welcome {
+  padding: 90px 0;
+
+  .info {
+    padding-bottom: 60px;
+  }
+
+  .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 2.6em;
+    span {
+      color:$green;
+    }
+  }
+
+  .content {
+    color: $grey;
+    padding-bottom: 10px;
+  }
+
+  .offer {
+    padding: 15px 0;
+  }
+
+  .mockup {
+    width: 900px;
+    position: absolute;
+    bottom: -610px;
+    left: -400px;
+  }
+
+  .col-md-6 > .col-md-12 {
+    padding: 0;
+  }
+}
+/** </WELCOME SECTION> **************************************************** ************************/
+
+/** <OPINIE> **************************************************** ************************/
+.testimonials{
+  padding: 90px 0;
+  background: lighten($lightGrey, 7%);
+
+  .testimonial {
+    width: 70%;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 90px;
+    box-shadow: 0px 0px 16px -17px #292f36;
+
+    h2, h3 {
+      padding: 2px 0;
+      margin: 0;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .client {
+      font-weight: 600;
+    }
+
+    .company {
+      color: $grey;
+      font-weight: 600;
+      font-size: 1em;
+    }
+
+    .content {
+      font-size: 1.3em;
+      padding: 25px 0 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+.testimonials.__invert {
+  background: white;
+
+  .testimonial {
+    background: lighten($lightGrey, 7%);
+  }
+}
+
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+  background: $green;
+  opacity: 1;
+}
+/** </OPINIE> **************************************************** ************************/
+
+/** <PORTFOLIO> **************************************************** ************************/
+.portfolio {
+    background-color: white;
+    padding: 90px 0;
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: $spacing;
+      font-size: 2.6em;
+    }
+    .portfolio-grid {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .portfolio-item {
+        overflow: hidden;
+        background: red;
+        width: 33.33%;
+        height: 300px;
+        float: left;
+        position: relative;
+        img {
+          height: 100%;
+          min-width: 100%;
+          position: relative;
+          z-index: 1;
+          transition: 300ms all ease-in-out;
+
+        }
+
+        &:hover {
+          .description {
+            opacity: 1 !important;
+          }
+          img {
+            transform: scale(1.3) rotate(3deg);
+          }
+        }
+
+        .description {
+          opacity: 0 !important;
+          background-color: fade(white, 50%);
+          z-index: 2;
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 300ms all ease-in-out;
+
+          .content {
+            width: 90%;
+            color: @darkblack;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+
+          img {
+            min-width: 100%;
+            height: 100%;
+          }
+        }
+    }
+}
+
+.portfolio-text {
+    margin-bottom: 10px;
+}
+
+#portfolio{
+    background-color: antiquewhite;
+}
+.portfolio-items {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+/** </PORTFOLIO> **************************************************** ************************/
+
+/** <INFORMATION> **************************************************** ************************/
+.information-section {
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  .information {
+    padding: 110px;
+    background-color: lighten(@black,10%);
+    background-image: url('../img/bcg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transform: rotate(-1deg);
+    margin: 0 -15px;
+
+
+    .col-sm-12 {
+      transform: rotate(1deg);
+      h1, p, a {
+        margin: 20px 0;
+      }
+      h1 {
+        color: white;
+      }
+      p {
+        color: @grey;
+      }
+    }
+  }
+}
+
+/** </INFORMATION> **************************************************** ************************/
+
+/** <BLOG ARTICLES> **************************************************** ************************/
+.promoted-articles {
+  padding: 0;
+
+  .half-container {
+    width: 585px;
+    float: right;
+
+    @media screen only and (max-width: 968px) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+  }
+  .title {
+    padding: 45% 0;
+
+    p {
+      padding-bottom: 10px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding: 30px 0;
+      text-align: center;
+    }
+  }
+
+  .articles{
+    padding: 0;
+    border-left: 1px solid lighten($black,78%);
+    border-right: 1px solid lighten($black,78%);
+  }
+  .excerpt {
+    padding: 30px 60px;
+    border-bottom: 1px solid lighten($black,78%);
+
+    &:hover {
+      background: lighten($black,80%);
+    }
+  }
+}

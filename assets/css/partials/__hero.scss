@@ -1,0 +1,103 @@
+.hero {
+    background-image: url('../img/bcg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 685px;
+    padding-top: 80px;
+    color: white;
+
+    h1 {
+      font-size: 3.6em;
+      z-index: 2;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: $spacing;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 2em;
+      z-index: 2;
+      position: relative;
+    }
+
+    .icon {
+      position: relative;
+      z-index: 2;
+      font-size: 2em;
+      top: 50px;
+      animation: arrow 1300ms ease-in-out 5s infinite;
+    }
+
+    .overlay {
+      background: linear-gradient(325deg, rgba(41,47,54,0.25) 0%, rgba(41,47,54,0.7) 80%);
+      width: 100%;
+      height: 685px;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+}
+
+.hero.__small {
+  padding-top: 80px;
+  height: 500px;
+  background-color: darken($black,5%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: white;
+
+  h1,h2 {
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+  }
+
+  h2 {
+    color: $grey;
+  }
+}
+
+.hero.__portfolio {
+  background: radial-gradient(ellipse at center, rgba(191,31,70,0.92) 0%,rgba(191,31,70,1) 30%);
+  height: 750px;
+  padding-top: 130px;
+
+  .image-container {
+    width: 800px;
+    height: 530px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    .image {
+      position: absolute;
+      width: 800px;
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 2.4em;
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+@keyframes arrow {
+    0% {top: 50px;}
+    50%{top: 60px}
+    100% {top: 50px;}
+}

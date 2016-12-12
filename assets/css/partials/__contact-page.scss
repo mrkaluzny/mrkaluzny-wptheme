@@ -1,0 +1,42 @@
+.contact {
+  padding-top: 20px;
+
+  .card {
+    box-shadow: 0px 0px 16px 1px fade(#888888, 70%);
+    color: $black;
+    box-sizing: border-box;
+    background-color: lighten($black,80%);
+    bottom: -120px;
+    z-index: 3;
+    position: relative;
+
+    .row {
+      margin: 0;
+    }
+
+    .photo {
+      height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .contact-info {
+      padding: 60px;
+      letter-spacing: $spacing;
+
+      h5 {
+        color: $grey;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "vars";
+
+/** BLOG **/
+
+.article {
+  padding: 20px 0;
+  color: @black !important;
+}
+.article-photo {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-photo img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.article-margin {
+    margin: 20px;
+    font-family: 'Source Sans Pro';
+}
+
+article a {
+    text-decoration: none;
+}
+
+
+.article-small {
+    font-size: 1em;
+    color: @grey;
+}
+
+.article-title {
+    font-size: 3.2em;
+}
+
+.sidebar {
+    margin-top: 50px;
+}

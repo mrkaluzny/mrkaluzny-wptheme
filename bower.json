@@ -1,0 +1,27 @@
+{
+  "name": "mrkaluzny-wptheme",
+  "description": "Main website for mrkaluzny theme.",
+  "main": "index.php",
+  "authors": [
+    "mrkaluzny"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "float-fest",
+    "float",
+    "fest",
+    "float",
+    "fest",
+    "home",
+    "page"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

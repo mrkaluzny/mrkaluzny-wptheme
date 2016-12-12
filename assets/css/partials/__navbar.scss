@@ -1,0 +1,89 @@
+.navbar-mr {
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+  transition: all 400ms ease-in-out;
+
+  &.scrolling {
+    background: fade($darkblack, 90%);
+
+    .container {
+      padding: 10px 0;
+      border-bottom: 0.1em solid transparent;
+    }
+
+  }
+
+  .container {
+    padding: 20px 0;
+    border-bottom: 0.1em solid darken(white, 20%);
+    transition: all 400ms ease-in-out;
+  }
+
+  .navbar-header {
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+      width: 100%;
+      text-align: center;
+      display: block;
+      a {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar-brand {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: white;
+    @media only screen and (max-width: 768px) {
+      margin-left:35px;
+    }
+  }
+
+  ul {
+    float: right;
+    @media only screen and (max-width: 768px) {
+      float:none;
+      text-align: center;
+
+      .btn-wycena {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    li {
+      position: relative;
+      top: 4px;
+      a {
+        letter-spacing: $spacing;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 300ms ease-in-out;
+        margin-left: 5px;
+        font-size: 0.8em;
+        &:hover {
+          color: $green;
+        }
+      }
+
+      a:hover:not(.navbar-brand) {
+        color: $green;
+        background: fade($black, 40%);
+        border-radius: 4px;
+      }
+
+      a.btn-wycena {
+        background-color: @green;
+        color: white;
+        border-radius: 4px;
+        &:hover {
+          background: white;
+        }
+      }
+    }
+  }
+
+}

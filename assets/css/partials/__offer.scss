@@ -1,0 +1,39 @@
+.oferta {
+  padding: 90px 0;
+
+  .information {
+    padding-top: 10vh;
+  }
+
+  .image {
+    width: 550px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .technology-used {
+    list-style: none;
+    padding: 20px 0;
+    li {
+      display: inline-block;
+      text-align: center;
+      padding: 0 30px;
+
+      img {
+        max-height: 50px;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+.portfolio.__oferta {
+  background: $darkblack;
+
+  .row.title {
+    color: white;
+    padding-bottom: 50px;
+  }
+}
