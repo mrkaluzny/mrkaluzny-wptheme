@@ -33,7 +33,7 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .navbar-mr ul li a:hover:not(.navbar-brand){color:#14cc60;background:fade(#292f36,40%);border-radius:4px}
 .navbar-mr ul li a.btn-wycena{background-color:#14cc60;color:white;border-radius:4px}
 .navbar-mr ul li a.btn-wycena:hover{background:white}
-.hero{background-image:url("../img/bcg.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;height:685px;padding-top:80px;color:white}
+.hero{background-image:url("assets/img/bcg.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;height:685px;padding-top:80px;color:white}
 .hero h1{font-size:3.6em;z-index:2;position:relative;text-transform:uppercase;letter-spacing:1.6pt;font-weight:700}
 .hero p{font-size:2em;z-index:2;position:relative}
 .hero .icon{position:relative;z-index:2;font-size:2em;top:50px;-webkit-animation:arrow 1300ms ease-in-out 5s infinite;animation:arrow 1300ms ease-in-out 5s infinite}

@@ -8,6 +8,17 @@ get_header(); ?>
 
 <div class="wrapper"></div>
 
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="container flex">
+    <div class="row text-center">
+      <h1>Profesjonalne strony internetowe</h1>
+      <p>Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie.</p>
+      <i class="icon ion-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
 <section class="welcome" id="about">
   <div class="container">
     <div class="row">
@@ -84,18 +95,7 @@ get_header(); ?>
   </div>
 </section>
 
-<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <h1>Contact me!</h1>
-        <h3>I live in <strong>Poznan, Poland.</strong></h3>
-        <h3>Want to get in touch?</h3><br><br>
-        <a href="http://mrkaluzny.com/contact" class="btn button"><h4>Hell yeah!</h4></a>
-      </div>
-    </div>
-  </div>
-</section>
+<?php get_template_part('page-tempalates/partials/contactComponent'); ?>
 
 <?php
 get_footer();
