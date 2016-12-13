@@ -6,8 +6,6 @@
 
 get_header(); ?>
 
-<div class="wrapper"></div>
-
 <section class="hero">
   <div class="overlay"></div>
   <div class="container flex">
@@ -19,28 +17,40 @@ get_header(); ?>
   </div>
 </section>
 
-<section class="welcome" id="about">
+<section class="welcome">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2 class="text-center mar-side-50">In constant search for new challanges.</h2>
+    <div class="row info">
+      <div class="col-md-8 col-md-offset-2 col-sm-12">
+        <h1 class="title">Make your <span>startup</span> dream a reality</h1>
+        <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
       </div>
     </div>
-    <div class="wrapper"></div>
-    <div class="row">
-      <div class="col-md-6 pad-side-50">
-        <p class="justify"><strong>Who Am I?</strong>
-          <br>Currently I'm studing Law and Economics at Poznan University Of Economics and work with company called <a href="http://blueowl.pl">Blue Owl</a>. Recently I decided to start programming as both as hobby and probable future job. This website is
-          meant for presenting and documenting my work and progress.</p>
+    <div class="row offer">
+      <div class="col-md-6 hidden-xs hidden-sm">
+        <img class="mockup" src="<?php echo get_template_directory_uri(); ?>/assets/img/mock.png" alt="">
       </div>
-      <div class="col-md-6 pad-side-50">
-        <p class="justify"><strong>Why I do what I do?</strong>
-          <br> Building things always made me wonder. Thanks to programming I'm able to develop ideas using only my imagination and a computer. This idea is both liberating and mesmerizing, which happend to be the things I look for in my life.</p>
-          <p>Today I help people execute their ideas in a way which they customers will truly love and appreciate. Knowing that my work makes life of few hundred people a day easier by providing them with is the most rewarding feeling in the world.</p>
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <h2 class="subtitle">Strony internetowe</h2>
+          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
+          <a href="#" class="btn-basic">Więcej</a>
+        </div>
+        <div class="col-md-12">
+          <h2 class="subtitle">Aplikacje webowe</h2>
+          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
+          <a href="#" class="btn-basic">Więcej</a>
+        </div>
+        <div class="col-md-12">
+          <h2 class="subtitle">Design &amp; Marketing</h2>
+          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
+          <a href="#" class="btn-basic">Więcej</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 <div class="img-swap portfolio-cta" data-img="<?php the_field('portfolio-img'); ?>">
@@ -58,42 +68,33 @@ get_header(); ?>
 </div>
 
 
-
-<section id="blog-query">
+<section class="promoted-articles">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <h2 class="text-center mar-side-50">Newest Articles</h2>
-        <h4 class="text-center mar-side-50">Take a look at some of my latest articles. Still hot!</h4>
+      <div class="col-md-6">
+          <div class="title">
+            <h1>Read our startup tips</h1>
+            <p class="content">Keep up with the latest in app development and design. Follow our blog for expert insights from our team, new technologies and the projects we’re working on.</p>
+            <a class="btn-basic" href="#">Sprawdź bloga</a>
+          </div>
       </div>
-    </div>
-    <div class="wrapper"></div>
-    <div class="row">
-      <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
-      if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
-        <div class="col-md-4 col-sm-6 col-xs-12 blog-post">
-          <?php the_post_thumbnail('post-thumbnail', array( 'class'	=> "img-responsive"));
-                the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
-          <p class="article-small">
-            <?php mrkaluzny_posted_on(); ?>
-          </p>
-          <?php
-      			the_content( sprintf(
-      				/* translators: %s: Name of current post. */
-      				wp_kses( __( '<div class="btn button">Continue reading <span class="meta-nav">&rarr;</span></div>', 'mrkaluzny' ), array( 'span' => array( 'class' => array() ) ) ),
-      				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-      			) );
+      <div class="col-md-6 articles">
+        <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
+        if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
 
-      			wp_link_pages( array(
-      				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mrkaluzny' ),
-      				'after'  => '</div>',
-      			) );
-      		?>
-        </div>
-      <?php endwhile; endif; ?>
+
+          <article class="excerpt">
+            <?php the_title( '<h1>', '</h1>' );?>
+            <p class="content"><?php echo get_the_excerpt(); ?></p>
+            <a href="<?php get_permalink(); ?>">Read more..</a>
+          </article>
+        <?php endwhile; endif; ?>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 <?php get_template_part('page-tempalates/partials/contactComponent'); ?>
 

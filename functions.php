@@ -130,6 +130,12 @@ function mrkaluzny_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mrkaluzny_scripts' );
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
 /**
  * Implement the Custom Header feature.
  */
