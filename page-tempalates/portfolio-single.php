@@ -4,7 +4,7 @@
  * @package mrkaluzny
  */
 
-get_header('portfolio'); ?>
+get_header(); ?>
 <div class="wrapper"></div>
 <section class="welcome" id="about">
   <div class="container">

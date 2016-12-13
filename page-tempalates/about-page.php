@@ -4,7 +4,7 @@
  * @package mrkaluzny
  */
 
-get_header('default'); ?>
+get_header(); ?>
 
 <section>
   <div class="container">
@@ -94,4 +94,4 @@ get_header('default'); ?>
 
 <div class="wrapper"></div>
 
-<?php get_footer('default'); ?>
+<?php get_footer(); ?>
