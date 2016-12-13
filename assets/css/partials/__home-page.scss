@@ -229,8 +229,14 @@
       text-align: center;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    div#articlesTitle.col-md-6 {
+      height: auto !important;
+      padding-top: 0 !important;
+    }
+  }
   .title {
-    padding: 45% 0;
 
     p {
       padding-bottom: 10px;

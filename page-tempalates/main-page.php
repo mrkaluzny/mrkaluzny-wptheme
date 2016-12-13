@@ -50,35 +50,32 @@ get_header(); ?>
   </div>
 </section>
 
+<section class="information-section" data-img="<?php the_field('portfolio-img'); ?>">
+  <div class="information img-swap" data-img="<?php the_field('portfolio-img'); ?>">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+          <h1><?php the_field('cta-heading'); ?></h1>
+          <p class="content">With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
+          <a class="btn-basic" href="#">Learn more</a>
+        </div>
 
-
-
-<div class="img-swap portfolio-cta" data-img="<?php the_field('portfolio-img'); ?>">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <h2><?php the_field('cta-heading'); ?></h2>
-        <h4><?php the_field('cta-message'); ?></h4>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <a href="http://mrkaluzny.com/portfolio" class="btn button btn-cta">Check out my portfolio!</a>
       </div>
     </div>
   </div>
-</div>
-
+</section>
 
 <section class="promoted-articles">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" id="articlesTitle">
           <div class="title">
             <h1>Read our startup tips</h1>
             <p class="content">Keep up with the latest in app development and design. Follow our blog for expert insights from our team, new technologies and the projects we’re working on.</p>
             <a class="btn-basic" href="#">Sprawdź bloga</a>
           </div>
       </div>
-      <div class="col-md-6 articles">
+      <div class="col-md-6 articles" id="articles">
         <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
 
