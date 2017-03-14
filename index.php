@@ -14,13 +14,10 @@
 
 get_header(); ?>
 
-<section class="module module-parallax bg-dark-30" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<div class="hero-caption">
-		<div class="hero-text">
-			<h1 class="page-title mh-line-size-3 font-alt m-b-20">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
-		</div>
-	</div>
+<section class="hero __small" data-background="<?php the_post_thumbnail_url('cover-img');?>">
+	<h1 class="hero-page-title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
 </section>
+
 <nav class="navbar-blog">
 	<div class="container">
 		<div class="row">
