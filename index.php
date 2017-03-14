@@ -22,6 +22,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+
+				<!-- TODO: Add Search form -->
 				<ul class="categories-menu">
 				<?php
 				$categories = get_categories();
@@ -41,7 +43,6 @@ get_header(); ?>
 
 <section class="module blog-main-module">
 	<div class="container">
-		<div class="row">
 			<div class="col-md-12">
 				<?php
 				if ( have_posts() ) :
@@ -77,16 +78,19 @@ get_header(); ?>
 				endif; ?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<?php the_posts_pagination( array(
-					'mid_size' => 2,
-					'prev_text' => __( 'Poprzednie', 'textdomain' ),
-					'next_text' => __( 'Następne', 'textdomain' ),
-					) ); ?>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<?php the_posts_pagination( array(
+						'mid_size' => 2,
+						'prev_text' => __( 'Poprzednie', 'textdomain' ),
+						'next_text' => __( 'Następne', 'textdomain' ),
+						) ); ?>
+				</div>
 			</div>
 		</div>
-	</div>
+
 </section>
 
 

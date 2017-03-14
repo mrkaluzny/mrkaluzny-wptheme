@@ -82,7 +82,7 @@ get_header(); ?>
 				$prevPost = get_previous_post();
 				$nextPost = get_next_post();
 
-				$class = $nextPost ? 'multiple' : 'single';
+				$class = $nextPost ? ($prevPost ? 'multiple' : 'single') : 'single';
 
 				if($nextPost): ?>
 					<?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'large' );?>
