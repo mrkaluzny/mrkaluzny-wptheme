@@ -38,7 +38,7 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .hero p{font-size:2em;z-index:2;position:relative}
 .hero .icon{position:relative;z-index:2;font-size:2em;top:50px;-webkit-animation:arrow 1300ms ease-in-out 5s infinite;animation:arrow 1300ms ease-in-out 5s infinite}
 .hero .overlay{background:-webkit-linear-gradient(125deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);background:linear-gradient(325deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);width:100%;height:685px;position:absolute;top:0;z-index:1}
-.hero.__small{padding-top:80px;height:500px;background-color:#1e2228;background-position:center;background-size:cover;background-repeat:no-repeat;background-blend-mode:overlay;color:white}
+.hero.__small{padding-top:80px;height:500px;background-color:rgba(41,47,54,0.6);background-position:center;background-size:cover;background-repeat:no-repeat;background-blend-mode:overlay;color:white}
 .hero.__small h1,.hero.__small h2{text-transform:uppercase;letter-spacing:1.6pt}
 .hero.__small h2{color:#828282}
 .hero.__portfolio{background:-webkit-radial-gradient(center ellipse,rgba(191,31,70,0.92) 0,#bf1f46 30%);background:radial-gradient(ellipse at center,rgba(191,31,70,0.92) 0,#bf1f46 30%);height:750px;padding-top:130px}
@@ -129,12 +129,12 @@ article.post .entry-content h3{font-size:1.8em}
 article.post .entry-content h4{font-size:1.6em}
 article.post .entry-content h5{font-size:1.4em}
 article.post .entry-content h6{font-size:1.2em}
-.post-navigation .screen-reader-text{display:none}
-.post-navigation .nav-links .nav-previous,.post-navigation .nav-links .nav-next{position:relative;width:600px;display:inline-block;padding:0 4em;text-align:center;height:350px;display:table-cell;vertical-align:middle}
-.post-navigation .nav-links .nav-previous a,.post-navigation .nav-links .nav-next a{position:relative;z-index:2}
-.post-navigation .nav-links .nav-next::before{content:"Następny";position:absolute;z-index:1;color:#e8e8e8;font-size:10em;top:48%;left:10px;line-height:0}
-.post-navigation .nav-links .nav-previous{border-right:1px solid #e8e8e8}
-.post-navigation .nav-links .nav-previous::before{content:"Poprzedni";position:absolute;z-index:1;color:#e8e8e8;font-size:10em;top:48%;right:10px;text-align:left;direction:rtl;line-height:0}
+.post-navigation .nav-box{position:relative;height:250px;background-size:cover;background-position:center}
+.post-navigation .nav-box .overlay{display:block;position:absolute;top:0;left:0;background-color:rgba(41,47,54,0.7);width:100%;height:100%;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.post-navigation .nav-box:hover .overlay{background-color:rgba(41,47,54,0.4)}
+.post-navigation .nav-box.multiple{display:inline-block;width:50%;float:left}
+.post-navigation::after{content:" ";display:block;clear:both}
+.post-navigation-title{margin:0;color:white;text-decoration:none;text-align:center;-webkit-transform:translateY(-50%) translateX(-50%);-ms-transform:translateY(-50%) translateX(-50%);transform:translateY(-50%) translateX(-50%);position:absolute;top:50%;left:50%;width:90%;font-weight:600;font-size:2em;letter-spacing:.7px}
 .navbar-blog{border-bottom:1px solid #dee2e6;background:#ededed}
 .navbar-blog .categories-menu{list-style:none;padding:0;margin:10px 0}
 .navbar-blog .categories-menu li{display:inline-block;padding:0 5px}
@@ -192,11 +192,7 @@ figure:hover figcaption{display:block;-webkit-transition:ease;transition:ease}
 }@media screen and (max-width:968px){.promoted-articles .half-container{width:100%;float:none;text-align:center}
 }@media screen and (max-width:800px){.hero.__portfolio .image-container{width:100%}
 }@media screen and (max-width:782px){.contact-component .form{width:100%}
-}@media screen and (max-width:772px){.post-navigation .nav-links .nav-previous,.post-navigation .nav-links .nav-next{width:100%;display:block;height:auto;padding:80px 10px}
-.post-navigation .nav-links .nav-next::before{font-size:6em}
-.post-navigation .nav-links .nav-previous{border-right:0;border-bottom:1px solid #e8e8e8}
-.post-navigation .nav-links .nav-previous::before{font-size:6em}
-.blog-row{padding:20px}
+}@media screen and (max-width:772px){.blog-row{padding:20px}
 .blog-row .col-md-4:not(:last-child){margin-bottom:40px}
 }@media only screen and (max-width:768px){.navbar-mr .navbar-brand{margin-left:35px}
 .navbar-mr ul{float:none;text-align:center}

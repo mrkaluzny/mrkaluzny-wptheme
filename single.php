@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<section class="module module-parallax bg-dark-30" data-background="<?php //the_post_thumbnail_url('cover-img');?>">
+<section class="hero __small" style="background-image: url('<?php the_post_thumbnail_url('cover-img');?>')">
 </section>
 
 <?php
@@ -77,24 +77,37 @@ get_header(); ?>
 			</footer><!-- .entry-footer -->
 		</article><!-- #post-## -->
 
-		<?php get_template_part('views/modules/newsletter');?>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<?php the_post_navigation(); ?>
-				</div>
-			</div>
+		<div class="post-navigation">
+			<?php
+				$prevPost = get_previous_post();
+				$nextPost = get_next_post();
+
+				$class = $nextPost ? 'multiple' : 'single';
+
+				if($nextPost): ?>
+					<?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'large' );?>
+					<a href="<?php echo get_post_permalink($nextPost->ID); ?>">
+						<div class="nav-box next <?php echo $class; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url($nextPost->ID, 'large'); ?>);">
+							<div class="overlay"></div>
+							<h3 class="post-navigation-title"><?php echo $nextPost->post_title ?></h3>
+						</div>
+					</a>
+				<?php endif; ?>
+
+			 	<?php if($prevPost):
+				$prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'large' );?>
+
+				<a href="<?php echo get_post_permalink($prevPost->ID); ?>">
+					<div class="nav-box previous <?php echo $class; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url($prevPost->ID, 'large'); ?>);">
+						<div class="overlay"></div>
+						<h3 class="post-navigation-title"><?php echo $prevPost->post_title ?></h3>
+						<?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'large' );?>
+					</div>
+				</a>
+			<?php endif; ?>
+
 		</div>
 
-		<?php	//the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				//comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+		<?php	endwhile; // End of the loop.?>
 <?php
 get_footer();
