@@ -41,6 +41,7 @@ function mrkaluzny_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'cover-img', 1920, 1080);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -130,8 +131,13 @@ function mrkaluzny_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mrkaluzny_scripts' );
 
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+    return 30;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

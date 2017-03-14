@@ -7,33 +7,94 @@
  * @package mrkaluzny
  */
 
-get_header('single'); ?>
+get_header(); ?>
 
-<div class="wrapper"></div>
-	<div class="container">
-		<div class="row justify">
-			<div class="col-md-9 col-xs-12">
-		<?php
-		while ( have_posts() ) : the_post();
+<section class="module module-parallax bg-dark-30" data-background="<?php //the_post_thumbnail_url('cover-img');?>">
+</section>
 
-			get_template_part( 'template-parts/content', get_post_format() );
+<?php
+		while ( have_posts() ) : the_post();?>
 
+		<section class="module single-post info">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<h2 class="date"><?php echo the_time('j F, Y');?></h2>
+						<h1 class="title"><?php the_title();?></h1>
+						<h3 class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author();?></a></h3>
+						<?php
+						$categories = get_the_category();
+						$separator = ' ';
+						$output = '';
+						if ( ! empty( $categories ) ) {
+							foreach( $categories as $category ) {
+								$output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+							}
+							echo trim( $output, $separator );
+						} ?>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+			<div class="entry-content">
+				<?php get_template_part('views/modules/share'); ?>
+				<?php
+					the_content( sprintf(
+						/* translators: %s: Name of current post. */
+						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'zmienzdanie' ), array( 'span' => array( 'class' => array() ) ) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					) );
+
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'zmienzdanie' ),
+						'after'  => '</div>',
+					) );
+				?>
+				<?php get_template_part('views/modules/share'); ?>
+				<hr />
+				<div class="blogpost-info">
+					<p>Learn to code and start your new career as a developer. Explore the Techdegree Program today.</p>
+				</div>
+				<div class="tags">
+					<?php $posttags = get_the_tags();
+								$separator = ' ';
+								$output = '';
+								if ($posttags) {
+									foreach($posttags as $tag) {
+										$output .= '<a href="' . esc_url( get_category_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '">' . esc_html( $tag->name ) . '</a>' . $separator;
+									}
+									echo trim( $output, $separator );
+								}
+					?>
+				</div>
+			</div><!-- .entry-content -->
+
+			<footer class="entry-footer">
+
+			</footer><!-- .entry-footer -->
+		</article><!-- #post-## -->
+
+		<?php get_template_part('views/modules/newsletter');?>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<?php the_post_navigation(); ?>
+				</div>
+			</div>
+		</div>
+
+		<?php	//the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
-				comments_template();
+				//comments_template();
 			endif;
 
 		endwhile; // End of the loop.
 		?>
-	</div>
-	<div class="col-md-3 hidden-xs hidden-sm">
-		<?php get_sidebar(); ?>
-	</div>
-		</div><!-- #main -->
-	</div><!-- #primary -->
-
-	<div class="wrapper"></div>
 
 <?php
-get_footer('default');
+get_footer();
