@@ -181,6 +181,9 @@ article.post .entry-content h6{font-size:1.2em}
 .blog-article .article-content .entry-excerpt>p{padding-top:10px;font-size:1em;line-height:1.4em}
 .blog-article:hover{box-shadow:0 0 15px #e8e8e8}
 .blog-article:hover .entry-title a{color:#292f36}
+.tags{margin-left:-5px}
+.tags a{padding:5px 12px;border:2px solid #1e2228;border-radius:4px;color:#1e2228;font-weight:500;display:inline-block;text-decoration:none;margin:5px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.tags a:hover{background-color:#1e2228;color:white}
 .white{color:white}
 #hero-wirtualnebiuro{background-image:url(../portfolio/wirtualne_biuro.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}
 #hero-casa{background-image:url(../portfolio/casa-morretti.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}

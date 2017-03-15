@@ -280,3 +280,24 @@ article.post {
   }
 
 }
+
+.tags {
+  margin-left: -5px;
+}
+
+.tags a {
+  padding: 5px 12px;
+  border: 2px solid $darkblack;
+  border-radius: 4px;
+  color: $darkblack;
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: $darkblack;
+    color: white;
+  }
+}
