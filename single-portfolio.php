@@ -25,7 +25,7 @@
         </div>
       </section>
 
-      <section class="img-portfolio">
+      <section class="img-portfolio" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
       </section>
 
       <section class="portfolio-single">
@@ -66,11 +66,11 @@
             <div class="owl-carousel owl-theme" id="testimonialSlider">
               <div class="item">
                 <div class="testimonial">
-                  <h2 class="client"><?php the_field('client-name'); ?></h2>
-                  <h3 class="company"><?php the_field('client-company'); ?></h3>
                   <div class="content">
                     <?php the_field('client-testimonial'); ?>
                   </div>
+                  <h2 class="client"><?php the_field('client-name'); ?></h2>
+                  <h3 class="company"><?php the_field('client-company'); ?></h3>
                 </div>
               </div>
             </div>

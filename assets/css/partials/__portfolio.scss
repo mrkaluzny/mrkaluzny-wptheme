@@ -27,7 +27,7 @@
 
   .portfolio-item {
     overflow: hidden;
-    background: red;
+    background: $darkblack;
     width: 33.33%;
     height: 300px;
     float: left;
@@ -120,7 +120,7 @@
 
 
 .img-portfolio {
-  padding: 120px 0;
+  padding: 195px 0;
   background-image: url(http://mrkaluzny.com/wp-content/uploads/2016/09/mkmserwis-cover.jpg);
   background-position: center;
   background-repeat: no-repeat;

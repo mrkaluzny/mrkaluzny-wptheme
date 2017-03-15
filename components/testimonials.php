@@ -16,11 +16,11 @@
 
         <div class="item">
           <div class="testimonial">
-            <h2 class="client"><?php the_title();?></h2>
-            <h3 class="company"><?php the_field('company'); ?></h3>
             <div class="content">
               <?php the_content();?>
             </div>
+            <h2 class="client"><?php the_title();?></h2>
+            <h3 class="company"><?php the_field('company'); ?></h3>
           </div>
         </div>
 
