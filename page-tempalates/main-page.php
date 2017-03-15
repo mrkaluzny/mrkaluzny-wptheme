@@ -52,6 +52,8 @@ get_header(); ?>
 
 <?php get_template_part('components/testimonials'); ?>
 
+<?php get_template_part('components/portfolio'); ?>
+
 <section class="information-section" data-img="<?php the_field('portfolio-img'); ?>">
   <div class="information img-swap" data-img="<?php the_field('portfolio-img'); ?>">
     <div class="container">

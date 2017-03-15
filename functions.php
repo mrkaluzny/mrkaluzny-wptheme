@@ -240,7 +240,7 @@ function services_post_type() {
 add_action( 'init', 'services_post_type', 0 );
 
 // Register Custom Post Type
-function portfolio_custom_post() {
+function portfolio_post_type() {
 
 	$labels = array(
 		'name'                  => _x( 'Portfolio Items', 'Post Type General Name', 'text_domain' ),
@@ -292,16 +292,17 @@ function portfolio_custom_post() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+		'query_var'             => 'portfolio',
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'post_type', $args );
+	register_post_type( 'portfolio', $args );
 
 }
-add_action( 'init', 'portfolio_custom_post', 0 );
+add_action( 'init', 'portfolio_post_type', 0 );
 
 /**
  * Register widget area.

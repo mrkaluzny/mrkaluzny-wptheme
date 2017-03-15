@@ -51,15 +51,15 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .navbar-mr ul li a:hover:not(.navbar-brand){color:#14cc60;background:fade(#292f36,40%);border-radius:4px}
 .navbar-mr ul li a.btn-wycena{background-color:#14cc60;color:white;border-radius:4px}
 .navbar-mr ul li a.btn-wycena:hover{background:white}
-.hero{background-image:url("assets/img/bcg.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;height:685px;padding-top:80px;color:white}
+.hero{background-image:url("assets/img/bcg.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;height:685px;padding-top:80px;color:white;position:relative}
 .hero h1{font-size:3.6em;z-index:2;position:relative;text-transform:uppercase;letter-spacing:1.6pt;font-weight:700}
 .hero p{font-size:2em;z-index:2;position:relative}
 .hero .icon{position:relative;z-index:2;font-size:2em;top:50px;-webkit-animation:arrow 1300ms ease-in-out 5s infinite;animation:arrow 1300ms ease-in-out 5s infinite}
-.hero .overlay{background:-webkit-linear-gradient(125deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);background:linear-gradient(325deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);width:100%;height:685px;position:absolute;top:0;z-index:1}
+.hero .overlay{background:-webkit-linear-gradient(125deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);background:linear-gradient(325deg,rgba(41,47,54,0.25) 0,rgba(41,47,54,0.7) 80%);width:100%;height:100%;position:absolute;top:0;z-index:1}
 .hero.__small{padding-top:80px;height:500px;background-color:rgba(41,47,54,0.6);background-position:center;background-size:cover;background-repeat:no-repeat;background-blend-mode:overlay;color:white}
 .hero.__small h1,.hero.__small h2{text-transform:uppercase;letter-spacing:1.6pt}
 .hero.__small h2{color:#828282}
-.hero.__portfolio{background:-webkit-radial-gradient(center ellipse,rgba(191,31,70,0.92) 0,#bf1f46 30%);background:radial-gradient(ellipse at center,rgba(191,31,70,0.92) 0,#bf1f46 30%);height:750px;padding-top:130px}
+.hero.__portfolio{background-image:none;height:750px;padding-top:130px}
 .hero.__portfolio .image-container{width:800px;height:530px;position:relative;margin:0 auto;text-align:center}
 .hero.__portfolio .image-container .image{position:absolute;width:800px;bottom:0}
 .hero.__portfolio h1{font-size:2.4em;z-index:2;position:relative;text-transform:uppercase;letter-spacing:1.6pt;font-weight:700}
@@ -90,18 +90,6 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .testimonials.__invert{background:white}
 .testimonials.__invert .testimonial{background:#fafafa}
 .owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{background:#14cc60;opacity:1}
-.portfolio{background-color:white;padding:90px 0}
-.portfolio h1{text-align:center;text-transform:uppercase;font-weight:bold;letter-spacing:1.6pt;font-size:2.6em}
-.portfolio .portfolio-grid{width:100%;margin:0 auto}
-.portfolio .portfolio-item{overflow:hidden;background:red;width:33.33%;height:300px;float:left;position:relative}
-.portfolio .portfolio-item img{height:100%;min-width:100%;position:relative;z-index:1;-webkit-transition:300ms all ease-in-out;transition:300ms all ease-in-out}
-.portfolio .portfolio-item:hover .description{opacity:1 !important}
-.portfolio .portfolio-item:hover img{-webkit-transform:scale(1.3) rotate(3deg);-ms-transform:scale(1.3) rotate(3deg);transform:scale(1.3) rotate(3deg)}
-.portfolio .portfolio-item .description{opacity:0 !important;background-color:fade(white,50%);z-index:2;position:absolute;text-align:center;width:100%;height:100%;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:300ms all ease-in-out;transition:300ms all ease-in-out}
-.portfolio .portfolio-item .description .content{width:90%;color:#1e2228;margin:0;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
-.portfolio-text{margin-bottom:10px}
-#portfolio{background-color:antiquewhite}
-.portfolio-items{margin:0;padding:0;display:block}
 .information-section{overflow:hidden;padding-bottom:12px}
 .information-section .information{padding:110px;background-color:#3f4853;background-image:url("../img/bcg.jpg");background-position:center;background-repeat:no-repeat;background-size:cover;background-blend-mode:multiply;margin:0 -15px}
 .information-section .information .col-sm-12 h1,.information-section .information .col-sm-12 p,.information-section .information .col-sm-12 a{margin:20px 0}
@@ -126,8 +114,19 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .oferta .technology-used{list-style:none;padding:20px 0}
 .oferta .technology-used li{display:inline-block;text-align:center;padding:0 30px}
 .oferta .technology-used li img{max-height:50px;text-align:center}
-.portfolio.__oferta{background:#1e2228}
-.portfolio.__oferta .row.title{color:white;padding-bottom:50px}
+.portfolio .row.title{color:white;padding-bottom:50px}
+.portfolio{background:#1e2228;padding:90px 0}
+.portfolio h1{text-align:center;text-transform:uppercase;font-weight:bold;letter-spacing:1.6pt;font-size:2.6em}
+.portfolio .portfolio-grid{width:100%;margin:0 auto}
+.portfolio .portfolio-item{overflow:hidden;background:red;width:33.33%;height:300px;float:left;position:relative}
+.portfolio .portfolio-item img{height:100%;min-width:100%;position:relative;z-index:1;-webkit-transition:300ms all ease-in-out;transition:300ms all ease-in-out}
+.portfolio .portfolio-item:hover .description{opacity:1 !important}
+.portfolio .portfolio-item:hover img{-webkit-transform:scale(1.3) rotate(3deg);-ms-transform:scale(1.3) rotate(3deg);transform:scale(1.3) rotate(3deg)}
+.portfolio .portfolio-item .description{opacity:0 !important;background-color:rgba(255,255,255,0.3);z-index:2;position:absolute;text-align:center;width:100%;height:100%;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:300ms all ease-in-out;transition:300ms all ease-in-out}
+.portfolio .portfolio-item .description .content{width:90%;color:#1e2228;margin:0;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.portfolio-text{margin-bottom:10px}
+#portfolio{background-color:antiquewhite}
+.portfolio-items{margin:0;padding:0;display:block}
 .portfolio-single{padding:90px 0}
 .portfolio-single .technology-used{list-style:none;padding:20px 0}
 .portfolio-single .technology-used li{display:inline-block;text-align:center;padding:0 30px}
