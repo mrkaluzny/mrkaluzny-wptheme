@@ -101,19 +101,73 @@
 
 .portfolio-single {
   padding: 90px 0;
+}
 
-  .technology-used {
-    list-style: none;
-    padding: 20px 0;
-    li {
+.technology-used {
+  list-style: none;
+  padding: 20px 0;
+  li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 30px;
+
+    &::before {
+      content: " ";
+      height: 120px;
+      width: 120px;
       display: inline-block;
-      text-align: center;
-      padding: 0 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-      img {
-        max-height: 120px;
-        text-align: center;
-      }
+    &.html::before {
+      background-image: url('https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png');
+    }
+
+    &.css::before {
+      background-image: url('https://ohdoylerules.com/content/images/css3.svg');
+    }
+
+    &.jquery::before {
+      background-image: url('https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png');
+    }
+
+    &.wordpress::before {
+      background-image: url('https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png');
+    }
+
+    &.bootstrap::before {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png');
+    }
+
+    &.php::before {
+      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    }
+
+    &.node::before {
+      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    }
+
+    &.mongo::before {
+      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    }
+
+    &.react::before {
+      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    }
+
+    &.angular::before {
+      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    }
+
+    &.ror::before {
+      background-image: url('http://coolspotters.com/files/photos/26546/ruby-on-rails-profile.png');
+    }
+
+    img {
+      max-height: 120px;
+      text-align: center;
     }
   }
 }

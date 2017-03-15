@@ -42,7 +42,7 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .navbar-mr{background-color:transparent;border-radius:0;margin:0;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .navbar-mr.scrolling{background:#1e2228}
 .navbar-mr.scrolling .container{padding:10px 0;border-bottom:.1em solid transparent}
-.navbar-mr .container{padding:20px 0;border-bottom:.1em solid #ccc;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
+.navbar-mr .container{padding:20px 0;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .navbar-mr .navbar-brand{font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.4em;color:white}
 .navbar-mr ul{float:right}
 .navbar-mr ul li{position:relative;top:4px}
@@ -90,11 +90,10 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .testimonials.__invert{background:white}
 .testimonials.__invert .testimonial{background:#fafafa}
 .owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{background:#14cc60;opacity:1}
-.information-section{overflow:hidden;padding-bottom:12px}
-.information-section .information{padding:110px;background-color:#3f4853;background-image:url("../img/bcg.jpg");background-position:center;background-repeat:no-repeat;background-size:cover;background-blend-mode:multiply;margin:0 -15px}
-.information-section .information .col-sm-12 h1,.information-section .information .col-sm-12 p,.information-section .information .col-sm-12 a{margin:20px 0}
-.information-section .information .col-sm-12 h1{color:white}
-.information-section .information .col-sm-12 p{color:#828282}
+.information-section{padding:110px 0;background-position:center;background-size:cover}
+.information-section .col-sm-12 h1,.information-section .col-sm-12 p,.information-section .col-sm-12 a{margin:20px 0}
+.information-section .col-sm-12 h1{color:white}
+.information-section .col-sm-12 p{color:#828282}
 .promoted-articles{padding:0 0 30px 0}
 .promoted-articles .half-container{width:585px;float:right}
 .promoted-articles .articles{padding:0;border-left:1px solid #f5f6f8;border-right:1px solid #f5f6f8}
@@ -128,9 +127,21 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 #portfolio{background-color:antiquewhite}
 .portfolio-items{margin:0;padding:0;display:block}
 .portfolio-single{padding:90px 0}
-.portfolio-single .technology-used{list-style:none;padding:20px 0}
-.portfolio-single .technology-used li{display:inline-block;text-align:center;padding:0 30px}
-.portfolio-single .technology-used li img{max-height:120px;text-align:center}
+.technology-used{list-style:none;padding:20px 0}
+.technology-used li{display:inline-block;text-align:center;padding:0 30px}
+.technology-used li::before{content:" ";height:120px;width:120px;display:inline-block;background-size:contain;background-repeat:no-repeat;background-position:center}
+.technology-used li.html::before{background-image:url("https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png")}
+.technology-used li.css::before{background-image:url("https://ohdoylerules.com/content/images/css3.svg")}
+.technology-used li.jquery::before{background-image:url("https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png")}
+.technology-used li.wordpress::before{background-image:url("https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png")}
+.technology-used li.bootstrap::before{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png")}
+.technology-used li.php::before{background-image:url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png")}
+.technology-used li.node::before{background-image:url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png")}
+.technology-used li.mongo::before{background-image:url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png")}
+.technology-used li.react::before{background-image:url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png")}
+.technology-used li.angular::before{background-image:url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png")}
+.technology-used li.ror::before{background-image:url("http://coolspotters.com/files/photos/26546/ruby-on-rails-profile.png")}
+.technology-used li img{max-height:120px;text-align:center}
 .img-portfolio{padding:195px 0;background-image:url(http://mrkaluzny.com/wp-content/uploads/2016/09/mkmserwis-cover.jpg);background-position:center;background-repeat:no-repeat;background-size:cover}
 .module.single-post{padding:60px 0 40px 0}
 .module.single-post .date{font-size:.95em;letter-spacing:1.1pt;font-weight:600;text-transform:uppercase;color:#596776}

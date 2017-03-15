@@ -44,12 +44,15 @@
       <section class="portfolio-single __gray">
         <div class="container">
           <div class="row text-center">
-            <h1 class="subtitle">Wykorzystana technologia</h1>
+            <h1 class="subtitle">Technologies Used</h1>
             <ul class="technology-used">
-              <li><img class="img-responsive" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" /></li>
-              <li><img class="img-responsive" src="https://ohdoylerules.com/content/images/css3.svg" /></li>
-              <li><img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png" /></li>
-              <li><img class="img-responsive" src="https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png" /></li>
+              <?php
+                $technologies = get_field('technologies-used');
+                for ($i = 0; $i < count($technologies); $i++ ) {
+                  $class = $technologies[$i];
+                  echo "<li class=" . $class . "></li>";
+                }
+              ?>
             </ul>
           </div>
         </div>

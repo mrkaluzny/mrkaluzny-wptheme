@@ -54,17 +54,15 @@ get_header(); ?>
 
 <?php get_template_part('components/portfolio'); ?>
 
-<section class="information-section" data-img="<?php the_field('portfolio-img'); ?>">
-  <div class="information img-swap" data-img="<?php the_field('portfolio-img'); ?>">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
-          <h1><?php the_field('cta-heading'); ?></h1>
-          <p class="content">With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
-          <a class="btn-basic" href="#">Learn more</a>
-        </div>
-
+<section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+        <h1><?php the_field('cta-heading'); ?></h1>
+        <p class="content">With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
+        <a class="btn-basic" href="#">Learn more</a>
       </div>
+
     </div>
   </div>
 </section>
