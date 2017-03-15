@@ -32,6 +32,9 @@ get_header(); ?>
 </section>
 
 
+<?php get_template_part('views/components/testimonials'); ?>
+
+
 <div class="img-swap portfolio-cta" data-img="<?php the_field('portfolio-img'); ?>">
   <div class="container">
     <div class="row">

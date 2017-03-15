@@ -95,6 +95,84 @@ function mrkaluzny_content_width() {
 }
 add_action( 'after_setup_theme', 'mrkaluzny_content_width', 0 );
 
+function opinie_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Opinie', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Opinia', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Opinie', 'text_domain' ),
+		'name_admin_bar'        => __( 'Opinia', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Product:', 'text_domain' ),
+		'all_items'             => __( 'Wszystkie opinie', 'text_domain' ),
+		'add_new_item'          => __( 'Dodaj opinię', 'text_domain' ),
+		'add_new'               => __( 'Nowa opinia', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edytuj opinię', 'text_domain' ),
+		'update_item'           => __( 'Uaktualnij opinię', 'text_domain' ),
+		'view_item'             => __( 'Zobacz opinię', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search products', 'text_domain' ),
+		'not_found'             => __( 'No products found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'No products found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Opinia', 'text_domain' ),
+		'description'           => __( 'Opinie klientów', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'							=> 'dashicons-format-quote',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'query_var'             => 'opinie',
+		'capability_type'       => 'page',
+	);
+
+	$labels = array(
+    'name'              => _x( 'Kategorie Opinii', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Kategoria  Opinii', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Project Categories' ),
+    'all_items'         => __( 'All Project Categories' ),
+    'parent_item'       => __( 'Parent Project Category' ),
+    'parent_item_colon' => __( 'Parent Project Category:' ),
+    'edit_item'         => __( 'Edit Project Category' ),
+    'update_item'       => __( 'Update Project Category' ),
+    'add_new_item'      => __( 'Add New Project Category' ),
+    'new_item_name'     => __( 'New Project Category' ),
+    'menu_name'         => __( 'Kategorie Opinii' ),
+  );
+  $tax = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+		'show_ui' => true,
+  );
+
+	register_post_type( 'opinie', $args );
+	register_taxonomy( 'opinie_category', 'opinie', $tax);
+
+}
+add_action( 'init', 'opinie_post_type', 0 );
+
 /**
  * Register widget area.
  *
@@ -122,6 +200,8 @@ function mrkaluzny_scripts() {
 	wp_enqueue_script( 'mrkaluzny-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/js/vendors.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'mrkaluzny-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

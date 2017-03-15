@@ -18,6 +18,9 @@ body {
   height: 100%;
 }
 
+@import 'vendor/owl-carousel';
+@import 'vendor/owl-theme';
+
 @import 'partials/__contact-component';
 /** <NAVBAR> *********************************************************** ************************/
 @import 'partials/__navbar';

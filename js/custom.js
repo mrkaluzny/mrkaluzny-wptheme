@@ -26,3 +26,10 @@ window.onresize = function() {
 		});
 });
   }(jQuery));
+
+  $(document).ready(function() {
+              $("#testimonialSlider").owlCarousel({
+                autoPlay: 3000,
+                singleItem: true
+              });
+            });
