@@ -173,6 +173,72 @@ function opinie_post_type() {
 }
 add_action( 'init', 'opinie_post_type', 0 );
 
+
+// Register Custom Post Type
+function services_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Services', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Services Item', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Services', 'text_domain' ),
+		'name_admin_bar'        => __( 'Services Item', 'text_domain' ),
+		'archives'              => __( 'Archive', 'text_domain' ),
+		'attributes'            => __( 'Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Usługa nadrzędna', 'text_domain' ),
+		'all_items'             => __( 'All Services', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Services Item', 'text_domain' ),
+		'add_new'               => __( 'New Services Item', 'text_domain' ),
+		'new_item'              => __( 'Nowa rzecz', 'text_domain' ),
+		'edit_item'             => __( 'Edytuj usługę', 'text_domain' ),
+		'update_item'           => __( 'Uaktualnij usługę', 'text_domain' ),
+		'view_item'             => __( 'Zobacz usługę', 'text_domain' ),
+		'view_items'            => __( 'Zobacz usługi', 'text_domain' ),
+		'search_items'          => __( 'Wyszukaj usługę', 'text_domain' ),
+		'not_found'             => __( 'Services Not Found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Nie znaleziono usług w koszu', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'uslugi',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Service', 'text_domain' ),
+		'description'           => __( 'Services', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'trackbacks', 'custom-fields', 'page-attributes', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-clipboard',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'query_var'             => 'services',
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'services', $args );
+
+}
+add_action( 'init', 'services_post_type', 0 );
+
 /**
  * Register widget area.
  *
