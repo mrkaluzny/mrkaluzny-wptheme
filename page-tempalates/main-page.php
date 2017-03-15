@@ -70,25 +70,38 @@ get_header(); ?>
 <section class="promoted-articles">
   <div class="container">
     <div class="row">
-      <div class="col-md-6" id="articlesTitle">
-          <div class="title">
+      <div class="col-md-12">
+          <div class="promoted-articles-title">
             <h1>Read our startup tips</h1>
             <p class="content">Keep up with the latest in app development and design. Follow our blog for expert insights from our team, new technologies and the projects we’re working on.</p>
             <a class="btn-basic" href="#">Sprawdź bloga</a>
           </div>
       </div>
-      <div class="col-md-6 articles" id="articles">
-        <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
-        if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row blog-row">
 
+      <?php $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
+      if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
 
-          <article class="excerpt">
-            <?php the_title( '<h1>', '</h1>' );?>
-            <p class="content"><?php echo get_the_excerpt(); ?></p>
-            <a href="<?php get_permalink(); ?>">Read more..</a>
-          </article>
-        <?php endwhile; endif; ?>
+      <div class="col-md-4">
+      		<div class="blog-article">
+      			<div class="top-image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)">
+      			</div>
+      			<article class="article-content">
+      				<div class="entry-meta">
+      					<?php the_time('F jS, Y'); ?>
+      				</div><!-- .entry-meta -->
+      				<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );?>
+      				<div class="entry-excerpt">
+      					<?php the_excerpt();?>
+      				</div>
+      			</article>
+      		</div>
       </div>
+      <?php endwhile; endif; ?>
+
     </div>
   </div>
 </section>
