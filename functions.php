@@ -243,7 +243,7 @@ add_action( 'init', 'services_post_type', 0 );
 function portfolio_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Portfolio Items', 'Post Type General Name', 'text_domain' ),
+		'name'                  => _x( 'Portfolio', 'text_domain' ),
 		'singular_name'         => _x( 'Portfolio Item', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'             => __( 'Portfolio', 'text_domain' ),
 		'name_admin_bar'        => __( 'Portfolio', 'text_domain' ),
