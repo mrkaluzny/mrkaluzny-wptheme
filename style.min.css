@@ -46,9 +46,10 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .navbar-mr .navbar-brand{font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.4em;color:white}
 .navbar-mr ul{float:right}
 .navbar-mr ul li{position:relative;top:4px}
-.navbar-mr ul li a{letter-spacing:1.6pt;color:white;font-weight:600;text-transform:uppercase;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;margin-left:5px;font-size:.8em}
-.navbar-mr ul li a:hover{color:#14cc60}
-.navbar-mr ul li a:hover:not(.navbar-brand){color:#14cc60;background:fade(#292f36,40%);border-radius:4px}
+.navbar-mr ul li a{letter-spacing:1.6pt;color:white;font-weight:600;text-transform:uppercase;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;margin-left:5px;font-size:13px}
+.navbar-mr ul li a:hover{color:white;background-color:transparent}
+.navbar-mr ul li a:hover::after{width:100%}
+.navbar-mr ul li a::after{content:" ";display:block;height:2px;width:0;background-color:#14cc60;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out}
 .navbar-mr ul li a.btn-wycena{background-color:#14cc60;color:white;border-radius:4px}
 .navbar-mr ul li a.btn-wycena:hover{background:white}
 .hero{background-image:url("assets/img/bcg.jpg");background-position:center;background-size:cover;background-repeat:no-repeat;height:685px;padding-top:80px;color:white;position:relative}
