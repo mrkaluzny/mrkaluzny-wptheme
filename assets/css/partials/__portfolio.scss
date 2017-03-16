@@ -47,13 +47,13 @@
       }
 
       img {
-        transform: scale(1.3) rotate(3deg);
+        transform: scale(1.2);
       }
     }
 
     .description {
       opacity: 0 !important;
-      background-color: rgba(white, 0.3);
+      background-color: rgba($black, 0.8);
       z-index: 2;
       position: absolute;
       text-align: center;
@@ -66,9 +66,10 @@
 
       .content {
         width: 90%;
-        color: $darkblack;
+        color: white;
         margin: 0;
         position: absolute;
+        font-weight: 300;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
