@@ -100,7 +100,7 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .promoted-articles .articles{padding:0;border-left:1px solid #f5f6f8;border-right:1px solid #f5f6f8}
 .promoted-articles-title{width:60%;text-align:center;margin:0 auto;padding-top:30px;margin-bottom:50px}
 .promoted-articles-title p{padding-bottom:10px}
-.contact{padding-top:20px}
+.contact{margin-top:-40px}
 .contact .card{box-shadow:0 0 16px 1px fade(#888,70%);color:#292f36;box-sizing:border-box;background-color:#fbfbfc;bottom:-120px;z-index:3;position:relative}
 .contact .card .row{margin:0}
 .contact .card .photo{height:400px;background-position:center;background-repeat:no-repeat;background-size:cover}
