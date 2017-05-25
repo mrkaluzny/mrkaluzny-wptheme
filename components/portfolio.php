@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row title">
             <div class="col-md-12">
-              <h1 class="subtitle">Latest Projects</h1>
+              <h1 class="subtitle"><?php the_field('portfolio_title'); ?> </h1>
             </div>
           </div>
           <div class="row">

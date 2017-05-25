@@ -1,23 +1,23 @@
 <section class="contact-component">
   <div class="container">
     <div class="row">
-      <h2 class="text-center component-title">Zapraszam do kontaktu</h2>
+      <h1 class="text-center component-title">Let’s <strong>get in touch</strong>, shall we?</h1>
       <div class="col-md-12">
         <form action="/" class="form">
           <div class="form-group">
-            <label>Imię i nazwisko</label>
+            <label>Name and surname</label>
             <input class="input" />
           </div>
           <div class="form-group">
-            <label>Adres email</label>
+            <label>Email</label>
             <input type="email" class="input" />
           </div>
           <div class="form-group">
-            <label>W czym mogę pomóc?</label>
+            <label>How may I help?</label>
             <textarea class="input"></textarea>
           </div>
           <div class="form-group text-center">
-            <input type="submit" class="btn-basic __contact-form" value="Wyślij"/>
+            <input type="submit" class="btn-basic __contact-form" value="Send"/>
           </div>
         </form>
       </div>

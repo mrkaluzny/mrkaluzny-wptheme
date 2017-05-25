@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home page
+ * Template Name: Old Home
  * @package mrkaluzny
  */
 

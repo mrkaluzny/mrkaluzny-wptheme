@@ -10,8 +10,7 @@ get_header(); ?>
   <div class="overlay"></div>
   <div class="container flex">
     <div class="row text-center">
-      <h1>Profesjonalne strony internetowe</h1>
-      <p>Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie. Szybko skutecznie i bajecznie.</p>
+      <?php the_field('hero_text'); ?>
       <i class="icon ion-chevron-down"></i>
     </div>
   </div>
@@ -21,29 +20,22 @@ get_header(); ?>
   <div class="container">
     <div class="row info">
       <div class="col-md-8 col-md-offset-2 col-sm-12">
-        <h1 class="title">Make your <span>startup</span> dream a reality</h1>
-        <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
+        <div class="welcome__content">
+          <?php the_field('services_text'); ?>
+        </div>
       </div>
     </div>
+  </div>
+
+
+  <div class="container">
     <div class="row offer">
       <div class="col-md-6 hidden-xs hidden-sm">
         <img class="mockup" src="<?php echo get_template_directory_uri(); ?>/assets/img/mock.png" alt="">
       </div>
       <div class="col-md-6">
-        <div class="col-md-12">
-          <h2 class="subtitle">Strony internetowe</h2>
-          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
-          <a href="#" class="btn-basic">Więcej</a>
-        </div>
-        <div class="col-md-12">
-          <h2 class="subtitle">Aplikacje webowe</h2>
-          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
-          <a href="#" class="btn-basic">Więcej</a>
-        </div>
-        <div class="col-md-12">
-          <h2 class="subtitle">Design &amp; Marketing</h2>
-          <p class="content">We love to work with startups because they are as passionate as we are about their products. Whether you need a brand new app, a full website redesign or just some sprucing up of current products, we want to help and make your startup dream a reality.</p>
-          <a href="#" class="btn-basic">Więcej</a>
+        <div class="services-list">
+          Services go here
         </div>
       </div>
     </div>
@@ -72,9 +64,8 @@ get_header(); ?>
     <div class="row">
       <div class="col-md-12">
           <div class="promoted-articles-title">
-            <h1>Read our startup tips</h1>
-            <p class="content">Keep up with the latest in app development and design. Follow our blog for expert insights from our team, new technologies and the projects we’re working on.</p>
-            <a class="btn-basic" href="#">Sprawdź bloga</a>
+            <? the_field('blog_text'); ?>
+            <a class="btn-basic" href="<?php the_field('blog_button_link');?>"><?php the_field('blog_button_text');?></a>
           </div>
       </div>
     </div>
