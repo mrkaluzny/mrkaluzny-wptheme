@@ -9,8 +9,7 @@ get_header(); ?>
 <section class="hero __small">
   <div class="container flex">
     <div class="row text-center">
-      <h1 style="text-align:center;">Portfolio</h1>
-      <h2>Moje projekty są super</h2>
+      <?php the_field('hero_text');?>
     </div>
   </div>
 </section>
@@ -19,8 +18,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1 class="subtitle">Przykładowy tekst (w razie jakby coś wymyślono)</h1>
-        <h2 class="content">Przykładowo jakby było więcej</h2>
+        <?php the_content(); ?>
       </div>
     </div>
   </div>
