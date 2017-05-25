@@ -1,45 +1,21 @@
 @import 'partials/vars';
 @import 'partials/general';
 
-body {
-    background-color: white;
-    color: #292F36;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 1.3em;
-}
 
-@import 'partials/__buttons';
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
+@import 'partials/buttons';
 @import 'vendor/owl-carousel';
 @import 'vendor/owl-theme';
 
-@import 'partials/__contact-component';
-/** <NAVBAR> *********************************************************** ************************/
-@import 'partials/__navbar';
+@import 'partials/contact-component';
+@import 'partials/navbar';
+@import 'partials/hero';
+@import 'partials/footer';
 
-/** </NAVBAR> ********************************************************** ************************/
-
-/** <HERO SECTION> ***************************************************** ************************/
-@import 'partials/__hero';
-/** </HERO SECTION> **************************************************** ************************/
-
-/** <FOOTER> **************************************************** ************************/
-@import 'partials/__footer';
-/** <FOOTER> **************************************************** ************************/
-
-@import 'partials/__home-page';
-@import 'partials/__contact-page';
-@import 'partials/__offer';
-@import 'partials/__portfolio';
-@import "partials/__blog";
+@import 'partials/home-page';
+@import 'partials/contact-page';
+@import 'partials/offer';
+@import 'partials/portfolio';
+@import "partials/blog";
 
 
 .white {
