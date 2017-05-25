@@ -35,7 +35,7 @@ get_header(); ?>
       </div>
       <div class="col-md-6">
         <div class="services-list">
-          Services go here
+          <?php get_template_part('components/services'); ?>
         </div>
       </div>
     </div>
