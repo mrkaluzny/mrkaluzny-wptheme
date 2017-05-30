@@ -5,11 +5,21 @@ body, html {
 }
 
 body {
-  background-color: white;
+  background-color: $white;
   color: #292F36;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   font-size: 1.3em;
+}
+
+*::-moz-selection {
+  color: $white;
+  background: $green;
+}
+
+*::selection {
+  color: $white;
+  background: $green;
 }
 
 .subtitle {

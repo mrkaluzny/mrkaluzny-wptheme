@@ -28,6 +28,7 @@ article.post {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
+    color: $green;
     &:hover {
       color: darken($green, 10%);
     }
