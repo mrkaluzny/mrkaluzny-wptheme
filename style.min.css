@@ -203,14 +203,13 @@ article.post .entry-content h6{font-size:1.2em}
 .articles-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .single-article__info{color:#fff !important}
 .article__meta{max-width:700px}
-.meta__categories::before{content:'';display:inline-block;width:45px;height:1px;margin-right:5px;background-color:#fff}
 .category-item{font-size:16px;margin-right:10px}
 .meta__article-title{color:#fff;font-size:50px;line-height:1.2;font-weight:bold;margin-bottom:25px}
 .meta__author{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .category-item,.author__link{color:#fff;font-weight:bold;-webkit-transition:.3s;transition:.3s}
 .category-item:hover,.author__link:hover{color:#14cc60;text-decoration:none}
 .author__info{color:#fff;font-size:14px;margin-left:15px}
-.author__photo{height:50px;width:50px;border-radius:50%;background-size:cover}
+.author__photo{height:50px;width:50px;border-radius:50%;background-size:cover;border:1px solid #fff}
 .white{color:white}
 #hero-wirtualnebiuro{background-image:url(../portfolio/wirtualne_biuro.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}
 #hero-casa{background-image:url(../portfolio/casa-morretti.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}
