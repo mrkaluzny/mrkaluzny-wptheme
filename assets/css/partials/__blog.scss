@@ -233,6 +233,12 @@ article.post {
 .blog-article {
   transition: box-shadow 300ms ease-in-out;
   cursor: pointer;
+  width: calc(33% - 20px);
+  margin: 20px 10px;
+
+  &:first-child {
+    width: 100%;
+  }
 
   .top-image {
     height: 200px;
@@ -300,4 +306,10 @@ article.post {
     background-color: $darkblack;
     color: white;
   }
+}
+
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }

@@ -184,7 +184,8 @@ article.post .entry-content h6{font-size:1.2em}
 .module.__blog .page-title{font-size:3em;line-height:0}
 .module.__blog.__author{padding:120px 0}
 .blog-row{padding:20px 60px}
-.blog-article{-webkit-transition:box-shadow 300ms ease-in-out;transition:box-shadow 300ms ease-in-out;cursor:pointer}
+.blog-article{-webkit-transition:box-shadow 300ms ease-in-out;transition:box-shadow 300ms ease-in-out;cursor:pointer;width:calc(33% - 20px);margin:20px 10px}
+.blog-article:first-child{width:100%}
 .blog-article .top-image{height:200px;width:100%;background-size:cover;background-repeat:no-repeat;border-top-right-radius:5px;border-top-left-radius:5px}
 .blog-article .article-content{padding:30px;border:1px solid #e8e8e8;border-top:0;border-bottom-right-radius:5px;border-bottom-left-radius:5px}
 .blog-article .article-content .entry-meta{font-size:.95em}
@@ -196,6 +197,7 @@ article.post .entry-content h6{font-size:1.2em}
 .tags{margin-left:-5px}
 .tags a{padding:5px 12px;border:2px solid #1e2228;border-radius:4px;color:#1e2228;font-weight:500;display:inline-block;text-decoration:none;margin:5px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .tags a:hover{background-color:#1e2228;color:white}
+.articles-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .white{color:white}
 #hero-wirtualnebiuro{background-image:url(../portfolio/wirtualne_biuro.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}
 #hero-casa{background-image:url(../portfolio/casa-morretti.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;min-height:500px}
