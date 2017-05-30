@@ -1,28 +1,4 @@
 @import "vars";
-
-.module.single-post {
-  padding: 60px 0 40px 0;
-
-  .date {
-    font-size: 0.95em;
-    letter-spacing: 1.1pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: lighten($black, 22%);
-  }
-
-  .title {
-    font-size: 3em;
-    letter-spacing: 1.3pt;
-  }
-
-  .author {
-    font-size: 1.2em;
-    font-style: italic;
-    color: $black;
-  }
-}
-
 .single-post {
   padding: 60px 0;
 }
@@ -33,63 +9,63 @@ article.post {
   @media screen and (max-width: 550px) {
     padding: 0 20px;
   }
+}
 
-  .entry-content {
-    max-width: 900px;
-    margin: 0 auto;
+.entry-content {
+  max-width: 900px;
+  margin: 0 auto;
 
-    .img-responsive, img {
-      width: 100%;
-      height: auto;
+  .img-responsive, img {
+    width: 100%;
+    height: auto;
+  }
+
+  strong, b {
+    font-weight: 600;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover {
+      color: darken($green, 10%);
     }
+  }
 
-    strong, b {
-      font-weight: 600;
-    }
+  p, li {
+    font-size: 1.5em;
+    color:$black;
+  }
 
-    a {
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-      &:hover {
-        color: darken($green, 10%);
-      }
-    }
+  h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    margin: 1.5em 0 0.5em 0;
+    font-weight: bold;
+  }
 
-    p, li {
-      font-size: 1.5em;
-      color:$black;
-    }
+  h1 {
+    font-size: 2.7em;
+  }
 
-    h1,h2,h3,h4,h5,h6 {
-      text-align: center;
-      margin: 1.5em 0 0.5em 0;
-      font-weight: bold;
-    }
+  h2 {
+    font-size: 2.5em;
+  }
 
-    h1 {
-      font-size: 2.7em;
-    }
+  h3 {
+    font-size: 2.3em;
+  }
 
-    h2 {
-      font-size: 2.5em;
-    }
+  h4 {
+    font-size: 2.1em;
+  }
 
-    h3 {
-      font-size: 2.3em;
-    }
+  h5 {
+    font-size: 1.9em;
+  }
 
-    h4 {
-      font-size: 2.1em;
-    }
-
-    h5 {
-      font-size: 1.9em;
-    }
-
-    h6 {
-      font-size: 1.7em;
-    }
+  h6 {
+    font-size: 1.7em;
   }
 }
 
@@ -232,17 +208,6 @@ article.post {
 
 .module.__blog.__author {
   padding: 120px 0;
-}
-
-.blog-row {
-  padding: 20px 60px;
-
-  @media screen and (max-width: $mobileBreak) {
-    padding: 20px;
-    .col-md-4:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
 }
 
 .blog-article {
