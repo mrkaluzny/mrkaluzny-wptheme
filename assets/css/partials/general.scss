@@ -1,4 +1,9 @@
 @import 'vars';
+
+body, html {
+  height: 100%;
+}
+
 .subtitle {
   font-weight: 700;
   letter-spacing: $spacing;

@@ -308,8 +308,71 @@ article.post {
   }
 }
 
+
+// New Classes
+
 .articles-list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+.single-article__info {
+  color: $white !important;
+}
+
+.article__meta {
+  max-width: 700px;
+}
+
+.meta__categories {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    margin-right: 5px;
+    background-color: $white;
+  }
+}
+
+.category-item {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.meta__article-title {
+  color: $white;
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.meta__author {
+  display: flex;
+}
+
+.category-item,
+.author__link {
+  color: $white;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.author__info {
+  color: $white;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.author__photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-size: cover;
 }

@@ -9,33 +9,42 @@
 
 get_header(); ?>
 
-<section class="hero __small" style="background-image: url('<?php the_post_thumbnail_url('cover-img');?>')">
-</section>
-
-<?php
-		while ( have_posts() ) : the_post();?>
-
-		<section class="module single-post info">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<h2 class="date"><?php echo the_time('j F, Y');?></h2>
-						<h1 class="title"><?php the_title();?></h1>
-						<h3 class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author();?></a></h3>
+<section class="hero--single-article" style="background-image: url('<?php the_post_thumbnail_url('cover-img');?>')">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="article__meta">
+					<div class="meta__categories">
 						<?php
 						$categories = get_the_category();
 						$separator = ' ';
 						$output = '';
 						if ( ! empty( $categories ) ) {
 							foreach( $categories as $category ) {
-								$output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+								$output .= '<a class="category-item" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
 							}
 							echo trim( $output, $separator );
 						} ?>
 					</div>
+					<h1 class="meta__article-title"><?php the_title();?></h1>
+					<div class="meta__author">
+						<?php
+							$author_id = get_the_author_meta( 'ID' );
+							$avatar_url = get_avatar_url($author_id);
+						?>
+
+						<div class="author__photo" style="background-image: url('<?php echo $avatar_url; ?>')"></div>
+						<h3 class="author__info"><?php echo the_time('j F, Y');?> - by <a class="author__link" href="<?php echo get_author_posts_url( $author_id ); ?>"><?php the_author();?></a></h3>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
+
+<?php
+		while ( have_posts() ) : the_post();?>
+
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

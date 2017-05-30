@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-<section class="hero __small" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<h1 class="hero-page-title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
+<section class="hero hero--blog" data-background="<?php the_post_thumbnail_url('cover-img');?>">
+	<h1 class="hero__title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
 </section>
 
 <nav class="navbar-blog">
