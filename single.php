@@ -44,47 +44,47 @@ get_header(); ?>
 
 <?php
 		while ( have_posts() ) : the_post();?>
+		<section class="single-post">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+				<div class="entry-content">
+					<?php get_template_part('views/modules/share'); ?>
+					<?php
+						the_content( sprintf(
+							/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'zmienzdanie' ), array( 'span' => array( 'class' => array() ) ) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						) );
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<div class="entry-content">
-				<?php get_template_part('views/modules/share'); ?>
-				<?php
-					the_content( sprintf(
-						/* translators: %s: Name of current post. */
-						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'zmienzdanie' ), array( 'span' => array( 'class' => array() ) ) ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					) );
-
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'zmienzdanie' ),
-						'after'  => '</div>',
-					) );
-				?>
-				<?php get_template_part('views/modules/share'); ?>
-				<hr />
-				<div class="blogpost-info">
-					<p>Learn to code and start your new career as a developer. Explore the Techdegree Program today.</p>
-				</div>
-				<div class="tags">
-					<?php $posttags = get_the_tags();
-								$separator = ' ';
-								$output = '';
-								if ($posttags) {
-									foreach($posttags as $tag) {
-										$output .= '<a href="' . esc_url( get_category_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '">' . esc_html( $tag->name ) . '</a>' . $separator;
-									}
-									echo trim( $output, $separator );
-								}
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'zmienzdanie' ),
+							'after'  => '</div>',
+						) );
 					?>
-				</div>
-			</div><!-- .entry-content -->
+					<?php get_template_part('views/modules/share'); ?>
+					<hr />
+					<div class="blogpost-info">
+						<p>Learn to code and start your new career as a developer. Explore the Techdegree Program today.</p>
+					</div>
+					<div class="tags">
+						<?php $posttags = get_the_tags();
+									$separator = ' ';
+									$output = '';
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											$output .= '<a href="' . esc_url( get_category_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '">' . esc_html( $tag->name ) . '</a>' . $separator;
+										}
+										echo trim( $output, $separator );
+									}
+						?>
+					</div>
+				</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
+				<footer class="entry-footer">
 
-			</footer><!-- .entry-footer -->
-		</article><!-- #post-## -->
+				</footer><!-- .entry-footer -->
+			</article><!-- #post-## -->
+		</section>
 
 		<div class="post-navigation">
 			<?php

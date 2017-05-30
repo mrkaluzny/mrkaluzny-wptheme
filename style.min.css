@@ -151,17 +151,21 @@ body{background-color:white;color:#292f36;font-family:'Source Sans Pro',sans-ser
 .module.single-post .date{font-size:.95em;letter-spacing:1.1pt;font-weight:600;text-transform:uppercase;color:#596776}
 .module.single-post .title{font-size:3em;letter-spacing:1.3pt}
 .module.single-post .author{font-size:1.2em;font-style:italic;color:#292f36}
+.single-post{padding:60px 0}
 article.post{margin:0 0 50px 0;padding:0 80px 0 80px}
-article.post .entry-content{max-width:810px;margin:0 auto}
+article.post .entry-content{max-width:900px;margin:0 auto}
 article.post .entry-content .img-responsive,article.post .entry-content img{width:100%;height:auto}
-article.post .entry-content p,article.post .entry-content li{font-weight:500;font-size:1.3em;color:#3f4853}
-article.post .entry-content h1,article.post .entry-content h2,article.post .entry-content h3,article.post .entry-content h4,article.post .entry-content h5,article.post .entry-content h6{text-align:center;margin:1.5em 0 .5em 0;letter-spacing:1.2pt;font-weight:bold}
-article.post .entry-content h1{font-size:2.2em}
-article.post .entry-content h2{font-size:2em}
-article.post .entry-content h3{font-size:1.8em}
-article.post .entry-content h4{font-size:1.6em}
-article.post .entry-content h5{font-size:1.4em}
-article.post .entry-content h6{font-size:1.2em}
+article.post .entry-content strong,article.post .entry-content b{font-weight:600}
+article.post .entry-content a{font-weight:bold;text-decoration:none;-webkit-transition:.3s;transition:.3s}
+article.post .entry-content a:hover{color:#0f9e4a}
+article.post .entry-content p,article.post .entry-content li{font-size:1.5em;color:#292f36}
+article.post .entry-content h1,article.post .entry-content h2,article.post .entry-content h3,article.post .entry-content h4,article.post .entry-content h5,article.post .entry-content h6{text-align:center;margin:1.5em 0 .5em 0;font-weight:bold}
+article.post .entry-content h1{font-size:2.7em}
+article.post .entry-content h2{font-size:2.5em}
+article.post .entry-content h3{font-size:2.3em}
+article.post .entry-content h4{font-size:2.1em}
+article.post .entry-content h5{font-size:1.9em}
+article.post .entry-content h6{font-size:1.7em}
 .post-navigation .nav-box{position:relative;height:250px;background-size:cover;background-position:center}
 .post-navigation .nav-box .overlay{display:block;position:absolute;top:0;left:0;background-color:rgba(41,47,54,0.7);width:100%;height:100%;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .post-navigation .nav-box:hover .overlay{background-color:rgba(41,47,54,0.4)}
