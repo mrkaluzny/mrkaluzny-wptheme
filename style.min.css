@@ -1153,8 +1153,9 @@ h1.subtitle{font-size:2em}
 .oferta ul:not(.technology-used) li{padding-left:20px}
 .oferta ul:not(.technology-used) li::before{content:'\25ce ';font-size:.8em;color:#14cc60;padding-top:3px;padding-right:15px;display:block;position:absolute;left:14px}
 .__gray{background-color:#fbfbfc}
-.btn-basic{font-weight:300;text-transform:uppercase;border:2px solid #14cc60;border-radius:4px;padding:5px 20px;font-size:.9em;letter-spacing:1.6pt;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
+.btn-basic{color:#14cc60;font-size:1.1em;font-weight:bold;text-transform:uppercase;border:2px solid #14cc60;border-radius:4px;padding:5px 20px;letter-spacing:1.6pt;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .btn-basic:hover{text-decoration:none;background:#14cc60;color:white}
+.btn-basic--white{color:#fff}
 .__block{display:inline-block}
 .__white{background:fade(#292f36,60%)}
 .__contact-form{margin:0 auto;border:0;width:60%;padding:20px;background-color:white;color:#14cc60;border-radius:50px;font-weight:bold;box-shadow:0 11px 16px 1px fade(#888,50%)}

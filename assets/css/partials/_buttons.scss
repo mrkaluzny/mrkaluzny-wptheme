@@ -1,12 +1,13 @@
 @import 'vars';
 
 .btn-basic {
-  font-weight: 300;
+  color: $green;
+  font-size: 1.1em;
+  font-weight: bold;
   text-transform: uppercase;
   border: 2px solid $green;
   border-radius: 4px;
   padding: 5px 20px;
-  font-size: 0.9em;
   letter-spacing: $spacing;
   transition: all 400ms ease-in-out;
 
@@ -15,6 +16,10 @@
     background: $green;
     color: white;
   }
+}
+
+.btn-basic--white {
+  color: $white;
 }
 
 .__block {
