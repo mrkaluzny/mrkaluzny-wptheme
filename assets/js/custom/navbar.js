@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   $("#testimonialSlider").owlCarousel({
     autoPlay: 3000,
@@ -17,4 +15,11 @@ $(document).ready(function() {
       $('.navbar').removeClass('scrolling');
     }
   });
+});
+
+
+$(document).on('click', '.animate-link', function(e){
+  e.preventDefault();
+  var animateTo = $(this).attr('href');
+  $("html, body").animate({ scrollTop: $(animateTo).offset().top }, 1000);
 });

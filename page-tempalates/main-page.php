@@ -11,13 +11,14 @@ get_header(); ?>
     <div class="row">
       <div class="hero__content hero__content--home">
         <?php the_field('hero_text'); ?>
-        <i class="icon ion-chevron-down"></i>
+        <a href="#services" class="btn-basic animate-link">Learn More</a>
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
       </div>
     </div>
   </div>
 </section>
 
-<section class="services">
+<section class="services" id="services">
 
   <div class="container">
     <div class="row">
