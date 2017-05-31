@@ -13,33 +13,47 @@
  */
 
 get_header(); ?>
+<?php
+	$stickies = get_option( 'sticky_posts' );
+	$args = [
+			'post_type'           => 'post',
+			'post__in'            => $stickies,
+			'posts_per_page'      => 3,
+			'ignore_sticky_posts' => 1
+	];
 
-<section class="hero hero--blog hero--overlay" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<h1 class="hero__title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
-</section>
+ if ( $stickies ) : ?>
+ <section class="hero hero--blog">
+	 <div class="owl-carousel owl-theme blog-slider" id="blogSlider">
+		<?php
+ 	 	$sticky_posts = new WP_Query($args);
+ 	 	if ( $sticky_posts->have_posts() ) :
+ 		 	while ( $sticky_posts->have_posts() ) :
+ 							 $sticky_posts->the_post(); ?>
 
-<nav class="navbar-blog">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-
-				<!-- TODO: Add Search form -->
-				<ul class="categories-menu">
-				<?php
-				$categories = get_categories();
-				$separator = ' ';
-				$output = '';
-				if ( ! empty( $categories ) ) {
-					foreach( $categories as $category ) {
-						$output .= '<li><a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a> </li>' . $separator;
-					}
-					echo trim( $output, $separator );
-				} ?>
-				</ul>
+ 		<div class="item">
+			<div class="promoted-article">
+				<div class="promoted-article__image hero--overlay" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')"></div>
+				<div class="promoted-article__title">
+					<?php the_title(); ?>
+				</div>
+				<div class="promoted-article__description">
+					<?php the_excerpt(); ?>
+				</div>
+				<div class="promoted-article__button">
+					<a href="<?php the_permalink(); ?>" class="btn-basic">Read More</a>
+				</div>
 			</div>
 		</div>
+
+ 		<?php endwhile; endif; else : ?>
 	</div>
-</nav>
+<section class="hero hero--blog hero--overlay" data-background="<?php the_post_thumbnail_url('cover-img');?>">
+		<h1 class="hero__title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
+	<?php endif; ?>
+</section>
+
+
 
 <section class="module blog-main-module">
 	<div class="container">

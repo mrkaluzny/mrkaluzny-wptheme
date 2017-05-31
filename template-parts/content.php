@@ -10,7 +10,7 @@
 ?>
 
 <div class="blog-article">
-	<div class="top-image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)">
+	<div class="blog-aritcle__image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)">
 	</div>
 	<article class="article-content">
 		<div class="entry-meta">
