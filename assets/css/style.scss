@@ -1,8 +1,16 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
 @import 'partials/vars';
 @import 'partials/general';
-
-
 @import 'partials/buttons';
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 @import 'vendor/owl-carousel';
 @import 'vendor/owl-theme';
 
@@ -16,119 +24,3 @@
 @import 'partials/offer';
 @import 'partials/portfolio';
 @import "partials/blog";
-
-
-.white {
-    color: white;
-}
-
-
-#hero-wirtualnebiuro {
-    background-image: url(../portfolio/wirtualne_biuro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-#hero-casa {
-    background-image: url(../portfolio/casa-morretti.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-#hero-zk {
-    background-image: url(../portfolio/zk.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
-}
-
-.mar-side-50 {
-    margin: 0px 50px 0px 50px
-}
-
-.pad-side-50 {
-    padding: 0px 50px 0px 50px
-}
-.justify {
-    text-align: justify;
-}
-
-
-
-
-a {
-    color: #14CC60;
-}
-
-a:hover {
-    color: #14CC60;
-}
-
-.items {
-    max-width: 600px;
-}
-
-
-figure {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-
-figcaption {
-    display: none;
-    position: absolute;
-    text-align: center;
-    top: 40px;
-    left: 20px;
-    right: 20px;
-    bottom: 50px;
-}
-
-figure:hover img {
-    opacity: .14;
-}
-
-figure:hover figcaption {
-    display: block;
-    transition: ease;
-}
-
-.caption {
-    font-size: 0.7em;
-}
-
-#hero a:hover {
-    text-decoration: none;
-}
-
-#hero-wirtualnebiuro a:hover {
-    text-decoration: none;
-}
-
-#hero-casa a:hover {
-    text-decoration: none;
-}
-
-#hero-zk a:hover {
-    text-decoration: none;
-}
-
-.picture {
-    height: 60px;
-    width: auto;
-    border-radius: 200px;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: #14CC60;
-}
-
-#subtitle {
-    margin-top: 100px;
-}

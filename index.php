@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-<section class="hero __small" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<h1 class="hero-page-title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
+<section class="hero hero--blog" data-background="<?php the_post_thumbnail_url('cover-img');?>">
+	<h1 class="hero__title">POZNAJ NOWĄ STRONĘ TEKSTU</h1>
 </section>
 
 <nav class="navbar-blog">
@@ -43,39 +43,28 @@ get_header(); ?>
 
 <section class="module blog-main-module">
 	<div class="container">
-			<div class="col-md-12">
-				<?php
-				if ( have_posts() ) :
+			<div class="row">
+				<div class="col-md-12">
+					<div class="articles-list">
+						<?php
+						if ( have_posts() ) :
 
-					$count = 0;
+							/* Start the Loop */
+							while ( have_posts() ) : the_post();
 
-					/* Start the Loop */
-					while ( have_posts() ) : the_post();
+								/*
+								 * Include the Post-Format-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								 */
+								get_template_part( 'template-parts/content', get_post_format() );
+							endwhile;
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						if ($count == 0) {
-							echo "<div class='row blog-row'>";
-						}
-						get_template_part( 'template-parts/content', get_post_format() );
-
-						if ($count == 2) {
-							echo "</div>";
-							$count = 0;
-						} else {
-							$count++;
-						}
-
-					endwhile;
-
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif; ?>
+						else :
+							get_template_part( 'template-parts/content', 'none' );
+						endif; ?>
+					</div>
+				</div>
 			</div>
 		</div>
 

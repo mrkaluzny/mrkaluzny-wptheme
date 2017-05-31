@@ -1,26 +1,6 @@
 @import "vars";
-
-.module.single-post {
-  padding: 60px 0 40px 0;
-
-  .date {
-    font-size: 0.95em;
-    letter-spacing: 1.1pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: lighten($black, 22%);
-  }
-
-  .title {
-    font-size: 3em;
-    letter-spacing: 1.3pt;
-  }
-
-  .author {
-    font-size: 1.2em;
-    font-style: italic;
-    color: $black;
-  }
+.single-post {
+  padding: 60px 0;
 }
 
 article.post {
@@ -29,52 +9,64 @@ article.post {
   @media screen and (max-width: 550px) {
     padding: 0 20px;
   }
+}
 
-  .entry-content {
-    max-width: 810px;
-    margin: 0 auto;
+.entry-content {
+  max-width: 900px;
+  margin: 0 auto;
 
-    .img-responsive, img {
-      width: 100%;
-      height: auto;
+  .img-responsive, img {
+    width: 100%;
+    height: auto;
+  }
+
+  strong, b {
+    font-weight: 600;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    color: $green;
+    &:hover {
+      color: darken($green, 10%);
     }
+  }
 
-    p, li {
-      font-weight: 500;
-      font-size: 1.3em;
-      color: lighten($black, 10%);
-    }
+  p, li {
+    font-size: 1.5em;
+    color:$black;
+  }
 
-    h1,h2,h3,h4,h5,h6 {
-      text-align: center;
-      margin: 1.5em 0 0.5em 0;
-      letter-spacing: 1.2pt;
-      font-weight: bold;
-    }
+  h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    margin: 1.5em 0 0.5em 0;
+    font-weight: bold;
+  }
 
-    h1 {
-      font-size: 2.2em;
-    }
+  h1 {
+    font-size: 2.7em;
+  }
 
-    h2 {
-      font-size: 2em;
-    }
+  h2 {
+    font-size: 2.5em;
+  }
 
-    h3 {
-      font-size: 1.8em;
-    }
+  h3 {
+    font-size: 2.3em;
+  }
 
-    h4 {
-      font-size: 1.6em;
-    }
+  h4 {
+    font-size: 2.1em;
+  }
 
-    h5 {
-      font-size: 1.4em;
-    }
+  h5 {
+    font-size: 1.9em;
+  }
 
-    h6 {
-      font-size: 1.2em;
-    }
+  h6 {
+    font-size: 1.7em;
   }
 }
 
@@ -219,20 +211,15 @@ article.post {
   padding: 120px 0;
 }
 
-.blog-row {
-  padding: 20px 60px;
-
-  @media screen and (max-width: $mobileBreak) {
-    padding: 20px;
-    .col-md-4:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
-}
-
 .blog-article {
   transition: box-shadow 300ms ease-in-out;
   cursor: pointer;
+  width: calc(33% - 20px);
+  margin: 20px 10px;
+
+  &:first-child {
+    width: 100%;
+  }
 
   .top-image {
     height: 200px;
@@ -300,4 +287,65 @@ article.post {
     background-color: $darkblack;
     color: white;
   }
+}
+
+
+// New Classes
+
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.single-article__info {
+  color: $white !important;
+}
+
+.article__meta {
+  max-width: 700px;
+}
+
+
+
+.category-item {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.meta__article-title {
+  color: $white;
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.meta__author {
+  display: flex;
+}
+
+.category-item,
+.author__link {
+  color: $white;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.author__info {
+  color: $white;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.author__photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 1px solid $white;
 }

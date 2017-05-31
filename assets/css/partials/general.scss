@@ -1,18 +1,25 @@
 @import 'vars';
 
-body {
-    background-color: white;
-    color: #292F36;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 1.3em;
+body, html {
+  height: 100%;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+body {
+  background-color: $white;
+  color: #292F36;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+*::-moz-selection {
+  color: $white;
+  background: $green;
+}
+
+*::selection {
+  color: $white;
+  background: $green;
 }
 
 .subtitle {
