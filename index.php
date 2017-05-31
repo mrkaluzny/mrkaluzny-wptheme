@@ -60,6 +60,14 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="articles-list">
+
+						<div class="cta cta--signup">
+							<div class="cta__content cta__content--signup">
+								<h1>Sign Up Today!</h1>
+								<p>Sign up for latest news.</p>
+							</div>
+						</div>
+
 						<?php
 						if ( have_posts() ) :
 

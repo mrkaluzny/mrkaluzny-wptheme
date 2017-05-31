@@ -8,7 +8,7 @@
 }
 
 .hero--home {
-  min-height: 80%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .hero--blog {
-  height: calc(80% - 53px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
