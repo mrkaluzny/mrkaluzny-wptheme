@@ -1,45 +1,50 @@
 @import 'vars';
-/** <WELCOME SECTION> **************************************************** ************************/
-.welcome {
-  padding: 90px 0;
 
-  .info {
-    padding-bottom: 60px;
+.services {
+  padding: 120px 0 150px 0;
+}
+
+.services__content {
+  padding-bottom: 40px;
+  text-align: center;
+  h1 {
+    font-size: 50px;
   }
 
-  .title {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: $spacing;
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 2.6em;
-    span {
-      color:$green;
-    }
-  }
-
-  .content {
+  p {
+    font-size: 1.5em;
+    font-family: $serif;
     color: $grey;
-    padding-bottom: 10px;
-  }
-
-  .offer {
-    padding: 15px 0;
-  }
-
-  .mockup {
-    width: 900px;
-    position: absolute;
-    bottom: -610px;
-    left: -400px;
-  }
-
-  .col-md-6 > .col-md-12 {
-    padding: 0;
   }
 }
-/** </WELCOME SECTION> **************************************************** ************************/
+
+.services-list {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item {
+  border: 2px solid $black;
+  width: calc(33% - 40px);
+  margin: 10px 20px 60px 20px;
+  padding: 25px;
+}
+
+.service-item__name {
+  font-size: 35px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.service-item__description {
+  font-size: 1.5em;
+  font-family: $serif;
+  color: $grey;
+}
 
 /** <OPINIE> **************************************************** ************************/
 .testimonials{

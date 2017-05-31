@@ -6,40 +6,35 @@
 
 get_header(); ?>
 
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="container flex">
-    <div class="row text-center">
-      <?php the_field('hero_text'); ?>
-      <i class="icon ion-chevron-down"></i>
+<section class="hero hero--home hero--overlay" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
+  <div class="container">
+    <div class="row">
+      <div class="hero__content hero__content--home">
+        <?php the_field('hero_text'); ?>
+        <i class="icon ion-chevron-down"></i>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="welcome">
+<section class="services">
+
   <div class="container">
-    <div class="row info">
+    <div class="row">
       <div class="col-md-8 col-md-offset-2 col-sm-12">
-        <div class="welcome__content">
+        <div class="services__content">
           <?php the_field('services_text'); ?>
         </div>
       </div>
     </div>
   </div>
 
-
   <div class="container">
-    <div class="row offer">
-      <div class="col-md-6 hidden-xs hidden-sm">
-        <img class="mockup" src="<?php echo get_template_directory_uri(); ?>/assets/img/mock.png" alt="">
-      </div>
-      <div class="col-md-6">
-        <div class="services-list">
-          <?php get_template_part('components/services'); ?>
-        </div>
-      </div>
+    <div class="services-list">
+      <?php get_template_part('components/services'); ?>
     </div>
   </div>
+
 </section>
 
 <?php get_template_part('components/testimonials'); ?>
