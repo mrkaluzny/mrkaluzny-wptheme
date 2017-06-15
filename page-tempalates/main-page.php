@@ -40,7 +40,17 @@ get_header(); ?>
 
 <?php get_template_part('components/testimonials'); ?>
 
-<?php get_template_part('components/portfolio'); ?>
+<section class="portfolio-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="portfolio-list">
+          <?php get_template_part('components/portfolio'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
   <div class="container">

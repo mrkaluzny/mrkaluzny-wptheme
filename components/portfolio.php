@@ -7,16 +7,20 @@ $opinie = new WP_Query( $args );
 if( $opinie ):
   while( $opinie->have_posts() ):
     $opinie->the_post();
+    $image = get_the_post_thumbnail($post, 'large', array(
+      'class' => 'portfolio-item__image'
+    ));
 ?>
 
-<a href="<?php the_permalink(); ?>">
-  <div class="portfolio-item">
-    <img src="<?php echo the_post_thumbnail_url('large'); ?>" alt="">
+<div class="portfolio-item">
+  <a href="<?php the_permalink(); ?>">
+    <?php echo $image; ?>
     <div class="portfolio-item__description">
-      <h2><?php the_title();?></h2>
+      <h2 class="portfolio-item__description__name"><?php the_title();?></h2>
+      <p class="portfolio-item__description__short"><?php the_title();?></p>
     </div>
-  </div>
-</a>
+  </a>
+</div>
 
 <?php endwhile; endif;?>
 <?php wp_reset_query(); ?>
