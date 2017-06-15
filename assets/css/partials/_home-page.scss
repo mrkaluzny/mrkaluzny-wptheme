@@ -7,16 +7,6 @@
 .services__content {
   padding-bottom: 40px;
   text-align: center;
-  h1 {
-    font-size: 50px;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 1.5em;
-    font-family: $serif;
-    color: $grey;
-  }
 }
 
 .services-list {
@@ -48,7 +38,7 @@
 }
 
 .portfolio-section {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .portfolio-list {
@@ -115,8 +105,7 @@
   }
 }
 
-/** <OPINIE> **************************************************** ************************/
-.testimonials{
+.testimonials {
   padding: 90px 0;
   background: lighten($lightGrey, 7%);
 
@@ -170,76 +159,30 @@
   background: $green;
   opacity: 1;
 }
-/** </OPINIE> **************************************************** ************************/
 
-/** <PORTFOLIO> **************************************************** ************************/
-
-/** </PORTFOLIO> **************************************************** ************************/
-
-/** <INFORMATION> **************************************************** ************************/
 .information-section {
-  padding: 110px 0;
+  padding: 150px 0;
   background-position: center;
   background-size: cover;
-
-    .col-sm-12 {
-      h1, p, a {
-        margin: 20px 0;
-      }
-      h1 {
-        color: white;
-      }
-      p {
-        color: $grey;
-      }
+  .col-sm-12 {
+    h1, p, a {
+      margin: 20px 0;
     }
+  }
 }
 
-/** </INFORMATION> **************************************************** ************************/
 
-/** <BLOG ARTICLES> **************************************************** ************************/
 .promoted-articles {
-  padding: 0 0 30px 0;
-
-  .half-container {
-    width: 585px;
-    float: right;
-
-    @media screen and (max-width: 968px) {
-      width: 100%;
-      float: none;
-      text-align: center;
-    }
-  }
-
-  @media screen and (max-width: 992px) {
-    div#articlesTitle.col-md-6 {
-      height: auto !important;
-      padding-top: 0 !important;
-    }
-  }
+  padding: 100px 0;
 
   .articles{
     padding: 0;
     border-left: 1px solid lighten($black,78%);
     border-right: 1px solid lighten($black,78%);
   }
-}
 
-.promoted-articles-title {
-  width: 60%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 30px;
-  margin-bottom: 50px;
-
-  p {
-    padding-bottom: 10px;
-  }
-
-  @media screen and (max-width: 992px) {
-    padding: 30px 0;
+  &__title {
     text-align: center;
-    width: 100%;
+    margin-bottom: 50px;
   }
 }

@@ -10,7 +10,7 @@
 ?>
 
 <div class="blog-article">
-	<div class="blog-aritcle__image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)"></div>
+	<div class="blog-article__image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)"></div>
 	<div class="blog-article__content">
 		<div class="meta__categories meta__categories--all">
 			<?php get_template_part('components/categories'); ?>

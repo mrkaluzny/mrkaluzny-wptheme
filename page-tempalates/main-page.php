@@ -23,7 +23,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 col-sm-12">
-        <div class="services__content">
+        <div class="services__content content">
           <?php the_field('services_text'); ?>
         </div>
       </div>
@@ -55,9 +55,9 @@ get_header(); ?>
 <section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+      <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
         <h1><?php the_field('cta-heading'); ?></h1>
-        <p class="content">With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
+        <p>With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
         <a class="btn-basic" href="#">Learn more</a>
       </div>
 
@@ -69,7 +69,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <div class="promoted-articles-title">
+          <div class="promoted-articles__title content">
             <? the_field('blog_text'); ?>
             <a class="btn-basic" href="<?php the_field('blog_button_link');?>"><?php the_field('blog_button_text');?></a>
           </div>
@@ -83,15 +83,13 @@ get_header(); ?>
       if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
 
       <div class="col-md-4">
-      		<div class="blog-article">
-      			<div class="top-image" style="background-image: url(<?php the_post_thumbnail_url('large');?>)">
-      			</div>
-      			<article class="article-content">
-      				<div class="entry-meta">
-      					<?php the_time('F jS, Y'); ?>
-      				</div><!-- .entry-meta -->
-      				<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );?>
-      				<div class="entry-excerpt">
+      		<div class="blog-article blog-article--home">
+      			<?php echo get_the_post_thumbnail($post, 'large', array(
+              'class' => 'blog-article__image blog-article__image--home'
+            )); ?>
+      			<article class="article-content article-content--home">
+      				<?php the_title( '<h1 class="blog-article__title blog-article__title--home"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );?>
+      				<div class="blog-article__content blog-article__content--home">
       					<?php the_excerpt();?>
       				</div>
       			</article>
