@@ -1,89 +1,73 @@
 @import 'vars';
 
-.portfolio {
-
-  .row.title {
-    color: white;
-    padding-bottom: 50px;
+.portfolio-section {
+  padding: 100px 0;
+  &--dark {
+    background-color: $darkblack;
   }
 }
 
-.portfolio {
-  background: $darkblack;
-  padding: 90px 0;
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: $spacing;
-    font-size: 2.6em;
+.portfolio-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 50%;
+  background-size: cover;
+  overflow: hidden;
+  &__image {
+    width: 100% !important;
+    height: auto;
+    transition: 0.3s ease-out;
   }
 
-  .portfolio-grid {
+  &__description {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
+    background-color: rgba($green, 0.8);
+    color: $white;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.3s ease-out;
+
+    &__name {
+      margin: 0 0 5px 0;
+      font-weight: bold;
+      font-size: 1.8em;
+      width: 100%;
+    }
+
+    &__short {
+      font-family: $serif;
+      font-size: 1.3em;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+    }
   }
 
-  .portfolio-item {
-    overflow: hidden;
-    background: $darkblack;
-    width: 33.33%;
-    height: 300px;
-    float: left;
-    position: relative;
-
-    img {
-      height: 100%;
-      min-width: 100%;
-      position: relative;
-      z-index: 1;
-      transition: 300ms all ease-in-out;
+  &:hover {
+    .portfolio-item__description {
+      opacity: 1;
     }
 
-    &:hover {
-      .description {
-        opacity: 1 !important;
-      }
-
-      img {
-        transform: scale(1.2);
-      }
+    .portfolio-item__image {
+      filter: blur(5px);
     }
+  }
 
-    .description {
-      opacity: 0 !important;
-      background-color: rgba($black, 0.8);
-      z-index: 2;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: 300ms all ease-in-out;
-
-      .content {
-        width: 90%;
-        color: white;
-        margin: 0;
-        position: absolute;
-        font-weight: 300;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-
-      img {
-        min-width: 100%;
-        height: 100%;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -91,9 +75,10 @@
     margin-bottom: 10px;
 }
 
-#portfolio{
+#portfolio {
     background-color: antiquewhite;
 }
+
 .portfolio-items {
     margin: 0px;
     padding: 0px;
@@ -171,13 +156,4 @@
       text-align: center;
     }
   }
-}
-
-
-.img-portfolio {
-  padding: 195px 0;
-  background-image: url(http://mrkaluzny.com/wp-content/uploads/2016/09/mkmserwis-cover.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
