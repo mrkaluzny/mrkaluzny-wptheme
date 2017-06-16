@@ -1192,15 +1192,16 @@ h1.subtitle{font-size:2em}
 .__underlay{padding-top:150px}
 .navbar-mr{background-color:transparent;border-radius:0;margin:0;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .navbar-mr.scrolling{background:#1e2228;box-shadow:0 0 15px 0 rgba(30,34,40,0.5)}
-.navbar-mr.scrolling .container{padding:10px 0;border-bottom:.1em solid transparent}
+.navbar-mr.scrolling .container{padding:10px 0;border-bottom:0}
+.navbar-mr.scrolling ul li a::after{top:24px}
 .navbar-mr .container{padding:20px 0;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
-.navbar-mr .navbar-brand{font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.4em;color:white}
+.navbar-mr .navbar-brand{font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.5em;color:white}
 .navbar-mr ul{float:right}
-.navbar-mr ul li{position:relative;top:4px}
-.navbar-mr ul li a{letter-spacing:1.6pt;color:white;font-weight:600;text-transform:uppercase;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;margin-left:5px;font-size:13px}
-.navbar-mr ul li a:hover{color:white;background-color:transparent}
+.navbar-mr ul li{position:relative;top:2px}
+.navbar-mr ul li a{letter-spacing:1.6pt;color:white;font-weight:600;text-transform:uppercase;-webkit-transition:all 150ms ease-in-out;transition:all 150ms ease-in-out;margin-left:5px;font-size:1.04em;letter-spacing:.3em}
+.navbar-mr ul li a:hover{color:#14cc60;background-color:transparent}
 .navbar-mr ul li a:hover::after{width:100%}
-.navbar-mr ul li a::after{content:" ";display:block;height:2px;width:0;background-color:#14cc60;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out}
+.navbar-mr ul li a::after{content:" ";display:block;margin:0 auto;position:relative;height:3px;top:3px;width:0;background-color:#14cc60;-webkit-transition:all 150ms ease-in-out;transition:all 150ms ease-in-out}
 .navbar-mr ul li a.btn-wycena{background-color:#14cc60;color:white;border-radius:4px}
 .navbar-mr ul li a.btn-wycena:hover{background:white}
 .hero{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}

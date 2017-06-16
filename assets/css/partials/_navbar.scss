@@ -11,7 +11,13 @@
 
     .container {
       padding: 10px 0;
-      border-bottom: 0.1em solid transparent;
+      border-bottom: none;
+    }
+
+    ul li a {
+      &::after {
+        top: 24px;
+      }
     }
 
   }
@@ -35,7 +41,7 @@
   .navbar-brand {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: white;
     @media only screen and (max-width: 768px) {
       margin-left:35px;
@@ -55,17 +61,18 @@
     }
     li {
       position: relative;
-      top: 4px;
+      top: 2px;
       a {
         letter-spacing: $spacing;
         color: white;
         font-weight: 600;
         text-transform: uppercase;
-        transition: all 300ms ease-in-out;
+        transition: all 150ms ease-in-out;
         margin-left: 5px;
-        font-size: 13px;
+        font-size: 1.04em;
+        letter-spacing: 0.3em;
         &:hover {
-          color: white;
+          color: $green;
           background-color: transparent;
 
           &::after {
@@ -76,10 +83,13 @@
         &::after {
           content: " ";
           display: block;
-          height: 2px;
+          margin: 0 auto;
+          position: relative;
+          height: 3px;
+          top: 3px;
           width: 0;
           background-color: $green;
-          transition: all 300ms ease-in-out;
+          transition: all 150ms ease-in-out;
         }
       }
 
