@@ -1,6 +1,9 @@
 @import 'vars';
 
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,10 +12,11 @@
 
 .hero--home {
   min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 120px 0;
+}
+
+.hero--small {
+  min-height: 60%;
 }
 
 .hero--overlay::before {
@@ -29,9 +33,6 @@
 
 .hero--blog {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero--single-article {

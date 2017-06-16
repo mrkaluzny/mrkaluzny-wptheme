@@ -6,9 +6,9 @@
 
 get_header(); ?>
 
-<section class="hero __small">
+<section class="hero hero--small hero--overlay" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
   <div class="container flex">
-    <div class="row text-center">
+    <div class="row text-center hero__content hero__content--home">
       <?php the_field('hero_text');?>
     </div>
   </div>

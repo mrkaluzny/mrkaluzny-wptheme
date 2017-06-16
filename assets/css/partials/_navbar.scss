@@ -1,9 +1,34 @@
 @import 'vars';
+.navbar-toggle {
+  margin-right: 25px;
+  .icon-bar {
+    background-color: $white;
+    transition: 0.1s ease-in-out;
+  }
+  &:hover .icon-bar {
+    background-color: $green;
+  }
+}
 .navbar-mr {
   background-color: transparent;
   border-radius: 0;
   margin: 0;
   transition: all 400ms ease-in-out;
+  @media screen and (max-width: 768px) {
+    background: rgba($darkblack, 90%);
+    box-shadow: 0 0 15px 0 rgba($darkblack, 0.5);
+
+    .container {
+      padding: 10px 0;
+      border-bottom: none;
+    }
+
+    ul li a {
+      &::after {
+        top: 24px;
+      }
+    }
+  }
 
   &.scrolling {
     background: rgba($darkblack, 90%);
