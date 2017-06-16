@@ -42,6 +42,7 @@ function mrkaluzny_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'cover-img', 1920, 1080);
+	add_image_size( 'full', 2500, 2500);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

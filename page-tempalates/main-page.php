@@ -6,10 +6,10 @@
 
 get_header(); ?>
 
-<section class="hero hero--home hero--overlay" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
+<section class="hero hero--home hero--overlay-home" style="background-image: url('<?php echo the_post_thumbnail_url('full'); ?>')">
   <div class="container">
     <div class="row">
-      <div class="hero__content hero__content--home">
+      <div class="hero__content">
         <?php the_field('hero_text'); ?>
         <a href="#services" class="btn-basic animate-link">Learn More</a>
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
