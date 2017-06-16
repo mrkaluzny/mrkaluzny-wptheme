@@ -1154,8 +1154,9 @@ h1.subtitle{font-size:2em}
 .oferta ul:not(.technology-used) li::before{content:'\25ce ';font-size:.8em;color:#14cc60;padding-top:3px;padding-right:15px;display:block;position:absolute;left:14px}
 .__gray{background-color:#fbfbfc}
 .content h1{font-size:50px;font-weight:bold;color:#292f36;margin-bottom:20px}
+.content h2{font-size:45px;font-weight:bold;color:#292f36;margin-bottom:20px}
+.content h3{font-size:45px;font-weight:bold;color:#292f36;margin-bottom:20px}
 .content p{font-size:1.2em;font-family:"Source Serif Pro",serif;color:#828282}
-.content .btn-basic{display:inline-block;margin-top:10px}
 .btn-basic{color:#14cc60;font-size:1.5rem;font-weight:bold;text-transform:uppercase;border:2px solid #14cc60;border-radius:4px;padding:5px 20px;letter-spacing:1.6pt;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .btn-basic:hover{text-decoration:none;background:#14cc60;color:white}
 .btn-basic--white{color:#fff}
@@ -1295,13 +1296,13 @@ h1.subtitle{font-size:2em}
 .img-portfolio{padding:195px 0;background-image:url(http://mrkaluzny.com/wp-content/uploads/2016/09/mkmserwis-cover.jpg);background-position:center;background-repeat:no-repeat;background-size:cover}
 .single-post{padding:60px 0}
 article.post{margin:0 0 50px 0;padding:0 80px 0 80px}
-.entry-content{max-width:900px;margin:0 auto}
+.entry-content{max-width:950px;margin:0 auto}
 .entry-content .img-responsive,.entry-content img{width:100%;height:auto}
 .entry-content strong,.entry-content b{font-weight:600}
 .entry-content a{font-weight:bold;text-decoration:none;-webkit-transition:.3s;transition:.3s;color:#14cc60}
 .entry-content a:hover{color:#0f9e4a}
-.entry-content p,.entry-content li{font-size:1.5em;color:#292f36}
-.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6{text-align:center;margin:1.5em 0 .5em 0;font-weight:bold}
+.entry-content p,.entry-content li{font-size:2.15rem;color:#292f36;font-family:"Source Serif Pro",serif;line-height:1.85;margin-bottom:1.1rem}
+.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6{text-align:center;margin:1.5em 0 .5em 0;font-weight:bold;color:#1e2228}
 .entry-content h1{font-size:2.7em}
 .entry-content h2{font-size:2.5em}
 .entry-content h3{font-size:2.3em}
@@ -1371,7 +1372,7 @@ article.post{margin:0 0 50px 0;padding:0 80px 0 80px}
 .blog-slider .owl-wrapper-outer .owl-wrapper .owl-item{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding-top:90px}
 .blog-slider .owl-controls{position:relative;top:-80px}
 .promoted-article{width:100%;height:100%}
-.promoted-article__image{position:absolute;top:0;left:0;width:100%;height:100%}
+.promoted-article__image{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center}
 .promoted-article__title{position:relative;max-width:1100px;margin:0 auto;text-align:center;z-index:3;font-size:75px;line-height:1.1;color:#fff;font-weight:bold;padding:0 20px;margin-bottom:30px}
 .promoted-article__description{position:relative;margin:0 auto;z-index:3;color:#fff;max-width:800px;padding:0 20px;font-size:1.5em;text-align:center;font-family:"Source Serif Pro",serif;margin-bottom:30px}
 .promoted-article__button{position:relative;z-index:3;text-align:center}

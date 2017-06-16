@@ -73,14 +73,23 @@ h1.subtitle {
     margin-bottom: 20px;
   }
 
+  h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 45px;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
   p {
     font-size: 1.2em;
     font-family: $serif;
     color: $grey;
-  }
-
-  .btn-basic {
-    display: inline-block;
-    margin-top: 10px;
   }
 }
