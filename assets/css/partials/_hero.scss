@@ -8,6 +8,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  padding: 120px 0;
+
+  &--home {
+    min-height: 100%;
+  }
+
+  &--small {
+    min-height: 60%;
+  }
+
+  &--medium {
+    min-height: 80%;
+  }
 }
 
 .hero--home {
@@ -17,6 +30,7 @@
 
 .hero--small {
   min-height: 60%;
+  padding: 120px 0;
 }
 
 .hero--overlay::before {
@@ -33,6 +47,7 @@
 
 .hero--blog {
   height: 100%;
+  padding: 0;
 }
 
 .hero--single-article {

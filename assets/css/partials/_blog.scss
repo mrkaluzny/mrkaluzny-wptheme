@@ -14,6 +14,10 @@ article.post {
 .entry-content {
   max-width: 950px;
   margin: 0 auto;
+}
+
+.entry-content,
+.single-page__content {
 
   .img-responsive, img {
     width: 100%;
