@@ -38,7 +38,18 @@ get_header(); ?>
 
 </section>
 
-<?php get_template_part('components/testimonials'); ?>
+<section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
+        <h1><?php the_field('cta-heading'); ?></h1>
+        <p>With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
+        <a class="btn-basic" href="#">Learn more</a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <section class="portfolio-section">
   <div class="container">
@@ -52,18 +63,7 @@ get_header(); ?>
   </div>
 </section>
 
-<section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
-        <h1><?php the_field('cta-heading'); ?></h1>
-        <p>With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
-        <a class="btn-basic" href="#">Learn more</a>
-      </div>
-
-    </div>
-  </div>
-</section>
+<?php get_template_part('components/testimonials'); ?>
 
 <section class="promoted-articles">
   <div class="container">
