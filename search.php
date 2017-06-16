@@ -9,8 +9,10 @@
 
 get_header(); ?>
 
-<section class="hero __small" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<h1 class="hero-page-title"><?php printf( esc_html__( 'Search Results for: %s', 'mrkaluzny' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<section class="hero hero--small hero--overlay"  style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
+	<div class="hero__content hero__content--home">
+		<h1><?php printf( esc_html__( 'Search Results for: %s', 'mrkaluzny' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+	</div>
 </section>
 
 <nav class="navbar-blog">

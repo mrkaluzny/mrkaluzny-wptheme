@@ -9,11 +9,13 @@
 
 get_header(); ?>
 
-<section class="hero __small" data-background="<?php the_post_thumbnail_url('cover-img');?>">
-	<?php
-		the_archive_title( '<h1 class="hero-page-title">', '</h1>' );
-		the_archive_description( '<div class="taxonomy-description">', '</div>' );
-	?>
+<section class="hero hero--small hero--overlay"  style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
+	<div class="hero__content hero__content--home">
+		<?php
+			the_archive_title( '<h1>', '</h1>' );
+			the_archive_description( '<p>', '</p>' );
+		?>
+	</div>
 </section>
 
 <nav class="navbar-blog">
