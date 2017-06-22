@@ -16,8 +16,8 @@ if( $opinie ):
   <a href="<?php the_permalink(); ?>">
     <?php echo $image; ?>
     <div class="portfolio-item__description">
-      <h2 class="portfolio-item__description__name"><?php the_title();?></h2>
-      <p class="portfolio-item__description__short"><?php the_title();?></p>
+      <h2 class="portfolio-item__description__name"><?php the_field('project-name');?></h2>
+      <p class="portfolio-item__description__short"><?php the_field('project-subtitle');?></p>
     </div>
   </a>
 </div>

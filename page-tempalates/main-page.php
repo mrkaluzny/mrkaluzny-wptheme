@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="row">
       <div class="hero__content">
         <?php the_field('hero_text'); ?>
-        <a href="#services" class="btn-basic animate-link">Learn More</a>
+        <a href="#services" class="btn-basic btn-basic--white animate-link">Learn More</a>
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
       </div>
     </div>
