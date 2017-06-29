@@ -12,7 +12,8 @@
 }
 
 .cta--signup {
-  height: 250px;
+  min-height: 250px;
+  padding: 30px 0;
   order: 5;
   border-radius: 5px;
   margin: 20px 0;
@@ -29,4 +30,51 @@
     font-size: 1.5em;
     font-family: $serif;
   }
+
+}
+
+
+.newsletter__input {
+  color: $black;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 15px;
+  border: none;
+  padding: 0 50px 0 15px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.newsletter__submit {
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  border: none;
+  padding: 5px 15px;
+  position: relative;
+  left: -40px;
+  padding: 5px 35px;
+  height: 40px;
+  font-size: 1.5em;
+  background-color: lighten($green, 20%);
+}
+
+.newsletter__message {
+  max-width: 550px;
+  margin: 10px 0;
+  p {
+    font-family: $sans;
+    font-weight: 400;
+    a {
+      display: block;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+}
+
+
+#newsletterForm {
+  margin-top: 25px;
 }
