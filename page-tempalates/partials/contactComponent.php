@@ -4,16 +4,16 @@
       <h1 class="text-center component-title">Let’s <strong>get in touch</strong>, shall we?</h1>
       <div class="col-md-12">
         <form action="/" class="form">
-          <div class="form-group">
-            <label>Name and surname</label>
+          <div class="form-group form-group--underline">
+            <label class="label">Name and surname</label>
             <input class="input" />
           </div>
-          <div class="form-group">
-            <label>Email</label>
+          <div class="form-group form-group--underline">
+            <label class="label">Email</label>
             <input type="email" class="input" />
           </div>
-          <div class="form-group">
-            <label>How may I help?</label>
+          <div class="form-group form-group--underline">
+            <label class="label">How may I help?</label>
             <textarea class="input"></textarea>
           </div>
           <div class="form-group text-center">
