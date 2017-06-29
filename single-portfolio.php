@@ -12,7 +12,7 @@
   </div>
 </section>
 
-      <section class="portfolio-single">
+      <section class="single-portfolio__block">
         <div class="container">
           <div class="row">
             <div class="col-md-12 single-page__content">
@@ -23,10 +23,10 @@
         </div>
       </section>
 
-      <section class="img-portfolio" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
+      <section class="single-portfolio__image" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
       </section>
 
-      <section class="portfolio-single">
+      <section class="single-portfolio__block single-portfolio__block--small">
         <div class="container">
           <div class="row">
             <div class="col-md-12 single-page__content">
@@ -39,17 +39,17 @@
 
       <section class="portfolio-single __gray">
         <div class="container">
-          <div class="row text-center">
-            <h1 class="subtitle">Technologies Used</h1>
-            <ul class="technology-used">
+          <div class="row text-center single-page__content">
+            <h1>Technologies Used</h1>
+            <div class="technology-used">
               <?php
                 $technologies = get_field('technologies-used');
                 for ($i = 0; $i < count($technologies); $i++ ) {
                   $class = $technologies[$i];
-                  echo "<li class=" . $class . "></li>";
+                  echo "<div class='technology__item technology__item--" . $class . "'></div>";
                 }
               ?>
-            </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -57,8 +57,8 @@
       <section class="testimonials __invert">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 text-center">
-              <h1 class="subtitle">What Client says?</h1>
+            <div class="col-md-12 text-center single-page__content">
+              <h1>What Client said?</h1>
             </div>
           </div>
           <div class="row">

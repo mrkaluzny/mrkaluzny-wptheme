@@ -98,6 +98,10 @@
   .container {
     align-self: flex-end;
   }
+
+  @media screen and (max-width: 991px) {
+    min-height: calc(60% - 40px);
+  }
 }
 
 .hero__content {

@@ -92,10 +92,10 @@
 .technology-used {
   list-style: none;
   padding: 20px 0;
-  li {
+  .technology__item {
     display: inline-block;
     text-align: center;
-    padding: 0 30px;
+    padding: 7px 30px;
 
     &::before {
       content: " ";
@@ -105,55 +105,55 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      filter: grayscale(30%);
     }
 
-    &.html::before {
-      background-image: url('https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png');
+    &--html::before {
+      background-image: url('assets/img/html.png');
     }
 
-    &.css::before {
-      background-image: url('https://ohdoylerules.com/content/images/css3.svg');
+    &--css::before {
+      background-image: url('assets/img/css.png');
     }
 
-    &.jquery::before {
-      background-image: url('https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png');
+    &--sass::before {
+      background-image: url('assets/img/sass.png');
     }
 
-    &.wordpress::before {
-      background-image: url('https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png');
+    &--wordpress::before {
+      background-image: url('assets/img/wordpress.png');
     }
 
-    &.bootstrap::before {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png');
+    &--php::before {
+      background-image: url('assets/img/php.png');
     }
 
-    &.php::before {
-      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    &--node::before {
+      background-image: url('assets/img/node.png');
     }
 
-    &.node::before {
-      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    &--mongo::before {
+      background-image: url('assets/img/mongo.png');
     }
 
-    &.mongo::before {
-      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    &--react::before {
+      background-image: url('assets/img/react.png');
     }
 
-    &.react::before {
-      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    &--angular::before {
+      background-image: url('assets/img/angular.png');
     }
 
-    &.angular::before {
-      background-image: url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/04/1459870313PHP-logo.svg.png');
+    &--ror::before {
+      background-image: url('assets/img/rails.png');
     }
 
-    &.ror::before {
-      background-image: url('http://coolspotters.com/files/photos/26546/ruby-on-rails-profile.png');
+    &--vue::before {
+      background-image: url('assets/img/vue.png');
     }
 
-    img {
-      max-height: 120px;
-      text-align: center;
+    &--laravel::before {
+      background-image: url('assets/img/laravel.png');
     }
   }
 }
@@ -179,4 +179,18 @@
     font-family: $serif;
     font-weight: 300;
   }
+}
+
+.single-portfolio__block {
+  padding: 80px 0;
+  &--small {
+    padding: 30px 0 80px 0;
+  }
+}
+
+.single-portfolio__image {
+  min-height: 430px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
