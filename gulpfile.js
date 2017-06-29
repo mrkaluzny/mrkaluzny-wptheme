@@ -59,7 +59,7 @@ var imagesDestination       = './assets/img/'; // Destination folder of optimize
 // Watch files paths.
 var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './assets/js/vendor/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
+var customJSWatchFiles      = './assets/js/custom/**/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
 
