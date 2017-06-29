@@ -63,9 +63,6 @@ get_header(); ?>
 					?>
 					<?php get_template_part('views/modules/share'); ?>
 					<hr />
-					<div class="blogpost-info">
-						<p>Learn to code and start your new career as a developer. Explore the Techdegree Program today.</p>
-					</div>
 					<div class="tags">
 						<?php $posttags = get_the_tags();
 									$separator = ' ';
@@ -115,6 +112,10 @@ get_header(); ?>
 				</a>
 			<?php endif; ?>
 
+		</div>
+
+		<div class="post-signup">
+			<?php get_template_part('page-tempalates/partials/newsletterComponent'); ?>
 		</div>
 
 		<?php	endwhile; // End of the loop.?>

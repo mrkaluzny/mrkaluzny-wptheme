@@ -32,21 +32,20 @@ $(document).on('click', '.animate-link', function(e){
 
 },{}],3:[function(require,module,exports){
 if (jQuery.contains(document, $(".cta--signup")[0])) {
-  console.log('Newsletter signup found!');
+  console.log('Newsletter signup initialized..');
   if (checkSignUpStatus()) {
-    console.log('Signed up!')
+    console.log('User is already signed up.')
     $(".cta--signup").hide();
   } else {
-    console.log('User not signed up!');
+    console.log('User not signed to newsletter..');
     var $message = $('.cta__message--signup');
     var $form = $('#newsletterForm');
     $(document).on('submit', '#newsletterForm', function(e) {
       e.preventDefault();
-      console.log('Submited!');
       var dataForm = $form.serialize();
 
       if (validateEmail($('#newsletterEmailSignup').val())) {
-        console.log('Verified!');
+        console.log('Email verified..');
         $message.fadeOut(120);
 
         $.ajax({
@@ -108,12 +107,12 @@ function setCookie(cname, cvalue, exdays) {
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  console.log('User successfully signed up!');
 }
 
 function getCookie(cname) {
   var name = cname + "=";
     var ca = document.cookie.split(';');
-    console.log('Cookie: ' + ca);
     for(var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') {
