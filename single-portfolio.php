@@ -3,7 +3,7 @@
 <section class="hero hero--single-portfolio" style="background-color: <?php the_field('project-color'); ?>">
   <div class="container">
     <div class="single-portfolio__info">
-      <h1 style="text-align:center;"><?php the_field('project-name'); ?></h1>
+      <h1><?php the_field('project-name'); ?></h1>
       <h2><?php the_field('project-subtitle'); ?></h2>
     </div>
     <div class="single-portfolio__screenshot">
