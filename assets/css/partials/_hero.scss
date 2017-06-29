@@ -80,7 +80,6 @@
     display: block;
     background: #141E30;
     background: linear-gradient(to top, rgba($black, 0.8), rgba(#141E30, 0.5));
-
   }
 
   @media screen and (max-width: 768px) {
@@ -89,6 +88,15 @@
 
   @media screen and (min-height: 920px) {
     min-height: 70%;
+  }
+}
+
+.hero--single-portfolio {
+  flex-wrap: wrap;
+  min-height: calc(100% - 70px);
+  padding: 120px 0 0 0;
+  .container {
+    align-self: flex-end;
   }
 }
 

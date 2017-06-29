@@ -1,25 +1,23 @@
 <?php get_header(); ?>
 
-<section class="hero __portfolio" style="background-color: <?php the_field('project-color'); ?>">
-        <div class="container">
-          <div class="row text-center">
-            <h1 style="text-align:center;"><?php the_field('project-name'); ?></h1>
-            <h2><?php the_field('project-subtitle'); ?></h2>
-          </div>
-        </div>
-        <div class="image-container">
-          <img class="img-responsive image" src="<?php the_field('project-image');?>" alt="<?php the_field('project-name'); ?>"/>
-        </div>
-      </section>
+<section class="hero hero--single-portfolio" style="background-color: <?php the_field('project-color'); ?>">
+  <div class="container">
+    <div class="single-portfolio__info">
+      <h1 style="text-align:center;"><?php the_field('project-name'); ?></h1>
+      <h2><?php the_field('project-subtitle'); ?></h2>
+    </div>
+    <div class="single-portfolio__screenshot">
+      <img class="img-responsive image" src="<?php the_field('project-image');?>" alt="<?php the_field('project-name'); ?>"/>
+    </div>
+  </div>
+</section>
 
       <section class="portfolio-single">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <h1 class="subtitle">Project Info</h1>
-              <div class="content">
-                <?php the_field('project-info'); ?>
-              </div>
+            <div class="col-md-12 single-page__content">
+              <h1>Project Info</h1>
+              <?php the_field('project-info'); ?>
             </div>
           </div>
         </div>
@@ -31,11 +29,9 @@
       <section class="portfolio-single">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <h1 class="subtitle">Results</h1>
-              <div class="content">
-                <?php the_field('project-results'); ?>
-              </div>
+            <div class="col-md-12 single-page__content">
+              <h1>Results</h1>
+              <?php the_field('project-results'); ?>
             </div>
           </div>
         </div>

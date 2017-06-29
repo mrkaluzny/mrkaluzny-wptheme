@@ -157,3 +157,26 @@
     }
   }
 }
+
+
+// Single Portfolio
+.single-portfolio__screenshot {
+  position: relative;
+  top: 50px;
+}
+
+.single-portfolio__info {
+  text-align: center;
+  color: $white;
+  font-family: $sans;
+  h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: $serif;
+    font-weight: 300;
+  }
+}
