@@ -1637,6 +1637,7 @@ th.visible-lg,td.visible-lg{display:table-cell !important}
 .visible-lg-inline{display:inline !important}
 .visible-lg-inline-block{display:inline-block !important}
 .hidden-lg{display:none !important}
+}@media screen and (min-height:920px){.hero--single-article{min-height:70%}
 }@media screen and (max-width:992px){.__contact-form{width:100%}
 .contact-component .form{width:80%}
 }@media screen and (max-width:782px){.contact-component .form{width:100%}

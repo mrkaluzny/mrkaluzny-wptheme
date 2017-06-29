@@ -9,7 +9,7 @@ get_header(); ?>
 <section class="hero hero--medium hero--overlay" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 hero__content hero__content--home">
+      <div class="hero__content hero__content--home">
         <?php the_field('hero_text');?>
       </div>
     </div>

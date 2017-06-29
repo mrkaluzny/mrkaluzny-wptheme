@@ -1,20 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var height = $('#articles').height();
-var paddingTop = height - 568 + "px";
-$('#articlesTitle').height(height);
-$('#articlesTitle').css('padding-top', paddingTop);
-
-window.onresize = function() {
-  if (window.innerWidth <= 992) {
-    $('#articlesTitle').css('padding-top', "");
-    $('#articlesTitle').css('height', "");
-  } else if (window.innerWidth >= 992 ) {
-    var height = $('#articles').height();
-    var paddingTop = height - 568 + "px";
-    $('#articlesTitle').css('padding-top', paddingTop);
-    $('#articlesTitle').height(height);
-  }
-};
+$(document).on('click', '.blog-article', function() {
+  window.open($(this).find('.blog-article__link').attr('href'), '_self');
+})
 
 },{}],2:[function(require,module,exports){
 $(document).ready(function() {
@@ -47,10 +34,11 @@ $(document).on('click', '.animate-link', function(e){
 var jquery = require('jquery');
 window.$ = window.jQuery = jquery;
 require('bootstrap');
+
 require('./vendor/owl.carousel.min.js');
 
 // Components
-require('./components/articles.js'); 
+require('./components/articles.js');
 require('./components/navbar.js');
 
 },{"./components/articles.js":1,"./components/navbar.js":2,"./vendor/owl.carousel.min.js":4,"bootstrap":5,"jquery":18}],4:[function(require,module,exports){
