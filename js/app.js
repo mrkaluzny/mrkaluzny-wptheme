@@ -6,7 +6,7 @@ $(document).on('click', '.blog-article', function() {
 },{}],2:[function(require,module,exports){
 $(document).ready(function() {
   $("#testimonialSlider").owlCarousel({
-    autoPlay: 3000,
+    autoPlay: 6000,
     singleItem: true
   });
 
