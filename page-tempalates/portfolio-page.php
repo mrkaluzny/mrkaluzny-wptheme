@@ -6,25 +6,16 @@
 
 get_header(); ?>
 
-<section class="hero hero--small hero--overlay" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
+<section class="hero hero--medium hero--overlay" style="background-image: url('<?php the_post_thumbnail_url('cover-img'); ?>')">
   <div class="container flex">
     <div class="row text-center hero__content hero__content--home">
       <?php the_field('hero_text');?>
+      <?php the_content(); ?>
     </div>
   </div>
 </section>
 
-<section class="portfolio-single __gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 text-center content">
-        <?php the_content(); ?>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="portfolio-section portfolio-section--dark">
+<section class="portfolio-section ">
   <div class="container">
     <div class="row">
       <div class="col-md-12">

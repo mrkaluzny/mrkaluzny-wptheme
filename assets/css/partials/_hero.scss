@@ -33,6 +33,11 @@
   padding: 120px 0;
 }
 
+.hero--medium {
+  min-height: 80%;
+  padding: 120px 0;
+}
+
 .hero--overlay::before {
   content: ' ';
   top: 0;
