@@ -1241,7 +1241,7 @@ textarea{resize:none}
 .services{padding:120px 0 150px 0}
 .services__content{padding-bottom:40px;text-align:center}
 .services-list{padding:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
-.service-item{border:2px solid #292f36;width:calc(33% - 40px);margin:10px 20px 60px 20px;padding:25px}
+.service-item{border:2px solid #292f36;width:calc(33% - 40px);margin:10px 20px 60px 20px;padding:25px;min-width:300px}
 .service-item__name{font-size:35px;line-height:1.1;margin-bottom:15px;font-weight:bold}
 .service-item__description{font-size:1.5em;font-family:"Source Serif Pro",serif;color:#828282}
 .testimonials{padding:90px 0;background:#fafafa}
@@ -1704,7 +1704,25 @@ th.visible-xs,td.visible-xs{display:table-cell !important}
 .visible-xs-inline{display:inline !important}
 .visible-xs-inline-block{display:inline-block !important}
 .hidden-xs{display:none !important}
+}@media screen and (max-width:600px){.cta--signup{padding:30px 15px}
+.newsletter__input{width:100%;padding:0 5px;border-radius:0}
+.newsletter__submit{width:100%;display:block;left:0;border-radius:0;padding:0 5px}
+}@media screen and (max-width:556px){.hero__content h1{font-size:55px}
+.promoted-article__title{font-size:45px}
 }@media screen and (max-width:550px){article.post{padding:0 20px}
+}@media screen and (max-width:500px){.blog-article{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.blog-article__image{width:100%;height:150px;border-bottom-left-radius:0;border-top-right-radius:5px;border-right:1px solid #e8e8e8;border-bottom:0}
+.blog-article__content{width:100%;border-bottom-left-radius:5px;border-top-right-radius:0;border-top:0;border-left:1px solid #e8e8e8}
+}@media screen and (max-width:400px){.blog-article__title{font-size:26px}
+.cta__content--signup h1{font-size:30px}
+}@media screen and (max-width:375px){.content h1{font-size:37px}
+.content h2{font-size:35px}
+.content h3{font-size:30px}
+.hero__content h1{font-size:37px}
+.service-item__name{font-size:30px}
+.promoted-article__title{font-size:30px}
+.promoted-article__description{font-size:1.2em}
+}@media screen and (max-width:350px){.service-item{width:100%;min-width:100%}
 }@media print{*,*:before,*:after{background:transparent !important;color:#000 !important;-webkit-box-shadow:none !important;box-shadow:none !important;text-shadow:none !important}
 a,a:visited{text-decoration:underline}
 a[href]:after{content:" (" attr(href) ")"}

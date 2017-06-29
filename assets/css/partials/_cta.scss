@@ -17,6 +17,9 @@
   order: 5;
   border-radius: 5px;
   margin: 20px 0;
+  @media screen and (max-width: 600px) {
+    padding: 30px 15px;
+  }
 }
 
 .post-signup .cta--signup {
@@ -28,6 +31,9 @@
   h1 {
     font-size: 50px;
     font-weight: bold;
+    @media screen and (max-width: 400px) {
+      font-size: 30px;
+    }
   }
 
   p {
@@ -47,6 +53,11 @@
   padding: 0 50px 0 15px;
   height: 40px;
   box-sizing: border-box;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0 5px;
+    border-radius: 0;
+  }
 }
 
 .newsletter__submit {
@@ -62,6 +73,13 @@
   height: 40px;
   font-size: 1.5em;
   background-color: lighten($green, 20%);
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    display: block;
+    left: 0;
+    border-radius: 0;
+    padding: 0 5px;
+  }
 }
 
 .newsletter__message {

@@ -128,6 +128,13 @@
     font-weight: bold;
     text-transform: capitalize;
     margin-bottom: 30px;
+    @media screen and (max-width: 556px) {
+      font-size: 55px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 37px;
+    }
   }
 
   p {
