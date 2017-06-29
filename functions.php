@@ -328,15 +328,9 @@ add_action( 'widgets_init', 'mrkaluzny_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mrkaluzny_scripts() {
+	wp_deregister_script('jquery');
 	wp_enqueue_style( 'mrkaluzny-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'mrkaluzny-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.min.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/js/vendors.min.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'mrkaluzny-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
