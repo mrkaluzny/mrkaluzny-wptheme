@@ -7,13 +7,17 @@ use Mailgun\Mailgun;
 # Instantiate the client.
 $mgClient = new Mailgun($api_key);
 $domain = $domain_mg;
-$message = 'Name: ' . $_POST[name] . '\n' . 'Email: ' . $_POST[email] . '\n' . 'Message: ' . $_POST[message] . '\n';
+$name = $_POST[name];
+$email = $_POST[email];
+$message = $_POST[message];
+
+require 'mailer-template.php';
 
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
     'from'    => 'Wojciech Kałużny <hello@mrkalzuny.com>',
     'to'      => 'Wojciech Kałużny <wk@mrkaluzny.com>',
     'subject' => 'New contact from mrklauzny.com!',
-    'text'    => $message
+    'html'    => $html
 ));
 ?>
