@@ -14,21 +14,24 @@ get_header(); ?>
         <section class="contact-component contact-component--transparent">
             <div class="row">
               <div class="col-md-12">
-                <form action="/" class="form">
+                <div class="contact-component__message" id="contactComponentMessage">
+                  <p></p>
+                </div>
+                <form action="<?php echo get_template_directory_uri(); ?>/mailer.php" class="form" method="POST" id="contactComponentForm">
                   <div class="form-group form-group--underline">
-                    <label class="label">Name and surname</label>
-                    <input class="input" />
+                    <label class="label" for="cname">Name and surname *</label>
+                    <input class="input" name="cname" id="cname" required/>
                   </div>
                   <div class="form-group form-group--underline">
-                    <label class="label">Email</label>
-                    <input type="email" class="input" />
+                    <label class="label" for="cemail">Email *</label>
+                    <input type="email" class="input" name="cemail" id="cemail" required />
                   </div>
                   <div class="form-group form-group--underline">
-                    <label class="label">How may I help?</label>
-                    <textarea class="input textarea"></textarea>
+                    <label class="label" for="cmessage">How may I help? *</label>
+                    <textarea class="input textarea" name="cmessage" id="cmessage" required></textarea>
                   </div>
                   <div class="form-group text-center">
-                    <input type="submit" class="btn-basic __contact-form" value="Send"/>
+                    <button role="submit" class="btn-basic __contact-form" id="sendButton">Send</button>
                   </div>
                 </form>
               </div>

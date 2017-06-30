@@ -4,6 +4,59 @@ $(document).on('click', '.blog-article', function() {
 });
 
 },{}],2:[function(require,module,exports){
+$(document).on('submit', '#contactComponentForm', function(e){
+  e.preventDefault();
+  $form = $(this);
+  $button = $(this).find('button');
+  $('#sendButton').attr('disabled', 'disabled');
+
+  var faction = $(this).attr('action');
+  var fmethod = $(this).attr('method');
+  var formData = $(this).serialize();
+
+  var name = $("input#cname").val();
+	var email = $("input#cemail").val();
+	var message = $("textarea#cmessage").val();
+
+  var $message = $('#contactComponentMessage');
+
+  if (validateEmail(email)) {
+    $.ajax({
+      type: fmethod,
+      url: faction,
+      data: {
+        name: name,
+        email: email,
+        message: message
+      },
+      cache: false,
+      dataType: 'json',
+      complete: function(data) {
+        if (data.statusText == "OK") {
+          $form.fadeOut(600);
+          $('#contactComponentMessage p').html('Thank you for contacting me! You\'re message has been send successfully!');
+          $message.fadeIn(700);
+        } else {
+          $('#contactComponentMessage p').html('Something went wrong, please try again later or <a href="mailto:wk@mrkaluzny.com">contact me directly</a>');
+          $message.fadeIn(700);
+          $('#sendButton').attr('disabled');
+        }
+      }
+    });
+  } else {
+    $('#contactComponentMessage p').html('It seems your email address is not correct, try again!');
+    $message.fadeIn(700);
+    $('#sendButton').attr('disabled');
+  }
+
+  function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      console.log("Verifying email...");
+      return re.test(email);
+  }
+});
+
+},{}],3:[function(require,module,exports){
 $(document).ready(function() {
   $("#testimonialSlider").owlCarousel({
     autoPlay: 6000,
@@ -30,7 +83,7 @@ $(document).on('click', '.animate-link', function(e){
   $("html, body").animate({ scrollTop: $(animateTo).offset().top }, 1000);
 });
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 if (jQuery.contains(document, $(".cta--signup")[0])) {
   console.log('Newsletter signup initialized..');
   if (checkSignUpStatus()) {
@@ -134,19 +187,20 @@ function checkSignUpStatus() {
   }
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var jquery = require('jquery');
 window.$ = window.jQuery = jquery;
 require('bootstrap');
 
-require('./vendor/owl.carousel.min.js');
+require('./vendorjs/owl.carousel.min.js');
 
 // Components
 require('./components/articles.js');
 require('./components/navbar.js');
 require('./components/newsletter.js');
+require('./components/contactComponent.js');
 
-},{"./components/articles.js":1,"./components/navbar.js":2,"./components/newsletter.js":3,"./vendor/owl.carousel.min.js":5,"bootstrap":6,"jquery":19}],5:[function(require,module,exports){
+},{"./components/articles.js":1,"./components/contactComponent.js":2,"./components/navbar.js":3,"./components/newsletter.js":4,"./vendorjs/owl.carousel.min.js":6,"bootstrap":7,"jquery":20}],6:[function(require,module,exports){
 "function"!==typeof Object.create&&(Object.create=function(f){function g(){}g.prototype=f;return new g});
 (function(f,g,k){var l={init:function(a,b){this.$elem=f(b);this.options=f.extend({},f.fn.owlCarousel.options,this.$elem.data(),a);this.userOptions=a;this.loadContent()},loadContent:function(){function a(a){var d,e="";if("function"===typeof b.options.jsonSuccess)b.options.jsonSuccess.apply(this,[a]);else{for(d in a.owl)a.owl.hasOwnProperty(d)&&(e+=a.owl[d].item);b.$elem.html(e)}b.logIn()}var b=this,e;"function"===typeof b.options.beforeInit&&b.options.beforeInit.apply(this,[b.$elem]);"string"===typeof b.options.jsonPath?
 (e=b.options.jsonPath,f.getJSON(e,a)):b.logIn()},logIn:function(){this.$elem.data("owl-originalStyles",this.$elem.attr("style"));this.$elem.data("owl-originalClasses",this.$elem.attr("class"));this.$elem.css({opacity:0});this.orignalItems=this.options.items;this.checkBrowser();this.wrapperWidth=0;this.checkVisible=null;this.setVars()},setVars:function(){if(0===this.$elem.children().length)return!1;this.baseClass();this.eventTypes();this.$userItems=this.$elem.children();this.itemsAmount=this.$userItems.length;
@@ -194,7 +248,7 @@ f(k).off(".owl owl");f(g).off("resize",this.resizer)},unWrap:function(){0!==this
 a);this.unWrap();this.init(a,this.$elem)},addItem:function(a,b){var e;if(!a)return!1;if(0===this.$elem.children().length)return this.$elem.append(a),this.setVars(),!1;this.unWrap();e=void 0===b||-1===b?-1:b;e>=this.$userItems.length||-1===e?this.$userItems.eq(-1).after(a):this.$userItems.eq(e).before(a);this.setVars()},removeItem:function(a){if(0===this.$elem.children().length)return!1;a=void 0===a||-1===a?-1:a;this.unWrap();this.$userItems.eq(a).remove();this.setVars()}};f.fn.owlCarousel=function(a){return this.each(function(){if(!0===
 f(this).data("owl-init"))return!1;f(this).data("owl-init",!0);var b=Object.create(l);b.init(a,this);f.data(this,"owlCarousel",b)})};f.fn.owlCarousel.options={items:5,itemsCustom:!1,itemsDesktop:[1199,4],itemsDesktopSmall:[979,3],itemsTablet:[768,2],itemsTabletSmall:!1,itemsMobile:[479,1],singleItem:!1,itemsScaleUp:!1,slideSpeed:200,paginationSpeed:800,rewindSpeed:1E3,autoPlay:!1,stopOnHover:!1,navigation:!1,navigationText:["prev","next"],rewindNav:!0,scrollPerPage:!1,pagination:!0,paginationNumbers:!1,
 responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-carousel",theme:"owl-theme",lazyLoad:!1,lazyFollow:!0,lazyEffect:"fade",autoHeight:!1,jsonPath:!1,jsonSuccess:!1,dragBeforeAnimFinish:!0,mouseDrag:!0,touchDrag:!0,addClassActive:!1,transitionStyle:!1,beforeUpdate:!1,afterUpdate:!1,beforeInit:!1,afterInit:!1,beforeMove:!1,afterMove:!1,afterAction:!1,startDragging:!1,afterLazyLoad:!1}})(jQuery,window,document);
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 // This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
 require('../../js/transition.js')
 require('../../js/alert.js')
@@ -208,7 +262,7 @@ require('../../js/popover.js')
 require('../../js/scrollspy.js')
 require('../../js/tab.js')
 require('../../js/affix.js')
-},{"../../js/affix.js":7,"../../js/alert.js":8,"../../js/button.js":9,"../../js/carousel.js":10,"../../js/collapse.js":11,"../../js/dropdown.js":12,"../../js/modal.js":13,"../../js/popover.js":14,"../../js/scrollspy.js":15,"../../js/tab.js":16,"../../js/tooltip.js":17,"../../js/transition.js":18}],7:[function(require,module,exports){
+},{"../../js/affix.js":8,"../../js/alert.js":9,"../../js/button.js":10,"../../js/carousel.js":11,"../../js/collapse.js":12,"../../js/dropdown.js":13,"../../js/modal.js":14,"../../js/popover.js":15,"../../js/scrollspy.js":16,"../../js/tab.js":17,"../../js/tooltip.js":18,"../../js/transition.js":19}],8:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: affix.js v3.3.7
  * http://getbootstrap.com/javascript/#affix
@@ -372,7 +426,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: alert.js v3.3.7
  * http://getbootstrap.com/javascript/#alerts
@@ -468,7 +522,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: button.js v3.3.7
  * http://getbootstrap.com/javascript/#buttons
@@ -595,7 +649,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: carousel.js v3.3.7
  * http://getbootstrap.com/javascript/#carousel
@@ -834,7 +888,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
@@ -1048,7 +1102,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
@@ -1215,7 +1269,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
@@ -1556,7 +1610,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: popover.js v3.3.7
  * http://getbootstrap.com/javascript/#popovers
@@ -1666,7 +1720,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: scrollspy.js v3.3.7
  * http://getbootstrap.com/javascript/#scrollspy
@@ -1840,7 +1894,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -1997,7 +2051,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
@@ -2519,7 +2573,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
@@ -2580,7 +2634,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -12835,4 +12889,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[4])
+},{}]},{},[5])

@@ -1195,6 +1195,7 @@ h1.subtitle{font-size:2em}
 .__underlay{padding-top:150px}
 textarea{resize:none}
 .textarea{height:150px}
+.contact-component__message p{text-align:center;font-family:"Source Serif Pro",serif;margin-bottom:0;font-size:2.3rem}
 .label{font-size:1.25em;padding:0;letter-spacing:normal;font-family:"Source Sans Pro",sans-serif}
 .navbar-toggle{margin-right:25px}
 .navbar-toggle .icon-bar{background-color:#fff;-webkit-transition:.1s ease-in-out;transition:.1s ease-in-out}
