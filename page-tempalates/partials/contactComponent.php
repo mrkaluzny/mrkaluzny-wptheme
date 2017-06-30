@@ -20,7 +20,7 @@
             <textarea class="input textarea" name="cmessage" id="cmessage" required></textarea>
           </div>
           <div class="form-group text-center">
-            <input type="submit" class="btn-basic __contact-form" value="Send"/>
+            <button role="submit" class="btn-basic __contact-form" id="sendButton">Send</button>
           </div>
         </form>
       </div>
