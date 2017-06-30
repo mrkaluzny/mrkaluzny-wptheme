@@ -15,12 +15,27 @@
 .portfolio-item {
   position: relative;
   flex-shrink: 0;
-  width: 50%;
+  width: calc(50% - 20px);
   background-size: cover;
   overflow: hidden;
+  height: 300px;
+  margin-bottom: 40px;
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  &:nth-child(even) {
+    margin-left: 20px;
+  }
+
   &__image {
     width: 100% !important;
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: 0.3s ease-out;
   }
 
@@ -34,6 +49,8 @@
     text-decoration: none;
     opacity: 0;
     transition: 0.3s ease-out;
+    display: flex;
+
 
     &__name {
       margin: 0 0 5px 0;

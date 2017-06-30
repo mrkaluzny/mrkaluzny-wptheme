@@ -14,11 +14,15 @@ if( $opinie ):
 
 <div class="portfolio-item">
   <a href="<?php the_permalink(); ?>">
-    <?php echo $image; ?>
-    <div class="portfolio-item__description">
-      <h2 class="portfolio-item__description__name"><?php the_field('project-name');?></h2>
-      <p class="portfolio-item__description__short"><?php the_field('project-subtitle');?></p>
-    </div>
+    <figure class="portfolio-item__figure">
+      <picture class="portfolio-item__figure__picture">
+        <?php echo $image; ?>
+      </picture>
+      <figcaption class="portfolio-item__description">
+        <h2 class="portfolio-item__description__name"><?php the_field('project-name');?></h2>
+        <p class="portfolio-item__description__short"><?php the_field('project-subtitle');?></p>
+      </figcaption>
+    </figure>
   </a>
 </div>
 
