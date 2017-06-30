@@ -15,7 +15,7 @@ require 'mailer-template.php';
 
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
-    'from'    => 'MrKaluzny Ultra Robot 🤖 <hello@mrkalzuny.com>',
+    'from'    => 'mrkaluzny Ultra Robot 🤖 <hello@mrkalzuny.com>',
     'to'      => 'Wojciech Kałużny <wk@mrkaluzny.com>',
     'subject' => 'New contact from mrklauzny.com!',
     'html'    => $html
