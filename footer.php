@@ -15,8 +15,8 @@
 	<div class="container">
 		<div class="row m-t-40">
 			<div class="col-sm-4 col-xs-12">
-				<h5 class="justify"><strong>Wojciech Kałużny</strong></h5>
-				<p class="justify description">I'm a student of law &amp; economics. But I also code and develop websites and apps. This website shows a little bit of my work.
+				<h1 class="footer__brand">mrkaluzny</h5>
+				<p class="footer__about">I'm a student of law &amp; economics. But I also code and develop websites and apps. This website shows a little bit of my work.
 					<br>
 					<br> Hope you'll enjoy it.
 			</div>
@@ -24,31 +24,31 @@
 			<div class="col-sm-2"></div>
 
 			<div class="col-sm-2 col-xs-6">
-				<h5 class=""><strong>Menu</strong></h5>
-				<ul class="list-unstyled">
-					<li><a href="http://blog.mrkaluzny.pl">Strona główna</a></li>
-					<li><a href="http://blog.mrkaluzny.pl">Oferta</a></li>
-					<li><a href="http://blog.mrkaluzny.pl">Portfolio</a></li>
-					<li><a href="http://blog.mrkaluzny.pl">Blog</a></li>
-					<li><a href="http://blog.mrkaluzny.pl">Kontakt</a></li>
-				</ul>
+				<h2 class="footer__menu-title"><strong>Menu</strong></h5>
+				<div class="footer__menu-container">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'list-unstyled') ); ?>
+				</div>
 			</div>
 
 			<div class="col-sm-2 col-xs-6">
-				<h5 class="font-alt m-t-0 m-b-20"><strong>Useful Links</strong></h5>
-				<?php wp_nav_menu( array( 'theme_location' => 'footeruse', 'menu_class' => 'list-unstyled') ); ?>
+				<h2 class="footer__menu-title"><strong>Useful Links</strong></h5>
+				<div class="footer__menu-container">
+					<?php wp_nav_menu( array( 'theme_location' => 'footeruse', 'menu_class' => 'list-unstyled') ); ?>
+				</div>
 			</div>
 
 			<div class="col-sm-2 col-xs-6">
-				<h5 class="font-alt m-t-0 m-b-20"><strong>Social media</strong></h5>
-				<?php wp_nav_menu( array( 'theme_location' => 'footersm', 'menu_class' => 'list-unstyled') ); ?>
+				<h2 class="footer__menu-title"><strong>Social media</strong></h5>
+				<div class="footer__menu-container">
+					<?php wp_nav_menu( array( 'theme_location' => 'footersm', 'menu_class' => 'list-unstyled') ); ?>
+				</div>
 			</div>
 
 		</div>
 
 	</div>
-	<p class="copyright text-center">Made by <a href="http://mrkaluzny.pl">Wojciech Kałużny</a>
-		<br> &copy;<?php echo Date('Y');?> All rights reserved
+	<p class="footer__copyrights text-center">
+		 &copy; 2015-<?php echo Date('Y');?> Wojciech Kałużny All Rights Reserved.
 	</p>
 </footer>
 <?php wp_footer(); ?>
