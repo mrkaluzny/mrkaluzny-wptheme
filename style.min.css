@@ -1279,14 +1279,11 @@ textarea{resize:none}
 .portfolio-section--dark{background-color:#1e2228}
 .portfolio-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .portfolio-item{position:relative;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:calc(50% - 20px);background-size:cover;overflow:hidden;height:300px;margin-bottom:40px}
-.portfolio-item:nth-child(odd){margin-right:20px}
-.portfolio-item:nth-child(even){margin-left:20px}
-.portfolio-item__image{width:100% !important;height:auto;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:.3s ease-out;transition:.3s ease-out}
+.portfolio-item__image{width:100%;height:auto;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:.3s ease-out;transition:.3s ease-out}
 .portfolio-item__description{position:absolute;bottom:0;width:100%;text-align:center;background-color:rgba(20,204,96,0.8);color:#fff;text-decoration:none;opacity:0;-webkit-transition:.3s ease-out;transition:.3s ease-out;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .portfolio-item__description__name{margin:0 0 5px 0;font-weight:bold;font-size:1.8em;width:100%}
 .portfolio-item__description__short{font-family:"Source Serif Pro",serif;font-size:1.3em}
 .portfolio-item:hover .portfolio-item__description{opacity:1}
-.portfolio-item:hover .portfolio-item__image{-webkit-filter:blur(5px);filter:blur(5px)}
 .portfolio-text{margin-bottom:10px}
 #portfolio{background-color:antiquewhite}
 .portfolio-items{margin:0;padding:0;display:block}
@@ -1531,7 +1528,10 @@ input[type="date"].input-lg,.input-group-lg>input[type="date"].form-control,.inp
 .carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-10px}
 .carousel-caption{left:20%;right:20%;padding-bottom:30px}
 .carousel-indicators{bottom:20px}
+.portfolio-item:nth-child(odd){margin-right:20px}
+.portfolio-item:nth-child(even){margin-left:20px}
 .portfolio-item__description{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.portfolio-item:hover .portfolio-item__image{-webkit-filter:blur(5px);filter:blur(5px)}
 }@media(min-width:768px) and (max-width:991px){.visible-sm{display:block !important}
 table.visible-sm{display:table !important}
 tr.visible-sm{display:table-row !important}
@@ -1675,7 +1675,8 @@ th.visible-lg,td.visible-lg{display:table-cell !important}
 .navbar-mr .container{padding:10px 0;border-bottom:0}
 .navbar-mr ul li a::after{top:24px}
 .hero--single-article{padding:100px 0 50px 0}
-.portfolio-item{width:100%}
+.portfolio-item__image{min-height:100%;min-width:100%}
+.portfolio-item{width:100%;margin-bottom:15px}
 }@media only screen and (max-width:768px){.navbar-mr .navbar-brand{margin-left:35px}
 .navbar-mr ul{float:none;text-align:center}
 .navbar-mr ul .btn-wycena{width:50%;margin:0 auto}
