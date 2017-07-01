@@ -101,4 +101,8 @@
 
 #newsletterForm {
   margin-top: 25px;
+  margin-left: 20px;
+  @media screen and (max-width: 600px) {
+    margin-left: 0;
+  }
 }
