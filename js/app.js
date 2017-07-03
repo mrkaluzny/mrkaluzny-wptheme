@@ -192,7 +192,7 @@ var jquery = require('jquery');
 window.$ = window.jQuery = jquery;
 require('bootstrap');
 
-require('./vendorjs/owl.carousel.min.js');
+require('./vendor/owl.carousel.min.js');
 
 // Components
 require('./components/articles.js');
@@ -200,7 +200,7 @@ require('./components/navbar.js');
 require('./components/newsletter.js');
 require('./components/contactComponent.js');
 
-},{"./components/articles.js":1,"./components/contactComponent.js":2,"./components/navbar.js":3,"./components/newsletter.js":4,"./vendorjs/owl.carousel.min.js":6,"bootstrap":7,"jquery":20}],6:[function(require,module,exports){
+},{"./components/articles.js":1,"./components/contactComponent.js":2,"./components/navbar.js":3,"./components/newsletter.js":4,"./vendor/owl.carousel.min.js":6,"bootstrap":7,"jquery":20}],6:[function(require,module,exports){
 "function"!==typeof Object.create&&(Object.create=function(f){function g(){}g.prototype=f;return new g});
 (function(f,g,k){var l={init:function(a,b){this.$elem=f(b);this.options=f.extend({},f.fn.owlCarousel.options,this.$elem.data(),a);this.userOptions=a;this.loadContent()},loadContent:function(){function a(a){var d,e="";if("function"===typeof b.options.jsonSuccess)b.options.jsonSuccess.apply(this,[a]);else{for(d in a.owl)a.owl.hasOwnProperty(d)&&(e+=a.owl[d].item);b.$elem.html(e)}b.logIn()}var b=this,e;"function"===typeof b.options.beforeInit&&b.options.beforeInit.apply(this,[b.$elem]);"string"===typeof b.options.jsonPath?
 (e=b.options.jsonPath,f.getJSON(e,a)):b.logIn()},logIn:function(){this.$elem.data("owl-originalStyles",this.$elem.attr("style"));this.$elem.data("owl-originalClasses",this.$elem.attr("class"));this.$elem.css({opacity:0});this.orignalItems=this.options.items;this.checkBrowser();this.wrapperWidth=0;this.checkVisible=null;this.setVars()},setVars:function(){if(0===this.$elem.children().length)return!1;this.baseClass();this.eventTypes();this.$userItems=this.$elem.children();this.itemsAmount=this.$userItems.length;

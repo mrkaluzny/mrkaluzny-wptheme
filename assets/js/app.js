@@ -2,7 +2,7 @@ var jquery = require('jquery');
 window.$ = window.jQuery = jquery;
 require('bootstrap');
 
-require('./vendorjs/owl.carousel.min.js');
+require('./vendor/owl.carousel.min.js');
 
 // Components
 require('./components/articles.js');
