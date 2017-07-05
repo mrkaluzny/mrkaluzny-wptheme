@@ -38,15 +38,14 @@ get_header(); ?>
 
 </section>
 
-<section class="information-section" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
+<section class="information-section hero--overlay-home" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
         <h1><?php the_field('cta-heading'); ?></h1>
-        <p>With over 100 successful project launches, we’ve got the experience to deliver the results you want. Our app development team is passionate about creating quality products that will bring your vision into reality.</p>
-        <a class="btn-basic" href="#">Learn more</a>
+        <p><?php the_field('cta-message'); ?></p>
+        <a class="btn-basic btn-basic--white" href="/portfolio">Learn more</a>
       </div>
-
     </div>
   </div>
 </section>
