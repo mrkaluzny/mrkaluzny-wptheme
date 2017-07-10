@@ -1056,7 +1056,7 @@ textarea{resize:none}
 .portfolio-section{padding:100px 0}
 .portfolio-section--dark{background-color:#1e2228}
 .portfolio-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.portfolio-item{position:relative;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:calc(50% - 20px);background-size:cover;overflow:hidden;height:300px;margin-bottom:40px}
+.portfolio-item{position:relative;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:calc(50% - 20px);background-size:cover;background-position:center center;overflow:hidden;height:300px;margin-bottom:40px}
 .portfolio-item__image{width:100%;height:auto;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:.3s ease-out;transition:.3s ease-out}
 .portfolio-item__description{position:absolute;bottom:0;width:100%;padding:15px 20px;background-color:rgba(20,204,96,0.9);color:#fff;text-decoration:none;opacity:1;-webkit-transition:.3s ease-out;transition:.3s ease-out}
 .portfolio-item__description__name{margin:0 0 5px 0;font-weight:bold;font-size:1.4em;width:100%}

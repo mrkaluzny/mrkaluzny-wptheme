@@ -38,7 +38,8 @@ get_header(); ?>
 
 </section>
 
-<section class="information-section hero--overlay-home" style="background-image: url('<?php the_field('portfolio-img'); ?>')">
+<?php $information_image_id = get_field('portfolio-img'); ?>
+<section class="information-section hero--overlay" style="background-image: url('<?php echo wp_get_attachment_image_url($information_image_id, 'small_background') ?>')">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
