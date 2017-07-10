@@ -7,7 +7,8 @@
       <h2><?php the_field('project-subtitle'); ?></h2>
     </div>
     <div class="single-portfolio__screenshot">
-      <img class="img-responsive image" src="<?php the_field('project-image');?>" alt="<?php the_field('project-name'); ?>"/>
+      <?php $project_image = get_field('project-image'); ?>
+      <img class="img-responsive image" src="<?php echo wp_get_attachment_image_url($project_image, 'small_background')?>" alt="<?php the_field('project-name'); ?>"/>
     </div>
   </div>
 </section>

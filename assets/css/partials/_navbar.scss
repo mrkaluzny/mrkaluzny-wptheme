@@ -103,7 +103,15 @@
           &::after {
             width: 100%;
           }
+
+          @media screen and (max-width: 768px) {
+            &::after {
+              width: 0;
+            }
+          }
         }
+
+
 
         &::after {
           content: " ";

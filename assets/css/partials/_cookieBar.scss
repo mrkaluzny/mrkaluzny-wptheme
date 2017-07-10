@@ -1,0 +1,15 @@
+@import "vars";
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $black;
+  padding: 15px 0;
+  color: $white;
+  font-family: $sans;
+  font-size: 1.1em;
+  a {
+    color: $green;
+  }
+}
