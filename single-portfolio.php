@@ -54,6 +54,7 @@
         </div>
       </section>
 
+      <?php if (get_field('client-testimonial')) : ?>
       <section class="testimonials __invert">
         <div class="container">
           <div class="row">
@@ -76,5 +77,6 @@
           </div>
         </div>
       </section>
+    <?php endif; ?>
 
 <?php get_footer(); ?>

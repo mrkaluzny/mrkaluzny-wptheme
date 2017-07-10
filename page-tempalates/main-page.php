@@ -44,7 +44,7 @@ get_header(); ?>
       <div class="col-sm-12 col-sm-12 col-md-10 col-md-offset-1 text-center content">
         <h1><?php the_field('cta-heading'); ?></h1>
         <p><?php the_field('cta-message'); ?></p>
-        <a class="btn-basic btn-basic--white" href="/portfolio">Learn more</a>
+        <a class="btn-basic btn-basic--white" href="<?php the_field('portfolio_button_link'); ?>">Learn more</a>
       </div>
     </div>
   </div>
