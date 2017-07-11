@@ -16,9 +16,8 @@
 		<div class="row m-t-40">
 			<div class="col-sm-4 col-xs-12">
 				<h1 class="footer__brand">mrkaluzny</h5>
-				<p class="footer__about">I'm a student of law &amp; economics. But I also code and develop websites and apps. This website shows a little bit of my work.
-					<br>
-					<br> Hope you'll enjoy it.
+				<p class="footer__about">
+					Hi, I’m Wojciech Kałużny! This website was created to present my work both as a web developer and a designer. <br><br>Check out my previous projects and let’s create something together!
 			</div>
 
 			<div class="col-sm-2"></div>
