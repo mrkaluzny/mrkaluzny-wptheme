@@ -1,4 +1,4 @@
-$.getJSON('//api.wipmania.com/jsonp?callback=?', function (data) {
+$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
   if ( data.address.continent_code == 'EU' ) {
     showCookieBar();
   }

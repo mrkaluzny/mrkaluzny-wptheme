@@ -57,7 +57,7 @@ $(document).on('submit', '#contactComponentForm', function(e){
 });
 
 },{}],3:[function(require,module,exports){
-$.getJSON('//api.wipmania.com/jsonp?callback=?', function (data) {
+$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
   if ( data.address.continent_code == 'EU' ) {
     showCookieBar();
   }
