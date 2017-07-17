@@ -57,11 +57,11 @@ $(document).on('submit', '#contactComponentForm', function(e){
 });
 
 },{}],3:[function(require,module,exports){
-$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
-  if ( data.address.continent_code == 'EU' ) {
-    showCookieBar();
-  }
-});
+// $.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
+//   if ( data.address.continent_code == 'EU' ) {
+//     showCookieBar();
+//   }
+// });
 
 function showCookieBar() {
   var agreed = checkAgreement();
@@ -97,6 +97,10 @@ $(document).on('click', '.cookies__hide', function(){
   setCookie('cookieAgreement', 'true', 90);
   $('#cookiesBar').addClass('cookies--hide');
 });
+
+$(function(){
+  showCookieBar();
+})();
 
 },{}],4:[function(require,module,exports){
 $(document).ready(function() {

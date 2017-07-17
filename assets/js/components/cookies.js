@@ -1,8 +1,8 @@
-$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
-  if ( data.address.continent_code == 'EU' ) {
-    showCookieBar();
-  }
-});
+// $.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
+//   if ( data.address.continent_code == 'EU' ) {
+//     showCookieBar();
+//   }
+// });
 
 function showCookieBar() {
   var agreed = checkAgreement();
@@ -38,3 +38,7 @@ $(document).on('click', '.cookies__hide', function(){
   setCookie('cookieAgreement', 'true', 90);
   $('#cookiesBar').addClass('cookies--hide');
 });
+
+$(function(){
+  showCookieBar();
+})();
