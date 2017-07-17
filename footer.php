@@ -11,6 +11,8 @@
 
 ?>
 
+<?php get_template_part('components/cookiesBar'); ?>
+
 <footer class="footer">
 	<div class="container">
 		<div class="row m-t-40">
