@@ -8,13 +8,17 @@
   width: 100%;
   padding: 20px 0;
   opacity: 1;
+  z-index: 9999;
   transition: transform 0.4s ease-in-out;
 }
 .cookies__hide {
   position: absolute;
   right: 22px;
+  z-index: 9999;
+  cursor: pointer;
   &__icon {
     height: 20px;
+    cursor: pointer;
     width: 20px;
     color: $black;
     fill: transparent;
