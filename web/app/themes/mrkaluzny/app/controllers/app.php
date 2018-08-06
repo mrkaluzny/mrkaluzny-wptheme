@@ -30,4 +30,17 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function inline_svg($file_name) {
+      $src = get_template_directory_uri() . '/assets/icons/' . $file_name . '.svg';
+      $image_item = '<img src="'. $src .'" alt="'. $file_name .'">';
+      $arrContextOptions=array(
+        "ssl"=>array(
+            "verify_peer"=>false,
+            "verify_peer_name"=>false,
+        ),
+      );
+
+      return file_get_contents($src, false, stream_context_create($arrContextOptions));
+    }
 }
