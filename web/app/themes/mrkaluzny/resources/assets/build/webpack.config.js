@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+// const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
@@ -56,6 +56,14 @@ let webpackConfig = {
           { loader: 'cache' },
           { loader: 'buble', options: { objectAssign: 'Object.assign' } },
         ],
+      },
+      {
+        test: /\.jsx$/,
+        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react', 'stage-0'],
+        },
       },
       {
         test: /\.css$/,
@@ -171,10 +179,10 @@ let webpackConfig = {
         eslint: { failOnWarning: false, failOnError: true },
       },
     }),
-    new StyleLintPlugin({
-      failOnError: !config.enabled.watcher,
-      syntax: 'scss',
-    }),
+    // new StyleLintPlugin({
+    //   failOnError: !config.enabled.watcher,
+    //   syntax: 'scss',
+    // }),
     new FriendlyErrorsWebpackPlugin(),
   ],
 };
