@@ -7,6 +7,10 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+
+require_once('wp-custom/_autoload.php');
+require_once('API/_autoload.php');
+
 /**
  * Helper function for prettying up errors
  * @param string $message
