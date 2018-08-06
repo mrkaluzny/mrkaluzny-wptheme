@@ -6,7 +6,9 @@
     </div>
     <div id="availability"></div>
     <div class="footer__hello">
-      {{-- <p>{{ the_field('availability_explanation', 'options')}}</p> --}}
+      @if(get_field('availability_content'))
+        <p>{{ the_field('availability_content', 'options')}}</p>
+      @endif
       <p> If you'd like to talk about a project you want help with or need an advice about development or product design, just drop me a message at <a href="mailto:wk@mrkaluzny.com">wk@mrkaluzny.com</a></p>
     </div>
   </div>
@@ -18,22 +20,22 @@
         <ul class="footer__social">
           <li>
             <a href="https://instagram.com/mrkaluzny" class="footer__link" target="_blank">
-              {{-- {{ inline_svg('instagram') }} --}}
+              {!! App::inline_svg('instagram') !!}
             </a>
           </li>
           <li>
             <a href="https://twitter.com/mrkaluzny" class="footer__link" target="_blank">
-              {{-- <%= inline_svg('twitter') %> --}}
+              {!! App::inline_svg('twitter') !!}
             </a>
           </li>
           <li>
             <a href="https://github.com/mrkaluzny" class="footer__link" target="_blank">
-              {{-- <%= inline_svg('github') %> --}}
+              {!! App::inline_svg('github') !!}
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/mrkaluzny" class="footer__link" target="_blank">
-              {{-- <%= inline_svg('linkedin') %> --}}
+              {!! App::inline_svg('linkedin') !!}
             </a>
           </li>
         </ul>
