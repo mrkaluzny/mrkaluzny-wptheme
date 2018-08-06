@@ -1,0 +1,22 @@
+.btn {
+  &--rounded {
+    border-radius: 100px;
+  }
+
+  &--outline {
+    border-width: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  &--green {
+    border-color: $mr-green;
+    color: $mr-green;
+  }
+
+  &--large {
+    border-width: 3px;
+    padding: 5px 30px;
+    border-width: 3px;
+    font-weight: bold;
+  }
+}
