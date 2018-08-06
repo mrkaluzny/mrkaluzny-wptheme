@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Mailgun' => array($vendorDir . '/mailgun/mailgun-php/src'),
+    'johnpbloch\\Composer\\' => array($vendorDir . '/johnpbloch/wordpress-core-installer/src'),
+    'Env' => array($vendorDir . '/oscarotero/env/src'),
 );

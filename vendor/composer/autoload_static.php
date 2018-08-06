@@ -4,117 +4,47 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6f606544cbc9e0940da97fb9eb471231
+class ComposerStaticInit295683ce6cc29b8043b489230f3ba09a
 {
     public static $files = array (
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'ddc0a4d7e61c0286f0f8593b1903e894' => __DIR__ . '/..' . '/clue/stream-filter/src/functions.php',
-        '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '841f98c5d948ce534a6f87abe5b50614' => __DIR__ . '/..' . '/roots/wp-password-bcrypt/wp-password-bcrypt.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'W' => 
+        'D' => 
         array (
-            'Webmozart\\Assert\\' => 17,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Component\\OptionsResolver\\' => 34,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-        ),
-        'H' => 
-        array (
-            'Http\\Promise\\' => 13,
-            'Http\\Message\\MultipartStream\\' => 29,
-            'Http\\Message\\' => 13,
-            'Http\\Discovery\\' => 15,
-            'Http\\Client\\Common\\' => 19,
-            'Http\\Client\\' => 12,
-            'Http\\Adapter\\Guzzle6\\' => 21,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
+            'Dotenv\\' => 7,
         ),
         'C' => 
         array (
-            'Clue\\StreamFilter\\' => 18,
+            'Composer\\Installers\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Webmozart\\Assert\\' => 
+        'Dotenv\\' => 
         array (
-            0 => __DIR__ . '/..' . '/webmozart/assert/src',
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-        'Symfony\\Component\\OptionsResolver\\' => 
+        'Composer\\Installers\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/options-resolver',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Http\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/promise/src',
-        ),
-        'Http\\Message\\MultipartStream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/multipart-stream-builder/src',
-        ),
-        'Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
-            1 => __DIR__ . '/..' . '/php-http/message/src',
-        ),
-        'Http\\Discovery\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/discovery/src',
-        ),
-        'Http\\Client\\Common\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/client-common/src',
-        ),
-        'Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/httplug/src',
-        ),
-        'Http\\Adapter\\Guzzle6\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/guzzle6-adapter/src',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-        ),
-        'Clue\\StreamFilter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/clue/stream-filter/src',
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'M' => 
+        'j' => 
         array (
-            'Mailgun' => 
+            'johnpbloch\\Composer\\' => 
             array (
-                0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
+                0 => __DIR__ . '/..' . '/johnpbloch/wordpress-core-installer/src',
+            ),
+        ),
+        'E' => 
+        array (
+            'Env' => 
+            array (
+                0 => __DIR__ . '/..' . '/oscarotero/env/src',
             ),
         ),
     );
@@ -122,9 +52,9 @@ class ComposerStaticInit6f606544cbc9e0940da97fb9eb471231
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6f606544cbc9e0940da97fb9eb471231::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6f606544cbc9e0940da97fb9eb471231::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6f606544cbc9e0940da97fb9eb471231::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit295683ce6cc29b8043b489230f3ba09a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit295683ce6cc29b8043b489230f3ba09a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit295683ce6cc29b8043b489230f3ba09a::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
