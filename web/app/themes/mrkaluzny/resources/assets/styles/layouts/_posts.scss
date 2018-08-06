@@ -1,0 +1,47 @@
+.article {
+  margin-bottom: 47px;
+  &__header {
+    min-height: 75%;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 35px;
+
+    &--no-image {
+      background-color: $mr-dark;
+    }
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    color: $mr-white;
+    width: 75%;
+    font-size: 36px;
+  }
+
+  &__content {
+    color: $mr-dark;
+    p, li {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      strong {
+        font-weight: 600;
+      }
+    }
+    p {
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+
+    h1,h2,h3,h4 {
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: -0.86px;
+      line-height: 22px;
+      margin: 10px 0 20px;
+      padding: 0 15px;
+    }
+  }
+}

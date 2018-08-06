@@ -1,6 +1,19 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
+$mr-white: #fff;
+$mr-green: #14CC60;
+$mr-blue: #1641FF;
+$mr-dark: #394052;
+$mr-red: #FE5461;
+$mr-yellow: #FEB64D;
+$mr-grey: #CDCDCD;
+
+// Fonts
+$mr-main: "Source Sans Pro", sans-serif;
+
+
+// Breakpoints
+$break-sm-down: 576px;
+$break-md-down: 768px;
+$break-lg-down: 992px;

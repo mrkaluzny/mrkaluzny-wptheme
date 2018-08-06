@@ -1,0 +1,21 @@
+.card {
+  border-radius: 5px;
+  border: 1px solid $mr-grey;
+  margin-bottom: 20px;
+
+  &__title {
+    font-weight: 800;
+    padding: 15px;
+    border-bottom: 1px solid $mr-grey;
+  }
+
+  &__body {
+    padding: 15px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
