@@ -33,6 +33,33 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &--fixed {
+    position: fixed;
+    background-color: $mr-white;
+    box-shadow: 0 0 15px rgba($mr-dark, 0.15);
+    z-index: 100;
+    top: -80px;
+  }
+
+  &--animate {
+    transition: 0.4s ease-in-out;
+  }
+
+  // &--hidden {
+  //   top: -80px;
+  // }
+
+  &--visible {
+    top: 0;
+  }
+
+  &--open {
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background: transparent;
+  }
 }
 
 .mobile-nav {
