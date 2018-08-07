@@ -60,6 +60,8 @@ export default class Navbar extends React.Component {
     let navigationClass
     if (this.state.currentScroll < 66 && !this.state.isNavigationVisible || this.state.currentScroll < 3) {
       navigationClass = 'navigation'
+    } else if (this.state.currentScroll < 120 && !this.state.isNavigationVisible || this.state.currentScroll < 6)  {
+      navigationClass = 'navigation navigation--fixed';
     } else {
       navigationClass = 'navigation navigation--fixed navigation--animate' + (this.state.isNavigationVisible ? ' navigation--visible' : ' navigation--hidden');
     }
