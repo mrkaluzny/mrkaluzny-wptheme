@@ -12,7 +12,9 @@ export default class Navbar extends React.Component {
     this.state = {
       status: '',
       content: '',
-    };
+      isMenuOpen: false,
+    }
+    this.activateMenu = this.activateMenu.bind(this)
   }
 
   componentDidMount() {
@@ -25,16 +27,37 @@ export default class Navbar extends React.Component {
     })
   }
 
+  activateMenu() {
+    this.setState(prevState => ({
+      isMenuOpen: !prevState.isMenuOpen,
+    }))
+  }
+
 
   render() {
     let homeURL = window.location.href
+    let btnClass = 'btn btn--nav' + (this.state.isMenuOpen ? ' btn--active' : '')
+    let brandClass = 'brand' + (this.state.isMenuOpen ? ' brand--white' : '')
+    let navClass = 'mobile-nav' + (this.state.isMenuOpen ? ' mobile-nav--active' : '')
+
     return (
       <header className="header">
         <nav className="navigation">
           <div className="container">
-            <a className="brand" href={homeURL}>mrkaluzny</a>
+            <div className="navigation__inner">
+              <a className={brandClass} href={homeURL}>mrkaluzny</a>
+              <div className={btnClass} onClick={this.activateMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
           </div>
         </nav>
+
+        <div className={navClass}>
+
+        </div>
       </header>
     );
   }
