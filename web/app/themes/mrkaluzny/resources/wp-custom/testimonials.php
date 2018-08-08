@@ -47,8 +47,10 @@ function opinie_post_type() {
 		'has_archive'           => false,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
-		'query_var'             => 'opinie',
+		'query_var'             => 'testimonial',
 		'capability_type'       => 'page',
+    'show_in_rest'          => true,
+    'rest_base'             => 'testimonial'
 	);
 	$labels = array(
     'name'              => _x( 'Kategorie Opinii', 'taxonomy general name' ),
