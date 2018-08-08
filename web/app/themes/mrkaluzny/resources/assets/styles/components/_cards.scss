@@ -51,7 +51,9 @@
     border-radius: 18px;
     border: none;
     box-shadow: 0 0 30px 0 rgba($mr-dark, 0.22);
-    width: calc(100% - 19px * 2 );
     padding: 25px 25px 37px;
+    flex: 1 0 100%;
+    flex-basis: calc(100% - 54px * 2);
+    margin: 0 17px;
   }
 }
