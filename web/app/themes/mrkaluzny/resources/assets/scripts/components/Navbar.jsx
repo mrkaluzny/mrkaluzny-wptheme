@@ -44,7 +44,6 @@ export default class Navbar extends React.Component {
   handleScroll () {
     const lastScrollY = this.state.currentScroll;
     const currentScrollY = window.scrollY;
-    console.log(`Current scroll: ${currentScrollY} Last Scroll: ${lastScrollY}`)
 
     if (currentScrollY > lastScrollY) {
       this.setState({ isNavigationVisible: false });
