@@ -17,5 +17,41 @@
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    &--testimonial {
+      border-radius: 100px;
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.03px;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__position {
+    font-size: 12px;
+    letter-spacing: 0.04px;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__content {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+  }
+
+  &--testimonial {
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 0 30px 0 rgba($mr-dark, 0.22);
+    width: calc(100% - 19px * 2 );
+    padding: 25px 25px 37px;
   }
 }

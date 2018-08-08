@@ -38,3 +38,11 @@ a {
     background-image: linear-gradient(40deg, rgba(62,125,251,0.83) 0%, rgba(22,65,255,0.99) 100%);
   }
 }
+
+.section {
+  padding: 27px 0;
+
+  &--testimonials {
+    min-height: 590px;
+  }
+}
