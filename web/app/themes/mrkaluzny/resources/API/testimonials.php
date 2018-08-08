@@ -17,13 +17,13 @@ function get_testimonials( $data ) {
 
     $imageID = get_field('image', $item->ID);
     $object = (object) array(
-      'id' => $itme->ID,
+      'id' => $item->ID,
       'name' => $item->post_title,
       'image' => array(
         'small' => App::get_image_by_id($imageID, 'thumbnail'),
         'medium' => App::get_image_by_id($imageID, 'medium'),
       ),
-      'position' => get_field('postion', $item->ID),
+      'position' => get_field('position', $item->ID),
       'company' => get_field('company', $item->ID),
       'content' => $item->post_content,
     );
