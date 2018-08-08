@@ -43,4 +43,9 @@ class App extends Controller
 
       return file_get_contents($src, false, stream_context_create($arrContextOptions));
     }
+
+    public static function get_image_by_id($imageID, $size = "full") {
+      $image = wp_get_attachment_image_src($imageID, $size);
+      return $image[0];
+    }
 }
