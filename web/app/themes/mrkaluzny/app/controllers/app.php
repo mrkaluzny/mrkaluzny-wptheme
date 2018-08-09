@@ -48,4 +48,13 @@ class App extends Controller
       $image = wp_get_attachment_image_src($imageID, $size);
       return $image[0];
     }
+
+    public function get_services() {
+      $services = get_posts(array(
+        'post_type' => 'services',
+        'posts_per_page' => -1,
+      ));
+
+      return $services;
+    }
 }
