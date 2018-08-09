@@ -1,0 +1,38 @@
+.services {
+  &__feed {
+    margin: 35px 0 120px;
+    .service {
+      max-width: 67%;
+      &:nth-child(even) {
+        text-align: right;
+        margin-left: auto;
+      }
+      &:not(:last-child) {
+        margin-bottom: 130px;
+      }
+    }
+  }
+}
+
+.service {
+  &__name {
+    font-size: 9px;
+    letter-spacing: 1.51px;
+    margin: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__tagline {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+  }
+
+  &__excerpt {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 10px 0;
+  }
+}
