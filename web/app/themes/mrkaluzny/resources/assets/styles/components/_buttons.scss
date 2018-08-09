@@ -20,6 +20,12 @@
     font-weight: bold;
   }
 
+  &--small {
+    font-weight: 300;
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
   &--nav {
     padding: 0;
     border-radius: 0;

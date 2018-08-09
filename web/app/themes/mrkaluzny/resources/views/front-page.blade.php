@@ -22,6 +22,13 @@
             <h1 class="title__main">Things I can do for your business</h1>
           </div>
         </div>
+        <div class="col-12">
+          <div class="services__feed">
+            @foreach($get_services as $service)
+              @include('partials.service')
+            @endforeach
+          </div>
+        </div>
       </div>
     </div>
   </section>
