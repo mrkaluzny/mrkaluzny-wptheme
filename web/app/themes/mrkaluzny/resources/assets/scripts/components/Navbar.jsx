@@ -55,7 +55,7 @@ export default class Navbar extends React.Component {
 
 
   render() {
-    let homeURL = window.location.href
+    let homeURL = window.location.origin
     let navigationClass
     if (this.state.currentScroll < 66 && !this.state.isNavigationVisible || this.state.currentScroll < 3) {
       navigationClass = 'navigation'
