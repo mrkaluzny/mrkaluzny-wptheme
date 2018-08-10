@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
+import Slider from 'react-slick';
 
 export default class Testimonials extends React.Component {
   constructor(props) {
@@ -38,6 +39,17 @@ export default class Testimonials extends React.Component {
       )
     })
 
+    const settings = {
+      dots: false,
+      infinite: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '0 12px',
+      speed: 500,
+      slidesToShow: 1.2,
+      slidesToScroll: 1,
+    };
+
     return (
       <section className="section section--testimonials background--up">
         <div className="container">
@@ -47,8 +59,10 @@ export default class Testimonials extends React.Component {
                 <h2 className="title__top">Testimonials</h2>
                 <h1 className="title__main">Some of my happy clients</h1>
               </div>
-              <div className="testimonials__feed">
-                { cards }
+              <div className="slider-wrapper">
+                <Slider {...settings}>
+                  { cards }
+                </Slider>
               </div>
             </div>
           </div>

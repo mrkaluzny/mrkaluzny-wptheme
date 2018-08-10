@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
+import Slider from 'react-slick';
 
 export default class RecentProjects extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class RecentProjects extends React.Component {
 
     const cards = this.state.testimonials.map( (item) => {
       return (
-        <a className="card card--project" href={item.permalink} key={item.id}>
+        <div className="card card--project" href={item.permalink} key={item.id}>
           <div className="card__image card__image--project" style={{ background: item.color }}>
             <img src={item.image.large} alt={item.name}/>
           </div>
@@ -40,9 +41,20 @@ export default class RecentProjects extends React.Component {
             </div>
             <div className="card__content">{item.excerpt}</div>
           </div>
-        </a>
+        </div>
       )
     })
+
+    const settings = {
+      dots: false,
+      infinite: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '0 12px',
+      speed: 500,
+      slidesToShow: 1.2,
+      slidesToScroll: 1,
+    };
 
     return (
       <section className="section section--portfolio background--down">
@@ -53,8 +65,10 @@ export default class RecentProjects extends React.Component {
                 <h2 className="title__top">Recent Work</h2>
                 <h1 className="title__main">Recently delivered projects</h1>
               </div>
-              <div className="portfolio__feed">
-                { cards }
+              <div className="slider-wrapper">
+                <Slider {...settings}>
+                  { cards }
+                </Slider>
               </div>
             </div>
             <div className="col-12 text-center">

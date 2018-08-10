@@ -68,15 +68,16 @@
 
   &--testimonial {
     padding: 25px 25px 37px;
-    flex: 1 0 100%;
-    flex-basis: calc(100% - 54px * 2);
-    margin: 0 17px;
+    // flex: 1 0 100%;
+    // flex-basis: calc(100% - 54px * 2);
+    // margin: 0 17px;
   }
 
   &--project {
-    flex: 1 0 100%;
-    flex-basis: calc(100% - 64px * 2);
-    margin: 0 22px;
+    // flex: 1 0 100%;
+    // flex-basis: calc(100% - 64px * 2);
+    display: block;
+    // margin: 0 22px;
     padding: 0;
   }
 
