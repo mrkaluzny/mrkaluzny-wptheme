@@ -12,7 +12,9 @@
       </div>
     </div>
   </section>
+
   <section id="testimonials"></section>
+
   <section class="services section background--down">
     <div class="container">
       <div class="row">
@@ -34,4 +36,7 @@
   </section>
 
   @include('partials.help')
+
+  <div id="recent-projects"></div>
+
 @endsection
