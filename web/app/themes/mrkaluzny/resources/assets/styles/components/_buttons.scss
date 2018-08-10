@@ -13,11 +13,23 @@
     color: $mr-green;
   }
 
+  &--white {
+    border-color: $mr-white;
+    color: $mr-white;
+  }
+
   &--large {
     border-width: 3px;
     padding: 5px 30px;
     border-width: 3px;
     font-weight: bold;
+  }
+
+  &--medium {
+    border-width: 2px;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   &--small {

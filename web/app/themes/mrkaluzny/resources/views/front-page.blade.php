@@ -32,4 +32,6 @@
       </div>
     </div>
   </section>
+
+  @include('partials.help')
 @endsection
