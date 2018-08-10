@@ -42,7 +42,7 @@ function portfolio_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'custom-fields', ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => false,
+		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
