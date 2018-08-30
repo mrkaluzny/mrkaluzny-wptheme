@@ -37,6 +37,10 @@
   &--white {
     border-color: $mr-white;
     color: $mr-white;
+    &:hover {
+      background: $mr-white;
+      color: $mr-dark;
+    }
   }
 
   &--large {
@@ -88,6 +92,11 @@
       span {
         background-color: $mr-white;
       }
+    }
+
+    @media screen and (min-width: $break-md-up) {
+      display: none;
+      visibility: hidden;
     }
   }
 }

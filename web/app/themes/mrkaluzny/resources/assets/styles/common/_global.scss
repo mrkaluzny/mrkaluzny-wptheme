@@ -39,9 +39,15 @@ a {
 }
 
 .section {
-  padding: 27px 0;
+  padding: 120px 0;
+  @media screen and (max-width: $break-sm-down) {
+    padding: 27px 0;
+  }
 
   &--testimonials {
-    min-height: 590px;
+    min-height: 450px;
+    @media screen and (max-width: $break-sm-down) {
+      min-height: 590px;
+    }
   }
 }

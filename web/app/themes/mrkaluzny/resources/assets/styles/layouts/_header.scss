@@ -35,12 +35,77 @@
     align-items: center;
   }
 
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    > a {
+      padding: 10px;
+      display: block;
+      color: $mr-white;
+      transition: all .3s ease-in-out;
+      font-size: 1rem;
+      letter-spacing: 0.0515em;
+      font-weight: 300;
+      margin: 0 10px;
+      &:hover {
+        text-decoration: none;
+        color: $mr-white;
+      }
+    }
+
+    &:hover {
+      .submenu {
+        display: block;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__child-item {
+    a {
+      display: block;
+      color: $mr-dark;
+      padding: 0;
+      font-weight: 400;
+      letter-spacing: 0.003em;
+    }
+
+    &:not(:last-child) {
+      a {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
   &--fixed {
     position: fixed;
     background-color: $mr-white;
     box-shadow: 0 0 15px rgba($mr-dark, 0.15);
     z-index: 100;
     top: -80px;
+    .navigation__item a {
+      color: $mr-dark;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      &:hover {
+        color: $mr-dark;
+      }
+    }
+
+    .estimate-project {
+      border-color: $mr-green;
+      color: $mr-green;
+      &:hover {
+        color: $mr-white;
+        background-color: $mr-green;
+      }
+    }
   }
 
   &--animate {
@@ -72,4 +137,35 @@
   &--active {
     transform: translateX(0);
   }
+}
+
+.estimate-project {
+  color: $mr-white;
+  display: block;
+  padding: 5px 15px;
+  margin: 0 0 0 10px;
+  border: 2px solid $mr-white;
+  border-radius: 100px;
+  letter-spacing: 0.0515em;
+  font-weight: 400;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: $mr-white;
+    background-color: $mr-green;
+    border-color: $mr-green;
+    text-decoration: none;
+    box-shadow: 0 5px 25px 0 rgba($mr-dark, 0.4);
+  }
+}
+
+.submenu {
+  position: absolute;
+  background-color: $mr-white;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  box-shadow: 0 10px 15px rgba($mr-dark, 0.15);
+  display: none;
+  visibility: hidden;
 }
