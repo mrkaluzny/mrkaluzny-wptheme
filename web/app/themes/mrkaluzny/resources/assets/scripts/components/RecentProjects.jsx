@@ -72,7 +72,7 @@ export default class RecentProjects extends React.Component {
               </div>
             </div>
             <div className="col-12 text-center">
-              <a href='/portfolio' className="btn btn--green btn--rounded btn--large">See complete portfolio</a>
+              <a href='/portfolio' className="btn btn--green btn--rounded btn--medium">See complete portfolio</a>
             </div>
           </div>
         </div>
