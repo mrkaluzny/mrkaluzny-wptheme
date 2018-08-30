@@ -11,11 +11,22 @@
   &--green {
     border-color: $mr-green;
     color: $mr-green;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: $mr-white;
+      background-color: $mr-green;
+    }
   }
 
   &--green-f {
     background: $mr-green;
     color: $mr-white;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: transparent;
+      color: $mr-green;
+      border-color: $mr-green;
+    }
   }
 
   &--blue {

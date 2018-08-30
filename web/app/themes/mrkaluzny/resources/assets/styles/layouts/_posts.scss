@@ -7,10 +7,15 @@ $recent-article-padding: 0 20px;
     color: $mr-dark;
     text-decoration: none;
     font-weight: normal;
+    display: block !important;
 
     &:hover {
       text-decoration: none;
       color: $mr-dark;
+    }
+
+    @media screen and (max-width: $break-md-down) {
+      max-width: 370px;
     }
   }
 
@@ -20,6 +25,7 @@ $recent-article-padding: 0 20px;
     &:hover {
       box-shadow: 0 5px 20px 0 rgba($mr-dark, 0.05);
     }
+
   }
 
   &__excerpt {
