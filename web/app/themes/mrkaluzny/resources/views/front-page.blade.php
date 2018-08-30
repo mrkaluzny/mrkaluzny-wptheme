@@ -1,18 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  {{-- <section class="hero background--down">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="title title--hero">Get from idea to a bussiness.</h1>
-          <h2 class="title title--sub">You might be searching through job boards to find someone for your project. Why waste your time? Work with tested, dedicated developer!</h2>
-          <button class="btn btn--rounded btn--outline btn--green btn--large btn--center">Get Started</button>
-        </div>
-      </div>
-    </div>
-  </section> --}}
-
   <section class="hero hero--overlay" style="background-image: url(' {{ the_post_thumbnail_url('full') }} ')">
     <div class="container">
       <div class="row">
@@ -48,34 +36,12 @@
 
   </section>
 
+  <section id="recent-projects"></section>
+
 
   @include('partials.help')
 
-  <section class="section promoted-articles">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-            <div class="promoted-articles__title content">
-              {{ the_field('blog_text') }}
-              <a class="btn" href="{{ the_field('blog_button_link') }}">{{ the_field('blog_button_text') }}</a>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row blog-row">
-
-        @foreach($recent_posts as $item)
-          <div class="col-md-4">
-            @include('partials.articles.recent')
-          </div>
-        @endforeach
-
-      </div>
-    </div>
-  </section>
-
-
+  <section id="recent-articles"></section>
 
   <section id="contactComponent"></section>
 
