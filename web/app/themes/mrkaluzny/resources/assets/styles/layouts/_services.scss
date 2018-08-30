@@ -1,4 +1,7 @@
 .services {
+  background-color: rgba($mr-dark, 0.04);
+  position: relative;
+  overflow: hidden;
   &__feed {
     margin: 35px 0 120px;
     // .service {
@@ -11,22 +14,32 @@
     //     margin-bottom: 130px;
     //   }
     // }
+    position: relative;
+    display: flex;
   }
 }
 
 .service {
   &__name {
-    font-size: 9px;
-    letter-spacing: 1.51px;
+    font-size: 12px;
+    letter-spacing: 2.1px;
     margin: 0;
     font-weight: 300;
     text-transform: uppercase;
+    @media screen and (max-width: $break-sm-down) {
+      font-size: 9px;
+      letter-spacing: 1.51px;
+    }
   }
 
   &__tagline {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 19px;
+    line-height: 1.05em;
     margin: 0 0 8px 0;
+    @media screen and (max-width: $break-sm-down) {
+      font-size: 16px;
+    }
   }
 
   &__excerpt {
@@ -45,7 +58,7 @@
   @media screen and (min-width: $break-md-up) {
     margin-top: 30px;
     max-width: 600px;
-    margin-left: auto;
+    margin-right: auto;
   }
 
   @media screen and (max-width: $break-md-down) {
@@ -58,6 +71,19 @@
   @media screen and (min-width: $break-md-up) {
     width: calc(100%/2);
     padding: 30px 25px;
-    border: 1px solid black;
+    background-color: $mr-white;
+    &:hover {
+      box-shadow: 0 0 20px rgba($mr-dark, 0.15);
+      z-index: 99;
+    }
   }
+}
+
+.services-desktop {
+  position: absolute;
+  width: 850px;
+  height: auto;
+  right: -200px;
+  bottom: -70px;
+  z-index: -1;
 }

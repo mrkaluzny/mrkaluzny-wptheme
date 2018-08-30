@@ -24,7 +24,8 @@
     </div>
 
     <div class="services__feed">
-      <div class="container">
+      <div class="container" style="position:relative;">
+        <img src="{{ get_template_directory_uri() . '/assets/images/mockup-steen.png'}}" alt="" class="services-desktop">
         <div class="services__items">
           @foreach($get_services as $service)
             @include('components.service-card')
