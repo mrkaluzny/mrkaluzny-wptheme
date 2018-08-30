@@ -12,6 +12,7 @@ export default class Navbar extends React.Component {
     this.state = {
       status: '',
       content: '',
+      navigation: [],
       isMenuOpen: false,
       currentScroll: 0,
       isNavigationVisible: false,
@@ -29,10 +30,20 @@ export default class Navbar extends React.Component {
         content: res.data.availability.content,
       })
     })
+
+    this.fetchMenuItems()
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  fetchMenuItems() {
+    axios.get(Helper.getAPIRouteForResource('main-menu'))
+    .then(res => {
+      if (res.data)
+        this.setState({navigation:res.data})
+    })
   }
 
   activateMenu() {
@@ -68,9 +79,31 @@ export default class Navbar extends React.Component {
     if (this.state.isMenuOpen) {
       navigationClass += ' navigation--open'
     }
-    let btnClass = 'btn btn--nav' + (this.state.isMenuOpen ? ' btn--active' : '')
+    let btnClass = 'btn btn--nav' + (this.state.isMenuOpen || this.state.currentScroll < 66 ? ' btn--active' : '')
     let brandClass = 'brand' + (this.state.isMenuOpen || this.state.currentScroll < 66 ? ' brand--white' : '')
     let navClass = 'mobile-nav' + (this.state.isMenuOpen ? ' mobile-nav--active' : '')
+
+    const menuItems = this.state.navigation.map((item) => {
+      let subMenu = ''
+      if (item.children) {
+        let children = item.children.map((item) => {
+          return (
+            <li className="navigation__child-item" key={item.id}>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          )
+        })
+
+        subMenu = <ul className="submenu">{children}</ul>
+      }
+
+      return (
+        <li className="navigation__item" key={item.id}>
+          <a href={item.url}>{item.title}</a>
+          {subMenu}
+        </li>
+      )
+    })
 
     return (
       <header className="header">
@@ -83,6 +116,11 @@ export default class Navbar extends React.Component {
                 <span></span>
                 <span></span>
               </div>
+
+              <ul className="navigation__list">
+                {menuItems}
+                <a href="/estimate-project" className="estimate-project">Estimate Project</a>
+              </ul>
             </div>
           </div>
         </nav>
