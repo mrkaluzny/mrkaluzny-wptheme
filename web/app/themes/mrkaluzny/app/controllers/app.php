@@ -53,6 +53,7 @@ class App extends Controller
       $services = get_posts(array(
         'post_type' => 'services',
         'posts_per_page' => -1,
+        'post_parent' => 0,
       ));
 
       return $services;
