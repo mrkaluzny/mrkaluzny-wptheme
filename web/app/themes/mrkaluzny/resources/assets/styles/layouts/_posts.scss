@@ -1,5 +1,32 @@
+$recent-article-padding: 0 20px;
+
 .article {
   margin-bottom: 47px;
+
+  &__link {
+    color: $mr-dark;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: none;
+      color: $mr-dark;
+    }
+  }
+
+  &--recent {
+    transition: box-shadow .3s ease-in-out;
+    padding: 0 0 25px 0;
+    &:hover {
+      box-shadow: 0 5px 20px 0 rgba($mr-dark, 0.05);
+    }
+  }
+
+  &__excerpt {
+    padding: $recent-article-padding;
+  }
+
+
   &__header {
     min-height: 75%;
     display: flex;
@@ -18,6 +45,23 @@
     color: $mr-white;
     width: 75%;
     font-size: 36px;
+
+    &--recent {
+      font-size: 1.2rem;
+      color: $mr-dark;
+      margin: 10px 0 20px;
+      width: 100%;
+      font-weight: 600;
+      padding: $recent-article-padding;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0.5rem;
   }
 
   &__content {

@@ -69,7 +69,7 @@ export default class Navbar extends React.Component {
       navigationClass += ' navigation--open'
     }
     let btnClass = 'btn btn--nav' + (this.state.isMenuOpen ? ' btn--active' : '')
-    let brandClass = 'brand' + (this.state.isMenuOpen ? ' brand--white' : '')
+    let brandClass = 'brand' + (this.state.isMenuOpen || this.state.currentScroll < 66 ? ' brand--white' : '')
     let navClass = 'mobile-nav' + (this.state.isMenuOpen ? ' mobile-nav--active' : '')
 
     return (

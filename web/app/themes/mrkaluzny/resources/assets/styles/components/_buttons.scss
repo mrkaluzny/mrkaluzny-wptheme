@@ -13,6 +13,16 @@
     color: $mr-green;
   }
 
+  &--green-f {
+    background: $mr-green;
+    color: $mr-white;
+  }
+
+  &--blue {
+    background: $mr-blue;
+    color: $mr-white;
+  }
+
   &--white {
     border-color: $mr-white;
     color: $mr-white;

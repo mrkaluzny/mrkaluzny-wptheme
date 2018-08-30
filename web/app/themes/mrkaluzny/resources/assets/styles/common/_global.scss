@@ -3,7 +3,6 @@ html, body {
   font-weight: 300;
   height: 100%;
   width: 100%;
-
 }
 
 p, li, ol {
@@ -35,7 +34,7 @@ a {
     background-image: linear-gradient(0deg, rgba(238,238,238,0.28) 0%, rgba(216,216,216,0.00) 100%);
   }
   &--blue {
-    background-image: linear-gradient(40deg, rgba(62,125,251,0.83) 0%, rgba(22,65,255,0.99) 100%);
+    background-image: linear-gradient(40deg, rgba(#10c5f8,0.83) 0%, rgba(#6736dd,0.99) 100%);
   }
 }
 
