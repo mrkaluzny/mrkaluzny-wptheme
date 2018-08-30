@@ -57,4 +57,13 @@ class App extends Controller
 
       return $services;
     }
+
+    public function recent_posts () {
+      $posts = get_posts(array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+      ));
+
+      return $posts;
+    }
 }
