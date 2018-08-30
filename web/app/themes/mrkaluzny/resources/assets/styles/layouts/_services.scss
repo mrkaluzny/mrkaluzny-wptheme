@@ -1,16 +1,16 @@
 .services {
   &__feed {
     margin: 35px 0 120px;
-    .service {
-      max-width: 67%;
-      &:nth-child(even) {
-        text-align: right;
-        margin-left: auto;
-      }
-      &:not(:last-child) {
-        margin-bottom: 130px;
-      }
-    }
+    // .service {
+    //   max-width: 67%;
+    //   &:nth-child(even) {
+    //     text-align: right;
+    //     margin-left: auto;
+    //   }
+    //   &:not(:last-child) {
+    //     margin-bottom: 130px;
+    //   }
+    // }
   }
 }
 
@@ -34,5 +34,30 @@
     font-size: 14px;
     line-height: 21px;
     margin: 0 0 10px 0;
+  }
+}
+
+
+.services__items {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $break-md-up) {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: $break-md-down) {
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.service {
+  @media screen and (min-width: $break-md-up) {
+    width: calc(100%/2);
+    padding: 30px 25px;
+    border: 1px solid black;
   }
 }
