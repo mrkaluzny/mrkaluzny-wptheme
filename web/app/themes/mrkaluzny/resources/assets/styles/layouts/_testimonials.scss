@@ -14,9 +14,19 @@
 
   .slick-track > div {
     padding: 0 5px;
+
+    @media screen and (max-width: $break-sm-down) {
+      padding: 0 15px;
+    }
   }
 
   .slick-list {
-    padding: 20px 0 20px 26% !important;
+    padding: 20px 0 20px 0 !important;
+  }
+
+  .slick-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
