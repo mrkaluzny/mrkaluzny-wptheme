@@ -87,9 +87,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all ease-in-out .3s;
     &:hover {
       box-shadow: 0 0 20px rgba($mr-dark, 0.15);
       z-index: 99;
+      transform: scale(1.1,1.1)
     }
   }
 }
