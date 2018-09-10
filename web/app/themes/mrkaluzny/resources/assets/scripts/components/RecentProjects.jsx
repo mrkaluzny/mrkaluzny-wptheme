@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
@@ -13,16 +12,36 @@ export default class RecentProjects extends React.Component {
     this.state = {
       testimonials: [],
       isLoading: true,
+      isMobile: false,
+      viewportWidth: null,
     };
+    this.handleResize = this.handleResize.bind(this)
   }
 
   componentDidMount() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
     axios.get(Helper.getAPIRouteForResource('projects'))
     .then(res => {
       this.setState({
         testimonials: res.data,
       })
     })
+  }
+
+  handleResize() {
+    const isMobile = this.state.isMobile
+    let innerWidth = Helper.getInnerWidth()
+
+    if (innerWidth >= 680 && isMobile) {
+      this.setState({
+        isMobile: false,
+      })
+    } else if (innerWidth < 680 && !isMobile) {
+      this.setState({
+        isMobile: true,
+      })
+    }
   }
 
 
@@ -56,6 +75,31 @@ export default class RecentProjects extends React.Component {
       slidesToScroll: 1,
     };
 
+    const projectsMobile = <div className="slider-wrapper">
+      <Slider {...settings}>
+        { cards }
+      </Slider>
+    </div>;
+
+    const projects = this.state.testimonials.slice(0,4).map( (item) => {
+      return (
+        <article className="project" key={item.id}>
+          <a href={item.permalink} className="project__wrapper" >
+            <div className="project__image">
+              <img src={item.desktop_image.large} alt={item.name}/>
+            </div>
+            <div className="project__info">
+              <div className="project__info__owner">
+                <h2 className="project__info__category">Category</h2>
+                <h1 className="project__info__company">{item.name}</h1>
+              </div>
+              <div className="project__info__content">{item.excerpt}</div>
+            </div>
+          </a>
+        </article>
+      )
+    });
+
     return (
       <section className="section section--portfolio background--down">
         <div className="container">
@@ -65,10 +109,8 @@ export default class RecentProjects extends React.Component {
                 <h2 className="title__top">Recent Work</h2>
                 <h1 className="title__main">Recently delivered projects</h1>
               </div>
-              <div className="slider-wrapper">
-                <Slider {...settings}>
-                  { cards }
-                </Slider>
+              <div className="projects-feed">
+                {this.state.isMobile ? projectsMobile : projects}
               </div>
             </div>
             <div className="col-12 text-center">
