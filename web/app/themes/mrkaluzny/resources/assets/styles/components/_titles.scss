@@ -1,6 +1,8 @@
 .title {
   text-align: center;
   color: $mr-dark;
+  max-width: 600px;
+  margin: 0 auto;
 
   &__top {
     font-size: 1.1rem;
@@ -34,6 +36,10 @@
     &--cta {
       margin: 0 0 20px;
     }
+  }
+
+  &__content {
+    font-size: 1.1em;
   }
 
   &--hero {

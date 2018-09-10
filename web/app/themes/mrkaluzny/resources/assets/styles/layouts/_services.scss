@@ -4,18 +4,29 @@
   overflow: hidden;
   &__feed {
     margin: 35px 0 120px;
-    // .service {
-    //   max-width: 67%;
-    //   &:nth-child(even) {
-    //     text-align: right;
-    //     margin-left: auto;
-    //   }
-    //   &:not(:last-child) {
-    //     margin-bottom: 130px;
-    //   }
-    // }
     position: relative;
     display: flex;
+
+    @media screen and (max-width: $break-md-down) {
+      .service {
+        max-width: 67%;
+        &:nth-child(even) {
+          text-align: right;
+          margin-left: auto;
+        }
+        &:not(:last-child) {
+          margin-bottom: 130px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $break-md-up) {
+      margin: 40px 0 0;
+    }
+  }
+
+  @media screen and (min-width: $break-md-up) {
+    padding: 50px 0 0;
   }
 }
 
@@ -59,6 +70,7 @@
     margin-top: 30px;
     max-width: 600px;
     margin-right: auto;
+    padding-bottom: 120px;
   }
 
   @media screen and (max-width: $break-md-down) {
@@ -72,6 +84,9 @@
     width: calc(100%/2);
     padding: 30px 25px;
     background-color: $mr-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       box-shadow: 0 0 20px rgba($mr-dark, 0.15);
       z-index: 99;
@@ -81,9 +96,12 @@
 
 .services-desktop {
   position: absolute;
-  width: 850px;
+  width: 900px;
   height: auto;
   right: -200px;
-  bottom: -70px;
+  bottom: 0;
   z-index: -1;
+  @media screen and (max-width: $break-md-down) {
+    display: none;
+  }
 }
