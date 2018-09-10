@@ -10,7 +10,7 @@
   },
   "publicPath": "/app/themes/mrkaluzny",
   "devUrl": "https://mrkaluzny.local",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
