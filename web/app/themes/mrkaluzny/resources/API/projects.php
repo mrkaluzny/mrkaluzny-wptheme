@@ -16,6 +16,7 @@ function get_projects( $data ) {
   foreach ($testimonials as $item) {
 
     $imageID = get_field('project-image', $item->ID);
+    $desktopImageID = get_field('project_desktop_image', $item->ID);
     $object = (object) array(
       'id' => $item->ID,
       'name' => get_field('project-name', $item->ID),
@@ -23,6 +24,11 @@ function get_projects( $data ) {
         'small' => App::get_image_by_id($imageID, 'thumbnail'),
         'medium' => App::get_image_by_id($imageID, 'medium'),
         'large' => App::get_image_by_id($imageID, 'large'),
+      ),
+      'desktop_image' => array(
+        'small' => App::get_image_by_id($desktopImageID, 'thumbnail'),
+        'medium' => App::get_image_by_id($desktopImageID, 'medium'),
+        'large' => App::get_image_by_id($desktopImageID, 'large'),
       ),
       'excerpt' => get_field('excerpt', $item->ID),
       'color' => get_field('project-color', $item->ID),
