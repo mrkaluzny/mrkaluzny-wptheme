@@ -71,7 +71,7 @@ export default class RecentProjects extends React.Component {
       centerMode: true,
       centerPadding: '0 12px',
       speed: 500,
-      slidesToShow: 1.2,
+      slidesToShow: 1,
       slidesToScroll: 1,
     };
 
@@ -83,10 +83,9 @@ export default class RecentProjects extends React.Component {
 
     const projects = this.state.testimonials.slice(0,4).map( (item) => {
       return (
-        <article className="project" key={item.id} data-aos="fade-up">
+        <article className="project" key={item.id} data-aos="fade-up" style={{backgroundImage: `url('${item.desktop_image.large}')`}}>
           <a href={item.permalink} className="project__wrapper" >
             <div className="project__image">
-              <img src={item.desktop_image.large} alt={item.name}/>
             </div>
             <div className="project__info">
               <div className="project__info__owner">
@@ -113,7 +112,7 @@ export default class RecentProjects extends React.Component {
                 {this.state.isMobile ? projectsMobile : projects}
               </div>
             </div>
-            <div className="col-12 text-center">
+            <div className="col-12 text-center" data-aos="fade-up">
               <a href='/portfolio' className="btn btn--green btn--rounded btn--medium">See complete portfolio</a>
             </div>
           </div>

@@ -80,7 +80,7 @@ export default class RecentArticles extends React.Component {
       centerMode: true,
       centerPadding: '0 12px',
       speed: 500,
-      slidesToShow: 1.2,
+      slidesToShow: 1,
       slidesToScroll: 1,
     };
 
@@ -101,7 +101,7 @@ export default class RecentArticles extends React.Component {
             {this.state.isMobile ? articlesMobile : articles}
           </div>
           <div className="row">
-            <div className="col-12 text-center">
+            <div className="col-12 text-center" data-aos="fade-up">
               <a className="btn btn--rounded btn--green btn--medium" href="/blog">Check the blog</a>
             </div>
           </div>

@@ -4,21 +4,24 @@
   position: relative;
   overflow: hidden;
   height: 300px;
+  background-size: cover;
+  background-position: center;
 
   &__wrapper {
     display: block;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
   }
 
   &__image {
-    position: relative;
-
     img {
       max-width: 100%;
       height: auto;
+      display: none;
     }
 
-    &::before, &::after {
+    &::before {
       content: '';
       display: block;
       width: 100%;
@@ -28,15 +31,7 @@
       left: 0;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
-    }
-
-    &::before {
       background-color: rgba($mr-dark, 0.78);
-    }
-
-    &::after {
-      // background-color: $mr-dark;
-      // mix-blend-mode: lighten;
     }
 
   }
@@ -49,7 +44,6 @@
     height: 100%;
     color: $mr-white;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 30px;
@@ -66,6 +60,7 @@
     &__company {
       @extend .title__main;
       margin-bottom: 10px !important;
+      text-align: center;
     }
 
     &__category {
@@ -76,7 +71,7 @@
 
   &:hover {
     .project__image {
-      &::before, &::after {
+      &::before {
         opacity: 1;
       }
     }
