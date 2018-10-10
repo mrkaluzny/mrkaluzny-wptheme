@@ -20,6 +20,7 @@ function get_projects( $data ) {
     $object = (object) array(
       'id' => $item->ID,
       'name' => get_field('project-name', $item->ID),
+      'type' => get_the_terms($item->ID, 'project_type'),
       'image' => array(
         'small' => App::get_image_by_id($imageID, 'thumbnail'),
         'medium' => App::get_image_by_id($imageID, 'medium'),
