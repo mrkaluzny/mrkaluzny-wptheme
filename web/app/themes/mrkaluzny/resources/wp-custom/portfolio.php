@@ -41,7 +41,7 @@ function portfolio_post_type() {
 		'description'           => __( 'Portfolio Custom Post', 'mrkaluzny' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'custom-fields', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'project_type' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
