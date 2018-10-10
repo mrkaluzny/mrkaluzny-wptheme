@@ -6,7 +6,7 @@
       <div class="row">
         <div class="hero__content">
           <?php the_field('hero_text'); ?>
-          <a href="#services" class="btn btn--rounded btn--green-f btn--large animate-link">Learn More</a>
+          <a href="#services" class="btn btn--rounded btn--green-f btn--large animate-link">Let’s find out if we could be a perfect match!</a>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="services__feed">
       <div class="container" style="position:relative;">
         <img src="{{ get_template_directory_uri() . '/assets/images/mockup-steen.png'}}" alt="" class="services-desktop animated fadeInRight">
-        <div class="services__items animated fadeInUp">
+        <div class="services__items animated" transition-name="fadeInUp">
           @foreach($get_services as $service)
             @include('components.service-card')
           @endforeach

@@ -22,9 +22,21 @@
   }
 
   &__content {
-    max-width: 500px;
+    max-width: 760px;
     margin: 0 auto;
     position: relative;
     color: $mr-white;
+
+    h1 {
+      font-size: 4.2rem;
+      font-weight: bold;
+      font-family: 'Abril Fatface', cursive;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 }

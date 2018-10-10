@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Availability from '../components/Availability.jsx';
-import Navbar from '../components/Navbar.jsx';
-import Testimonials from '../components/Testimonials.jsx';
-import RecentProjects from '../components/RecentProjects.jsx';
-import RecentArticles from '../components/RecentArticles.jsx';
+import Availability from '../React/Availability.jsx';
+import Navbar from '../React/Navbar.jsx';
+import Testimonials from '../React/Testimonials.jsx';
+import RecentProjects from '../React/RecentProjects.jsx';
+import RecentArticles from '../React/RecentArticles.jsx';
 
 export default {
   init() {
