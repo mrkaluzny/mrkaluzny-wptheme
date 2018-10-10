@@ -114,6 +114,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "aos": "^2.3.4",
     "axios": "^0.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bootstrap": "v4.1.0",
