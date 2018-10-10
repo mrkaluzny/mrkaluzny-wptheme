@@ -9,12 +9,12 @@ import RecentArticles from '../React/RecentArticles.jsx';
 
 export default {
   init() {
+    AOS.init();
     ReactDOM.render(<Availability />, document.getElementById('availability'))
     ReactDOM.render(<Navbar />, document.getElementById('navbar'))
     ReactDOM.render(<Testimonials />, document.getElementById('testimonials'))
     ReactDOM.render(<RecentProjects />, document.getElementById('recent-projects'))
     ReactDOM.render(<RecentArticles />, document.getElementById('recent-articles'))
-    AOS.init();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

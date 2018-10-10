@@ -21,6 +21,13 @@
     opacity: 0.389;
   }
 
+  &--project {
+    position: relative;
+    overflow: hidden;
+    height: calc(100% - 90px);
+    display: block;
+  }
+
   &__content {
     max-width: 760px;
     margin: 0 auto;
@@ -37,6 +44,21 @@
 
     p {
       font-size: 1.2rem;
+    }
+  }
+
+  &__categories {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__screenshot {
+    text-align: center;
+    margin-top: 20px;
+    img {
+      max-width: 90%;
+      height: auto;
     }
   }
 }

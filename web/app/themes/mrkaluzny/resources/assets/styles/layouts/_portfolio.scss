@@ -89,3 +89,35 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
+
+.portfolio-content {
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-family: $mr-secondary;
+      font-size: 2.6rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      line-height: 1.5em;
+    }
+  }
+}
+
+
+.project-testimonial {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
