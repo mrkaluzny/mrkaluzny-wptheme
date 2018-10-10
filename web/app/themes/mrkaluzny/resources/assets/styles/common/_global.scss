@@ -36,6 +36,10 @@ a {
   &--blue {
     background-image: linear-gradient(40deg, rgba(#10c5f8,0.83) 0%, rgba(#6736dd,0.99) 100%);
   }
+
+  &--green {
+    background-image: linear-gradient(40deg, rgba($mr-green,0.83) 0%, rgba($mr-dark,0.99) 100%);
+  }
 }
 
 .section {
@@ -46,6 +50,7 @@ a {
 
   &--testimonials {
     min-height: 450px;
+    padding: 120px 0 0;
     @media screen and (max-width: $break-sm-down) {
       min-height: 590px;
     }

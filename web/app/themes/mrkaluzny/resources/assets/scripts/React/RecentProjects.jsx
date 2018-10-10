@@ -47,7 +47,7 @@ export default class RecentProjects extends React.Component {
 
   render() {
 
-    const cards = this.state.testimonials.map( (item) => {
+    const cards = this.state.testimonials.slice(0,6).map( (item) => {
       return (
         <div className="card card--project" href={item.permalink} key={item.id} data-aos="fade-up">
           <div className="card__image card__image--project" style={{ background: item.color }}>

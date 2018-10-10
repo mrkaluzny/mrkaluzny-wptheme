@@ -51,7 +51,7 @@ export default class Testimonials extends React.Component {
     };
 
     return (
-      <section className="section section--testimonials background--up">
+
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -67,7 +67,7 @@ export default class Testimonials extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+
     );
   }
 }

@@ -1,4 +1,4 @@
-<section class="cta cta--help background--blue">
+<section class="cta cta--help background--green">
   <div class="cta__inner cta__inner--help">
     <div class="title title--white">
       <h2 class="title__top">Let me help</h2>
@@ -6,7 +6,8 @@
     </div>
 
     <div class="cta__content">
-      Leave me some details and let me help you figure it out. Even the best ideas  may require some help!
+      Even the best ideas may require some help! <br>
+      Leave the details about your project and let me help you figure it out.
     </div>
 
     <a href="/" class="btn btn--rounded btn--white btn--medium">I could use some help</a>

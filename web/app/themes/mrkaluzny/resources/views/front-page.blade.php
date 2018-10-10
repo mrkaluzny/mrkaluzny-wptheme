@@ -39,7 +39,7 @@
   </section>
 
 
-  <section id="testimonials"></section>
+  <section id="testimonials" class="section section--testimonials background--up"></section>
 
   <section id="recent-projects"></section>
 
