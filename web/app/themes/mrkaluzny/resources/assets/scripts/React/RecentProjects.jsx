@@ -49,7 +49,7 @@ export default class RecentProjects extends React.Component {
 
     const cards = this.state.testimonials.map( (item) => {
       return (
-        <div className="card card--project" href={item.permalink} key={item.id}>
+        <div className="card card--project" href={item.permalink} key={item.id} data-aos="fade-up">
           <div className="card__image card__image--project" style={{ background: item.color }}>
             <img src={item.image.large} alt={item.name}/>
           </div>
@@ -83,7 +83,7 @@ export default class RecentProjects extends React.Component {
 
     const projects = this.state.testimonials.slice(0,4).map( (item) => {
       return (
-        <article className="project" key={item.id}>
+        <article className="project" key={item.id} data-aos="fade-up">
           <a href={item.permalink} className="project__wrapper" >
             <div className="project__image">
               <img src={item.desktop_image.large} alt={item.name}/>
@@ -105,7 +105,7 @@ export default class RecentProjects extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="title">
+              <div className="title" data-aos="fade-up">
                 <h2 className="title__top">Recent Work</h2>
                 <h1 className="title__main">Recently delivered projects</h1>
               </div>

@@ -55,11 +55,11 @@ export default class Testimonials extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="title">
+              <div className="title" data-aos="fade-up">
                 <h2 className="title__top">Testimonials</h2>
                 <h1 className="title__main">Some of my happy clients</h1>
               </div>
-              <div className="slider-wrapper">
+              <div className="slider-wrapper" data-aos="fade-up">
                 <Slider {...settings}>
                   { cards }
                 </Slider>

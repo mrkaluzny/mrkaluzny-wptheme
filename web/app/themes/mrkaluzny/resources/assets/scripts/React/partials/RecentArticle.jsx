@@ -7,7 +7,7 @@ class RecentArticle extends Component {
     const post = this.props.data
 
     return (
-      <a href={post.permalink} className="article__link">
+      <a href={post.permalink} className="article__link" data-aos="fade-up">
         <article className="article article--recent">
           <img src={post.image.large} alt={post.title} className="article__image"/>
           <h1 className="article__title article__title--recent">{post.title}</h1>

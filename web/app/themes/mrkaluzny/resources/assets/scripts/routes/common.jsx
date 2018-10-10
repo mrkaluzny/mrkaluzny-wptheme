@@ -1,3 +1,4 @@
+import AOS from 'aos';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Availability from '../React/Availability.jsx';
@@ -13,6 +14,7 @@ export default {
     ReactDOM.render(<Testimonials />, document.getElementById('testimonials'))
     ReactDOM.render(<RecentProjects />, document.getElementById('recent-projects'))
     ReactDOM.render(<RecentArticles />, document.getElementById('recent-articles'))
+    AOS.init();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

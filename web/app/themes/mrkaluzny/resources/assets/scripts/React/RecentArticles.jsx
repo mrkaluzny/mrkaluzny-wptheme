@@ -89,7 +89,7 @@ export default class RecentArticles extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="title">
+              <div className="title" data-aos="fade-up">
                 <h2 className="title__top">Latest Tips</h2>
                 <h1 className="title__main">Check the latest articles</h1>
               </div>
