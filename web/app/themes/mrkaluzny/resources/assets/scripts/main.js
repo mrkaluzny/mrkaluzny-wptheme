@@ -9,6 +9,7 @@ import Router from './util/Router';
 import common from './routes/common.jsx';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import blog from './routes/blog';
 
 
 /** Populate Router instance with DOM routes */
@@ -19,6 +20,7 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  blog,
 });
 
 // Load Events
