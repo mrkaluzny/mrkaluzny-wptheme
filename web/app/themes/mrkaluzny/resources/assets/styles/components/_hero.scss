@@ -28,6 +28,13 @@
     display: block;
   }
 
+  &--blog {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(60% - 90px);
+    display: block;
+  }
+
   &__content {
     max-width: 760px;
     margin: 0 auto;
