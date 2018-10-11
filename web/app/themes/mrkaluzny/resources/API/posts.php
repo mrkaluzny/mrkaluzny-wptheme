@@ -41,5 +41,43 @@ add_action( 'rest_api_init', function () {
   ) );
 } );
 
+function get_all_articles( $data ) {
+  $articles = get_posts(array(
+    'post_type' => 'post',
+    'posts_per_page' => -1,
+  ));
+
+  $collection = [];
+
+  foreach ($articles as $item) {
+
+    $imageID = get_post_thumbnail_id($item->ID);
+    $object = (object) array(
+      'id' => $item->ID,
+      'title' => $item->post_title,
+      'image' => array(
+        'small' => App::get_image_by_id($imageID, 'thumbnail'),
+        'medium' => App::get_image_by_id($imageID, 'medium'),
+        'large' => App::get_image_by_id($imageID, 'large'),
+      ),
+      'categories' => get_the_terms($item->ID, 'category'),
+      'tags' => get_the_terms($item->ID, 'post_tag'),
+      'excerpt' => wp_trim_words($item->post_content, 40, '...'),
+      'permalink' => get_permalink($item->ID),
+    );
+
+    array_push($collection, $object);
+
+  }
+  return $collection;
+}
+
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'api/v1', '/articles', array(
+    'methods' => 'GET',
+    'callback' => 'get_all_articles',
+  ) );
+} );
+
 
 ?>
