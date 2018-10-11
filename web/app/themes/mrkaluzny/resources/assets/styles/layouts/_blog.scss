@@ -1,0 +1,11 @@
+.blog-posts {
+  &__feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .article__link {
+      width: calc(100%/3 - 20px);
+    }
+  }
+}

@@ -30,6 +30,7 @@ $recent-article-padding: 0 20px;
 
   &__excerpt {
     padding: $recent-article-padding;
+    font-size: 1.1rem;
   }
 
 
@@ -53,9 +54,9 @@ $recent-article-padding: 0 20px;
     font-size: 36px;
 
     &--recent {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: $mr-dark;
-      margin: 10px 0 20px;
+      margin: 10px 0 10px;
       width: 100%;
       font-weight: 600;
       padding: $recent-article-padding;

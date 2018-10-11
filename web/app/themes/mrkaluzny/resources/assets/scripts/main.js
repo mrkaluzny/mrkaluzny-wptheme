@@ -9,7 +9,7 @@ import Router from './util/Router';
 import common from './routes/common.jsx';
 import home from './routes/home';
 import aboutUs from './routes/about';
-import blog from './routes/blog';
+import blog from './routes/blog.jsx';
 
 
 /** Populate Router instance with DOM routes */
