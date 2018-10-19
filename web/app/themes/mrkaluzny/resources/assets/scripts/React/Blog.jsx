@@ -2,6 +2,7 @@ import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
 import RecentArticle from './partials/RecentArticle.jsx';
+import Loader from './partials/Loader.jsx';
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class Blog extends React.Component {
       isLoading: true,
       isMobile: false,
       viewportWidth: null,
+      articleCounter: 3,
     };
   }
 
@@ -29,7 +31,7 @@ export default class Blog extends React.Component {
 
   render() {
 
-    const articles = this.state.posts.map( (item) => {
+    const articles = this.state.posts.slice(0, this.state.articleCounter).map( (item) => {
       return (
         <RecentArticle data={item} key={item.id} />
       )
@@ -41,7 +43,7 @@ export default class Blog extends React.Component {
           <div className="row">
             <div className="col-12">
               <div className="blog-posts__feed">
-                {articles}
+                {this.state.isLoading ? <Loader /> : articles}
               </div>
             </div>
           </div>
