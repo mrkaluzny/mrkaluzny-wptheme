@@ -13,6 +13,7 @@ export default class Blog extends React.Component {
       isMobile: false,
       viewportWidth: null,
       articleCounter: 3,
+      bottom: false,
     };
   }
 
@@ -24,8 +25,29 @@ export default class Blog extends React.Component {
           posts: res.data,
           isLoading: false,
         })
+
+        window.addEventListener('scroll', () => {
+          let bottom = this.bottomVisible()
+          if (bottom && this.state.posts.length >= this.state.articleCounter) {
+            this.setState((prevState) => {
+              return {articleCounter: prevState.articleCounter + 3}
+            })
+          }
+        })
       }
     })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll')
+  }
+
+  bottomVisible() {
+    const scrollY = window.scrollY
+    const visible = document.documentElement.clientHeight
+    const pageHeight = document.documentElement.scrollHeight
+    const bottomOfPage = visible + scrollY >= pageHeight - 500
+    return bottomOfPage || pageHeight < visible
   }
 
 
@@ -43,7 +65,8 @@ export default class Blog extends React.Component {
           <div className="row">
             <div className="col-12">
               <div className="blog-posts__feed">
-                {this.state.isLoading ? <Loader /> : articles}
+                {!this.state.isLoading ? articles : ''}
+                {this.state.isLoading ? <Loader /> : ''}
               </div>
             </div>
           </div>
