@@ -31,8 +31,15 @@
   &--blog {
     position: relative;
     overflow: hidden;
-    min-height: calc(60% - 90px);
+    min-height: auto;
+    padding: 180px 0 130px;
     display: block;
+  }
+
+  &--article {
+    min-height: 80vh;
+    align-items: flex-end;
+    padding: 170px 0 50px;
   }
 
   &__content {
