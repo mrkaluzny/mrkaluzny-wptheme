@@ -67,4 +67,13 @@ class App extends Controller
 
       return $posts;
     }
+
+    public static function get_reading_time_for_string($string = '') {
+      $word_count = str_word_count( strip_tags( $string ) );
+      $readingtime = ceil($word_count / 200);
+
+      $totalreadingtime = $readingtime . ' min read';
+
+      return $totalreadingtime;
+    }
 }
