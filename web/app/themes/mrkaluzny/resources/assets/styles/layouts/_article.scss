@@ -11,7 +11,7 @@
   }
 
   &__title {
-    color: $white;
+    color: $mr-white;
     font-size: 3.5rem;
     line-height: 0.95em;
     font-weight: bold;
@@ -21,6 +21,10 @@
     @media screen and (max-width: $break-sm-down) {
       font-size: 2.4rem;
     }
+  }
+
+  &__categories {
+    color: $mr-white;
   }
 
 }

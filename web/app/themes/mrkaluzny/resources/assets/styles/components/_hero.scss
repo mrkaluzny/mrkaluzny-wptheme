@@ -47,6 +47,10 @@
     @media screen and (max-height: 800px) {
       min-height: 100vh;
     }
+
+    &::before {
+      opacity: 0.689;
+    }
   }
 
   &__content {
