@@ -6,6 +6,18 @@
 
     .article__link {
       width: calc(100%/3 - 20px);
+
+      @media screen and (max-width: $break-lg-down) {
+        width: calc(100%/2 - 10px);
+      }
+    }
+
+    @media screen and (max-width: $break-md-down) {
+      .article__link {
+        width: 100%;
+        max-width: none;
+      }
+      justify-content: center;
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
-import RecentArticle from './partials/RecentArticle.jsx';
+import Article from './partials/Article.jsx';
 import Loader from './partials/Loader.jsx';
 
 export default class Blog extends React.Component {
@@ -55,7 +55,7 @@ export default class Blog extends React.Component {
 
     const articles = this.state.posts.slice(0, this.state.articleCounter).map( (item) => {
       return (
-        <RecentArticle data={item} key={item.id} />
+        <Article data={item} key={item.id} />
       )
     })
 

@@ -3,55 +3,26 @@
   max-width: 850px;
   margin: 0 auto;
   text-align: left;
+  position: relative;
+
+  &__wrapper {
+    max-width: 700px;
+    margin-right: auto;
+  }
 
   &__title {
     color: $white;
     font-size: 3.5rem;
-    line-height: 0.9em;
+    line-height: 0.95em;
     font-weight: bold;
     letter-spacing: -0.03em;
     margin-bottom: 1.2rem;;
-  }
 
-  &__details {
-    font-size: 0.95rem;
-  }
-
-  &__published {
-    margin-right: 5px;
-  }
-
-  &__time {
-    margin-left: 5px;
-  }
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  &__link {
-    color: $mr-white;
-    font-weight: bold;
-    transition: 0.3s;
-
-    &:hover {
-      color: $mr-green;
-      text-decoration: none;
+    @media screen and (max-width: $break-sm-down) {
+      font-size: 2.4rem;
     }
   }
 
-  &__info {
-    color: $mr-white;
-    font-size: 1rem;;
-    margin-left: 15px;
-  }
-
-  &__photo {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-size: cover;
-  }
 }
 
 .category-item {

@@ -1,0 +1,58 @@
+.author {
+  display: flex;
+  align-items: center;
+  color: $mr-white;
+  &__link,
+  &__name {
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  &__link:hover {
+    color: $mr-green;
+    text-decoration: none;
+  }
+
+  &__info {
+    color: inherit;
+    font-size: 1rem;
+    margin-left: 15px;
+
+    &--recent {
+      margin-left: 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__photo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    &--recent {
+      height: 28px;
+      width: 28px;
+    }
+  }
+
+  &__details {
+    font-size: 0.85em;
+    &--recent {
+      margin-top: -4px;
+    }
+  }
+
+  &__published {
+    margin-right: 5px;
+  }
+
+  &__time {
+    margin-left: 5px;
+  }
+
+  &--recent {
+    color: $mr-dark;
+    padding: 4px 20px 12px;
+  }
+}

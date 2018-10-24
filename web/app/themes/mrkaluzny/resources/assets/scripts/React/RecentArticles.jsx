@@ -2,7 +2,7 @@ import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
 import Slider from 'react-slick';
-import RecentArticle from './partials/RecentArticle.jsx';
+import Article from './partials/Article.jsx';
 
 export default class RecentArticles extends React.Component {
   constructor(props) {
@@ -59,15 +59,15 @@ export default class RecentArticles extends React.Component {
 
     const articles = this.state.posts.map( (item) => {
       return (
-        <div className="col-4" key={item.id}>
-          <RecentArticle data={item} />
+        <div className="col-lg-4 col-md-6" key={item.id}>
+          <Article data={item} />
         </div>
       )
     })
 
     const posts = this.state.posts.map( (item) => {
       return (
-        <RecentArticle data={item} key={item.id} />
+        <Article data={item} key={item.id} />
       )
     })
 
