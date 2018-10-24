@@ -1,10 +1,8 @@
 .card {
+  border: 1px solid lighten($mr-dark, 70%);
   border-radius: 5px;
-  border: 1px solid $mr-grey;
   margin-bottom: 20px;
-  border-radius: 18px;
-  border: none;
-  box-shadow: 0 0 30px 0 rgba($mr-dark, 0.22);
+  box-shadow: 0 5px 20px 0 rgba($mr-dark, 0.05);
   color: $mr-dark;
 
 
@@ -64,14 +62,20 @@
     font-size: 14px;
     line-height: 21px;
     margin-top: 10px;
+
+    &--testimonial {
+      font-size: 1.3rem;
+      margin-bottom: 2.4rem;
+      line-height: 1.2em;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+
+    }
   }
 
   &--testimonial {
-    padding: 25px 25px 37px;
+    padding: 37px 35px 37px;
     max-width: 500px;
-    // flex: 1 0 100%;
-    // flex-basis: calc(100% - 54px * 2);
-    // margin: 0 17px;
   }
 
   &--project {

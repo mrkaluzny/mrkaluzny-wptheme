@@ -51,6 +51,7 @@ a {
   &--testimonials {
     min-height: 450px;
     padding: 120px 0 0;
+    position: relative;
     @media screen and (max-width: $break-sm-down) {
       min-height: 590px;
     }
