@@ -2,6 +2,7 @@ import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
 import Slider from 'react-slick';
+import Loader from './partials/Loader.jsx';
 
 export default class RecentProjects extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class RecentProjects extends React.Component {
     .then(res => {
       this.setState({
         testimonials: res.data,
+        isLoading: false,
       })
     })
   }
@@ -109,6 +111,7 @@ export default class RecentProjects extends React.Component {
                 <h1 className="title__main">Recently delivered projects</h1>
               </div>
               <div className="projects-feed">
+                {this.state.isLoading ? <Loader /> : '' }
                 {this.state.isMobile ? projectsMobile : projects}
               </div>
             </div>

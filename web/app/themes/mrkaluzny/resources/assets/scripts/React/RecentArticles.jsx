@@ -3,6 +3,7 @@ import {Helper} from '../Helper.js';
 import axios from 'axios';
 import Slider from 'react-slick';
 import Article from './partials/Article.jsx';
+import Loader from './partials/Loader.jsx';
 
 export default class RecentArticles extends React.Component {
   constructor(props) {
@@ -98,6 +99,7 @@ export default class RecentArticles extends React.Component {
         </div>
         <div className="container">
           <div className="row">
+            {this.state.isLoading ? <Loader /> : '' }
             {this.state.isMobile ? articlesMobile : articles}
           </div>
           <div className="row">

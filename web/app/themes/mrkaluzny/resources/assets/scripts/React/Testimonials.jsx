@@ -3,6 +3,7 @@ import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
 import Slider from 'react-slick';
+import Loader from './partials/Loader.jsx';
 
 export default class Testimonials extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ export default class Testimonials extends React.Component {
     .then(res => {
       this.setState({
         testimonials: res.data,
+        isLoading: false,
       })
     })
   }
@@ -60,7 +62,8 @@ export default class Testimonials extends React.Component {
                 <h1 className="title__main">Some of my happy clients</h1>
               </div>
               <div className="slider-wrapper" data-aos="fade-up">
-                <Slider {...settings}>
+              {this.state.isLoading ? <Loader /> : '' }
+                <Slider {...settings} data-aos="fade-up">
                   { cards }
                 </Slider>
               </div>
