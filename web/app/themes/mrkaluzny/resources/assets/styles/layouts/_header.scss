@@ -48,15 +48,15 @@
   }
 
   &__item {
+    margin-right: 40px;
     > a {
-      padding: 10px;
+      padding: 10px 0;
       display: block;
       color: $mr-dark;
       transition: color .3s ease-in-out;
       font-size: 1rem;
       letter-spacing: -0.0515em;
       font-weight: 600;
-      margin: 0 10px;
       &:hover {
         text-decoration: none;
         color: $mr-dark;

@@ -20,22 +20,22 @@
         <ul class="footer__social">
           <li>
             <a href="https://instagram.com/mrkaluzny" class="footer__link" target="_blank">
-              {!! App::inline_svg('instagram') !!}
+              @include('icons.instagram')
             </a>
           </li>
           <li>
             <a href="https://twitter.com/mrkaluzny" class="footer__link" target="_blank">
-              {!! App::inline_svg('twitter') !!}
+              @include('icons.twitter')
             </a>
           </li>
           <li>
             <a href="https://github.com/mrkaluzny" class="footer__link" target="_blank">
-              {!! App::inline_svg('github') !!}
+              @include('icons.github')
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/mrkaluzny" class="footer__link" target="_blank">
-              {!! App::inline_svg('linkedin') !!}
+              @include('icons.linkedin')
             </a>
           </li>
         </ul>
