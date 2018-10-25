@@ -80,7 +80,7 @@ export default class Navbar extends React.Component {
       navigationClass += ' navigation--open'
     }
     let btnClass = 'btn btn--nav' + (this.state.isMenuOpen || this.state.currentScroll < 66 ? ' btn--active' : '')
-    let brandClass = 'brand' + (this.state.isMenuOpen || this.state.currentScroll < 66 ? ' brand--white' : '')
+    let brandClass = 'brand' + (this.state.isMenuOpen ? ' brand--white' : '')
     let navClass = 'mobile-nav' + (this.state.isMenuOpen ? ' mobile-nav--active' : '')
 
     const menuItems = this.state.navigation.map((item) => {
@@ -119,7 +119,7 @@ export default class Navbar extends React.Component {
 
               <ul className="navigation__list">
                 {menuItems}
-                <a href="/estimate-project" className="estimate-project">Estimate Project</a>
+                <a href="/estimate-project" className="btn btn--underlined">Estimate Project</a>
               </ul>
             </div>
           </div>

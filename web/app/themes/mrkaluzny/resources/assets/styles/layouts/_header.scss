@@ -51,15 +51,15 @@
     > a {
       padding: 10px;
       display: block;
-      color: $mr-white;
+      color: $mr-dark;
       transition: color .3s ease-in-out;
       font-size: 1rem;
-      letter-spacing: 0.0515em;
-      font-weight: 300;
+      letter-spacing: -0.0515em;
+      font-weight: 600;
       margin: 0 10px;
       &:hover {
         text-decoration: none;
-        color: $mr-white;
+        color: $mr-dark;
       }
     }
 
@@ -95,8 +95,6 @@
     top: -80px;
     .navigation__item a {
       color: $mr-dark;
-      font-weight: 400;
-      letter-spacing: 0.03em;
       &:hover {
         color: $mr-dark;
       }
