@@ -1,42 +1,29 @@
 .services {
-  background-color: rgba($mr-dark, 0.04);
+  // background-color: rgba($mr-dark, 0.04);
   position: relative;
   overflow: hidden;
-  &__feed {
-    margin: 35px 0 120px;
-    position: relative;
-    display: flex;
+  padding: 120px 0;
 
-    @media screen and (max-width: $break-md-down) {
-      .service {
-        max-width: 67%;
-        &:nth-child(even) {
-          text-align: right;
-          margin-left: auto;
-        }
-        &:not(:last-child) {
-          margin-bottom: 130px;
-        }
-      }
-    }
-
-    @media screen and (min-width: $break-md-up) {
-      margin: 40px 0 0;
-    }
+  &__image {
+    position: absolute;
+    left: -20%;
   }
 
-  @media screen and (min-width: $break-md-up) {
-    padding: 50px 0 0;
+  &__feed {
+    margin-left: auto;
+    position: relative;
+    display: flex;
   }
 }
 
 .service {
+  margin-bottom: 40px;
   &__name {
-    font-size: 12px;
-    letter-spacing: 2.1px;
-    margin: 0;
-    font-weight: 300;
-    text-transform: uppercase;
+    font-size: 1.813rem;
+    letter-spacing: -1.04px;
+    margin: 0 0 0.9375rem 0;
+    font-weight: 900;
+    line-height: 22px;
     @media screen and (max-width: $break-sm-down) {
       font-size: 9px;
       letter-spacing: 1.51px;
@@ -44,10 +31,11 @@
   }
 
   &__tagline {
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 1.05em;
-    margin: 0 0 8px 0;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0 0 0.175rem 0;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
     @media screen and (max-width: $break-sm-down) {
       font-size: 16px;
     }
@@ -55,9 +43,9 @@
 
   &__excerpt {
     font-weight: 300;
-    font-size: 14px;
-    line-height: 21px;
-    margin: 0 0 10px 0;
+    font-size: 1rem;;
+    line-height: 1.5em;
+    margin: 0 0 0.9375rem 0;
   }
 
   @media screen and (max-width: $break-md-down) {
@@ -71,36 +59,14 @@
 .services__items {
   display: flex;
   flex-wrap: wrap;
+  max-width: 450px;
 
   @media screen and (min-width: $break-md-up) {
-    margin-top: 30px;
-    max-width: 600px;
-    margin-right: auto;
-    padding-bottom: 120px;
+    margin-left: auto;
   }
 
-  @media screen and (max-width: $break-md-down) {
-    align-items: flex-start;
-    justify-content: center;
-  }
 }
 
-.service {
-  @media screen and (min-width: $break-md-up) {
-    width: calc(100%/2);
-    padding: 30px 25px;
-    background-color: $mr-white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all ease-in-out .3s;
-    &:hover {
-      box-shadow: 0 0 20px rgba($mr-dark, 0.15);
-      z-index: 99;
-      transform: scale(1.1,1.1)
-    }
-  }
-}
 
 .services-desktop {
   position: absolute;

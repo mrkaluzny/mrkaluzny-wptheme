@@ -4,6 +4,30 @@
     border-radius: 100px;
   }
 
+  &--standard {
+    border: 2px solid $mr-dark;
+    color: $mr-dark;
+    padding: 5px 15px;
+    font-size: 13px;
+    border-radius: 0;
+    font-weight: 900;
+    &:hover {
+      background-color: $mr-dark;
+      color: $mr-white;
+    }
+
+    &:active {
+      background-color: $mr-dark;
+      color: $mr-white;
+      transform: scale(0.95);
+    }
+
+    &-large {
+      padding: 10px 30px;
+      font-size: 1.2rem;
+    }
+  }
+
   &--underlined {
     position: relative;
     color: $mr-dark;

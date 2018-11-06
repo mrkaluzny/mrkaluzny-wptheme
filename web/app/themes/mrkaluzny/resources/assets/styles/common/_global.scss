@@ -1,6 +1,7 @@
 html, body {
   font-family: $mr-main;
   font-weight: 300;
+  font-size: 16px;
   height: 100%;
   width: 100%;
 }
@@ -56,4 +57,10 @@ a {
       min-height: 590px;
     }
   }
+}
+
+
+.flex-row {
+  flex-wrap: nowrap !important;
+  align-items: center;
 }

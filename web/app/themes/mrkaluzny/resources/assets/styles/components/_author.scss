@@ -5,7 +5,7 @@
   &__link,
   &__name {
     color: inherit;
-    font-weight: bold;
+    font-weight: 900;
     transition: 0.3s;
   }
 
@@ -53,6 +53,14 @@
 
   &--recent {
     color: $mr-dark;
-    padding: 4px 20px 12px;
+    padding: 0 20px 3px;
+    .author__name {
+      margin-right: 5px;
+      font-size: 0.875rem;
+    }
+
+    .author__time {
+      font-size: 0.875rem;
+    }
   }
 }

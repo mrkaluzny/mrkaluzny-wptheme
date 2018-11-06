@@ -33,6 +33,18 @@
       line-height: normal;
     }
 
+    &--large {
+      font-family: $mr-secondary;
+      color: $mr-dark;
+      font-size: 56px;
+      letter-spacing: -0.98px;
+      line-height: 60px;
+      max-width: 450px;
+      span {
+        color: $mr-green;
+      }
+    }
+
     &--cta {
       margin: 0 0 20px;
     }
@@ -61,5 +73,21 @@
 
   &--white {
     color: $mr-white;
+  }
+
+  &--right {
+    text-align: right;
+    margin: 0 0 0 auto;
+    .title__main {
+      margin-left: auto;
+    }
+  }
+
+  &--left {
+    text-align: left;
+    margin: 0 auto 0 0;
+    .title__main {
+      margin-right: auto;
+    }
   }
 }

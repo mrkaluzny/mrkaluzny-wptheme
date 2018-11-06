@@ -8,9 +8,6 @@ import Loader from './partials/Loader.jsx';
 export default class RecentArticles extends React.Component {
   constructor(props) {
     super(props);
-
-    // How to set initial state in ES6 class syntax
-    // https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class
     this.state = {
       posts: [],
       isLoading: true,
@@ -90,9 +87,8 @@ export default class RecentArticles extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="title" data-aos="fade-up">
-                <h2 className="title__top">Latest Tips</h2>
-                <h1 className="title__main">Check the latest articles</h1>
+              <div className="title title--left" data-aos="fade-up">
+                <h1 className="title__main title__main--large">Latest tips from the blog<span>.</span></h1>
               </div>
             </div>
           </div>
@@ -104,7 +100,7 @@ export default class RecentArticles extends React.Component {
           </div>
           <div className="row">
             <div className="col-12 text-center" data-aos="fade-up">
-              <a className="btn btn--rounded btn--green btn--medium" href="/blog">Check the blog</a>
+              <a className="btn btn--standard btn--standard-large" href="/blog">Check the blog</a>
             </div>
           </div>
         </div>

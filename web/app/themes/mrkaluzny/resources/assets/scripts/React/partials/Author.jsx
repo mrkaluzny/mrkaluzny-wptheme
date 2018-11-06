@@ -10,13 +10,7 @@ class Author extends Component {
 
     return (
       <div className="author author--recent">
-        <img src={author.avatar} alt={author.name} className="author__photo author__photo--recent"/>
-        <div className="author__info author__info--recent">
-          <div className="author__name author__name--recent"> { author.name }</div>
-          <div className="author__details author__details--recent">
-            <span className="article__published">{published}</span> | <span className="article__time">{readtime }</span>
-          </div>
-        </div>
+        <span className="author__name">{ author.name }</span> | <span className="author__time">{readtime }</span>
       </div>
     )
   }
