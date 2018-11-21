@@ -7,4 +7,5 @@
   require_once('testimonials.php');
   require_once('services.php');
   require_once('options-page.php');
+  require_once('industry.php');
 ?>
