@@ -2,7 +2,11 @@ import React from 'react';
 import {Helper} from '../Helper.js';
 import axios from 'axios';
 import Slider from 'react-slick';
+
+import Project from './partials/Project.jsx';
 import Loader from './partials/Loader.jsx';
+
+
 
 export default class RecentProjects extends React.Component {
   constructor(props) {
@@ -85,19 +89,7 @@ export default class RecentProjects extends React.Component {
 
     const projects = this.state.testimonials.slice(0,4).map( (item) => {
       return (
-        <article className="project" key={item.id} data-aos="fade-up" style={{backgroundImage: `url('${item.desktop_image.large}')`}}>
-          <a href={item.permalink} className="project__wrapper" >
-            <div className="project__image">
-            </div>
-            <div className="project__info">
-              <div className="project__info__owner">
-                <h2 className="project__info__category">Category</h2>
-                <h1 className="project__info__company">{item.name}</h1>
-              </div>
-              <div className="project__info__content">{item.excerpt}</div>
-            </div>
-          </a>
-        </article>
+        <Project key={item.id} project={item} />
       )
     });
 
@@ -115,7 +107,7 @@ export default class RecentProjects extends React.Component {
               </div>
             </div>
             <div className="col-12 text-center" data-aos="fade-up">
-              <a href='/portfolio' className="btn btn--standard btn--standard-large">See complete portfolio</a>
+              <a href='/clients' className="btn btn--standard btn--standard-large">See complete portfolio</a>
             </div>
           </div>
         </div>
