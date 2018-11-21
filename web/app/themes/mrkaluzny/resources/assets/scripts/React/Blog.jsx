@@ -19,6 +19,8 @@ export default class Blog extends React.Component {
       articleCounter: 3,
       bottom: false,
     };
+
+    this.handleScrollEvent = this.handleScrollEvent.bind(this)
   }
 
   componentDidMount() {
@@ -30,14 +32,7 @@ export default class Blog extends React.Component {
           isLoading: false,
         })
 
-        window.addEventListener('scroll', () => {
-          let bottom = this.bottomVisible()
-          if (bottom && this.state.posts.length >= this.state.articleCounter) {
-            this.setState((prevState) => {
-              return {articleCounter: prevState.articleCounter + 3}
-            })
-          }
-        })
+        window.addEventListener('scroll', this.handleScrollEvent)
       }
     })
 
@@ -50,7 +45,16 @@ export default class Blog extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll')
+    window.removeEventListener('scroll', this.handleScrollEvent)
+  }
+
+  handleScrollEvent() {
+    let bottom = this.bottomVisible()
+    if (bottom && this.state.posts.length >= this.state.articleCounter) {
+      this.setState((prevState) => {
+        return {articleCounter: prevState.articleCounter + 3}
+      })
+    }
   }
 
   bottomVisible() {

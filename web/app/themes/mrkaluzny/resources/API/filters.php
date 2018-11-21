@@ -22,7 +22,17 @@ function fetch_industries( $data ) {
 }
 
 function fetch_categories( $data ) {
-  $terms = get_categories();
+  $categories = get_categories();
+  $terms = array();
+  foreach ($categories as $category) {
+    $temp = (object)array(
+      'name' => $category->name,
+      'id' => $category->term_id,
+    );
+
+    array_push($terms, $temp);
+  }
+
 
   return $terms;
 }
