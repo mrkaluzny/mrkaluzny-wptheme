@@ -106,9 +106,8 @@ export default class RecentProjects extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="title" data-aos="fade-up">
-                <h2 className="title__top">Recent Work</h2>
-                <h1 className="title__main">Recently delivered projects</h1>
+              <div className="title title--right" data-aos="fade-up">
+                <h1 className="title__main title__main--large">Proudly providing solutions around the globe<span>.</span></h1>
               </div>
               <div className="projects-feed">
                 {this.state.isLoading ? <Loader /> : '' }
@@ -116,7 +115,7 @@ export default class RecentProjects extends React.Component {
               </div>
             </div>
             <div className="col-12 text-center" data-aos="fade-up">
-              <a href='/portfolio' className="btn btn--green btn--rounded btn--medium">See complete portfolio</a>
+              <a href='/portfolio' className="btn btn--standard btn--standard-large">See complete portfolio</a>
             </div>
           </div>
         </div>
