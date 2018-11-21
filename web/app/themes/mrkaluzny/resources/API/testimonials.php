@@ -13,22 +13,31 @@ function get_testimonials( $data ) {
 
   $collection = [];
 
+  $count = 1;
+  $intermediate = [];
   foreach ($testimonials as $item) {
 
-    $imageID = get_field('image', $item->ID);
-    $object = (object) array(
-      'id' => $item->ID,
-      'name' => $item->post_title,
-      'image' => array(
-        'small' => App::get_image_by_id($imageID, 'thumbnail'),
-        'medium' => App::get_image_by_id($imageID, 'medium'),
-      ),
-      'position' => get_field('position', $item->ID),
-      'company' => get_field('company', $item->ID),
-      'content' => $item->post_content,
-    );
+      $imageID = get_field('image', $item->ID);
+      $object = (object) array(
+        'id' => $item->ID,
+        'name' => $item->post_title,
+        'image' => array(
+          'small' => App::get_image_by_id($imageID, 'thumbnail'),
+          'medium' => App::get_image_by_id($imageID, 'medium'),
+        ),
+        'position' => get_field('position', $item->ID),
+        'company' => get_field('company', $item->ID),
+        'content' => $item->post_content,
+      );
 
-    array_push($collection, $object);
+      array_push($intermediate, $object);
+      $count++;
+      if ($count > 2) {
+        array_push($collection, $intermediate);
+        unset($intermediate);
+        $intermediate = [];
+        $count = 1;
+      }
 
   }
   return $collection;

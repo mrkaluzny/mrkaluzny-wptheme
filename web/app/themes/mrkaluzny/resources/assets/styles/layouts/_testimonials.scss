@@ -1,4 +1,11 @@
 .testimonials {
+  position: relative;
+  overflow: hidden;
+  &__dots {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   &__feed {
     max-width: 100%;
     position: relative;
@@ -30,7 +37,7 @@
 
   &--testimonials {
     .slick-slide div {
-      opacity: 0.5;
+      
       transition: opacity .3s ease-in-out;
     }
 
