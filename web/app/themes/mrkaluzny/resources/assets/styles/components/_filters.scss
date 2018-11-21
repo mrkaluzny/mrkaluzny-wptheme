@@ -1,0 +1,73 @@
+.filters {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    color: $mr-dark;
+    letter-spacing: 1.4px;
+    margin-bottom: 8px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    margin-bottom: 80px;
+    .filters:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}
+
+
+.filter {
+  width: calc(100%/4 - 90px/4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 2px solid rgba($mr-dark, 0.76);
+  transition: border 0.3s ease-in-out, background-color .3s ease-in-out;
+  cursor: pointer;
+
+  &:not(:nth-child(4n)) {
+    margin-right: calc(90px/3);
+  }
+
+  &__name {
+    font-weight: 900;
+    font-size: 13px;
+    line-height: normal;
+    color: $mr-dark;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__check {
+    opacity: 0;
+    height: 24px;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &--active {
+    background-color: $mr-dark;
+    .filter__name {
+      color: $mr-white;
+    }
+
+    .filter__check {
+      opacity: 1;
+    }
+  }
+
+
+  &:hover {
+    background-color: rgba($mr-dark, 0.76);
+    box-shadow: 0 0 15px 0 rgba($mr-dark, 0.2);
+    border-color: transparent;
+    .filter__name {
+      color: $mr-white;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page-header {
+  padding: 80px 0;
+  &__title {
+    font-family: $mr-secondary;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -0.98px;
+    max-width: 540px;
+    color: $mr-dark;
+    span {
+      color: $mr-green;
+    }
+  }
+}
