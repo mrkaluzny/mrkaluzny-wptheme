@@ -5,7 +5,7 @@ import Filter from './Filter.jsx'
 export default class Filters extends Component {
   render() {
 
-    const filters = Array.prototype.isArray(this.props.filters) ?
+    const filters = this.props.filters ?
       this.props.filters.map(filter => {
         return (
           <Filter key={filter.id} data={filter} />
