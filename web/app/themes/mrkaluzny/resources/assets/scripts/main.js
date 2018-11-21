@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import blog from './routes/blog.jsx';
 import singlePost from './routes/singlePost.js';
+import clients from  './routes/clients.jsx';
 
 
 /** Populate Router instance with DOM routes */
@@ -21,6 +22,7 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  clients,
   blog,
   singlePost,
 });
