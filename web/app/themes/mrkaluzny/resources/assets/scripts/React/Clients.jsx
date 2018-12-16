@@ -13,9 +13,9 @@ export default class Clients extends Component {
     this.state = {
       projects: [],
       isLoading: true,
-      industries: null,
-      projectTypes: null,
-      currentCategory: [],
+      industries: [],
+      projectTypes: [],
+      currentProjectType: [],
       currentIndustry: [],
     }
 
@@ -49,9 +49,71 @@ export default class Clients extends Component {
     })
   }
 
+
+  handleProjectType(id, isActive) {
+    if (isActive) {
+      this.setState(prevState => {
+        return {
+          currentProjectType: [...prevState.currentProjectType, id]
+        }
+      })
+    } else {
+      let index = this.state.currentProjectType.indexOf(id)
+      this.setState(prevState => {
+        return {
+          currentProjectType: prevState.currentProjectType.filter((_,i) => i !== index),
+        }
+      })
+    }
+  }
+
+  handleIndustry(id, isActive) {
+    if (isActive) {
+      this.setState(prevState => {
+        return {
+          currentIndustry: [...prevState.currentIndustry, id]
+        }
+      })
+    } else {
+      let index = this.state.currentIndustry.indexOf(id)
+      this.setState(prevState => {
+        return {
+          currentIndustry: prevState.currentIndustry.filter((_,i) => i !== index),
+        }
+      })
+    }
+  }
+
   render() {
 
-    const projects = this.state.projects.map( item => {
+    const projects = this.state.projects
+    .filter(item => {
+      if (this.state.currentProjectType.length >= 1) {
+        let result = false
+        for (let i = 0; i < item.type.length; i++) {
+          if (this.state.currentProjectType.indexOf(item.type[i].term_id) != -1) {
+            result = true;
+          }
+        }
+        return result;
+      } else {
+        return true;
+      }
+    })
+    .filter(item => {
+        if (this.state.currentIndustry.length >= 1) {
+          let result = false
+          for (let i = 0; i < item.industry.length; i++) {
+            if (this.state.currentIndustry.indexOf(item.industry[i].term_id) != -1) {
+              result = true;
+            }
+          }
+          return result;
+        } else {
+          return true;
+        }
+    })
+    .map( item => {
       return (
         <Project key={item.id} project={item} />
       )
@@ -63,8 +125,8 @@ export default class Clients extends Component {
           <div className="row">
             <div className="col-12">
               <div className="filters__wrapper">
-                <Filters title="Project type" filters={this.state.projectTypes} key="Project Types" />
-                <Filters title="Industry" filters={this.state.industries} key="Industry" />
+                <Filters title="Project type" filters={this.state.projectTypes} key="ProjectTypes" filterChange={this.handleProjectType.bind(this)} />
+                <Filters title="Industry" filters={this.state.industries} key="Industry" filterChange={this.handleIndustry.bind(this)} />
               </div>
             </div>
             <div className="col-12">

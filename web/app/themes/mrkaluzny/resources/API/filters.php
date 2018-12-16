@@ -7,19 +7,38 @@
  */
 function fetch_project_types( $data ) {
   $terms = get_terms( 'project_type', array(
-    'hide_empty' => false,
-  ) );
+    'hide_empty' => true,
+  ));
 
-  return $terms;
+  $collection = array();
+  foreach ($terms as $category) {
+    $temp = (object)array(
+      'name' => $category->name,
+      'id' => $category->term_id,
+    );
+    array_push($collection, $temp);
+  }
+
+  return $collection;
 }
 
 function fetch_industries( $data ) {
   $terms = get_terms( 'industry', array(
-    'hide_empty' => false,
-  ) );
+    'hide_empty' => true,
+  ));
 
-  return $terms;
+  $collection = array();
+  foreach ($terms as $category) {
+    $temp = (object)array(
+      'name' => $category->name,
+      'id' => $category->term_id,
+    );
+    array_push($collection, $temp);
+  }
+
+  return $collection;
 }
+
 
 function fetch_categories( $data ) {
   $categories = get_categories();

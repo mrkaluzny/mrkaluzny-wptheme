@@ -67,9 +67,7 @@ export default class Blog extends React.Component {
   }
 
   handleFilterChange(id, isActive) {
-    console.log(`Is ${id} active? ${isActive}`)
     if (isActive) {
-      console.log(`Adding ${id}...`)
       this.setState((prev) => {
         return {
           activeFilter: [...prev.activeFilter, id],
@@ -78,9 +76,7 @@ export default class Blog extends React.Component {
       })
 
     } else {
-      console.log(`Removing ${id}...`)
       let index = this.state.activeFilter.indexOf(id)
-      console.log('Index: ' + index)
       this.setState((prev) => {
         return {
           activeFilter: prev.activeFilter.filter((_,i) => i !== index),

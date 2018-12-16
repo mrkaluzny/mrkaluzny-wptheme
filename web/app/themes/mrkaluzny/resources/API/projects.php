@@ -21,6 +21,7 @@ function get_projects( $data ) {
       'id' => $item->ID,
       'name' => get_field('project-name', $item->ID),
       'type' => get_the_terms($item->ID, 'project_type'),
+      'industry' => get_the_terms($item->ID, 'industry'),
       'image' => array(
         'small' => App::get_image_by_id($imageID, 'thumbnail'),
         'medium' => App::get_image_by_id($imageID, 'medium'),

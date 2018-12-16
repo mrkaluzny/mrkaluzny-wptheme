@@ -63,8 +63,9 @@
       text-align: center;
     }
 
-    &__category {
+    &__types {
       @extend .title__top;
+      font-size: 0.9rem;
       text-align: center;
     }
   }
@@ -84,10 +85,30 @@
   }
 }
 
+.project__type {
+  display: inline-block;
+  position: relative;
+  &:not(:first-child) {
+    margin-left: 8px;
+    padding-left: 10px;
+    &::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 12px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      background-color: rgba($mr-white, 0.3);
+    }
+  }
+}
+
 .projects-feed {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 160px;
   justify-content: space-between;
 }
 
