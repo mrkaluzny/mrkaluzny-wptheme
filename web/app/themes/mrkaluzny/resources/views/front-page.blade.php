@@ -39,8 +39,7 @@
 
   <section id="recent-projects"></section>
 
-
-  @include('partials.help')
+  @include('partials.cta')
 
   <section id="recent-articles"></section>
 

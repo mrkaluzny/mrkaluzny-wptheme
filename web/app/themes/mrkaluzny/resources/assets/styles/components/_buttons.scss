@@ -68,11 +68,24 @@
 
   &--green {
     border-color: $mr-green;
+    border-radius: 0;
     color: $mr-green;
     transition: all .3s ease-in-out;
     &:hover {
       color: $mr-white;
       background-color: $mr-green;
+    }
+  }
+
+  &--yellow {
+    background-color: $mr-yellow;
+    color: $mr-dark;
+    border-radius: 0;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: $mr-yellow;
+      border-color: $mr-yellow;
+      background-color: transparent;
     }
   }
 
@@ -103,11 +116,10 @@
 
   &--large {
     border-width: 3px;
-    // padding: 5px 30px;
+    padding: 13px 30px;
     border-width: 3px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    // letter-spacing: 0.8px;
     max-width: 290px;
   }
 

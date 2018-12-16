@@ -45,6 +45,17 @@
       }
     }
 
+    &--center {
+      color: $mr-white;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: -0.98px;
+      text-align: center;
+      span {
+        color: $mr-yellow;
+      }
+    }
+
     &--cta {
       margin: 0 0 20px;
     }
