@@ -8,7 +8,7 @@ export default class Filters extends Component {
     const filters = this.props.filters ?
       this.props.filters.map(filter => {
         return (
-          <Filter key={filter.id} data={filter} />
+          <Filter key={filter.id} data={filter} filterChange={this.props.filterChange} />
         )
       })
       : '' ;

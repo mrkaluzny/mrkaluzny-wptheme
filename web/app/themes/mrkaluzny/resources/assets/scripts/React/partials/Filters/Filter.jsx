@@ -16,6 +16,8 @@ export default class Filter extends Component {
   handleClick() {
     this.setState( (prevState, current) => {
       return {isActive: !prevState.isActive}
+    }, () => {
+      this.props.filterChange(this.state.filter.id, this.state.isActive)
     })
   }
 

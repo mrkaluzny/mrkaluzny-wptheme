@@ -18,6 +18,7 @@ export default class Blog extends React.Component {
       viewportWidth: null,
       articleCounter: 3,
       bottom: false,
+      activeFilter: [],
     };
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this)
@@ -65,12 +66,53 @@ export default class Blog extends React.Component {
     return bottomOfPage || pageHeight < visible
   }
 
+  handleFilterChange(id, isActive) {
+    console.log(`Is ${id} active? ${isActive}`)
+    if (isActive) {
+      console.log(`Adding ${id}...`)
+      this.setState((prev) => {
+        return {
+          activeFilter: [...prev.activeFilter, id],
+          articleCounter: 3,
+        }
+      })
+
+    } else {
+      console.log(`Removing ${id}...`)
+      let index = this.state.activeFilter.indexOf(id)
+      console.log('Index: ' + index)
+      this.setState((prev) => {
+        return {
+          activeFilter: prev.activeFilter.filter((_,i) => i !== index),
+          articleCounter: 3,
+        }
+      })
+
+    }
+  }
+
 
   render() {
+    var posts = this.state.posts;
 
-    const articles = this.state.posts.slice(0, this.state.articleCounter).map( (item) => {
-      return (
-        <Article data={item} key={item.id} />
+    const articles = posts.filter( post => {
+        if (this.state.activeFilter.length >= 1) {
+          let result = false
+          for (let i = 0; i < post.categories.length; i++) {
+            if (this.state.activeFilter.indexOf(post.categories[i].term_id) != -1) {
+              result = true;
+            }
+          }
+          return result;
+        } else {
+          return true;
+        }
+      }
+    )
+    .slice(0, this.state.articleCounter)
+    .map( post => {
+      return(
+        <Article data={post} key={post.id} />
       )
     })
 
@@ -80,7 +122,7 @@ export default class Blog extends React.Component {
           <div className="row">
             <div className="col-12">
               <div className="filters__wrapper">
-                <Filters title="Browse by topic" filters={this.state.categories} />
+                <Filters title="Browse by topic" filters={this.state.categories} filterChange={this.handleFilterChange.bind(this)}/>
               </div>
               <div className="blog-posts__feed">
                 {!this.state.isLoading ? articles : ''}

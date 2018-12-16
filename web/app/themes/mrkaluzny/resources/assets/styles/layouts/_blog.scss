@@ -2,13 +2,21 @@
   &__feed {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 -10px;
+
+    @media screen and (max-width: $break-lg-down) {
+      margin: 0 -5px;
+    }
 
     .article__link {
       width: calc(100%/3 - 20px);
+      margin: 0 10px 20px;
 
       @media screen and (max-width: $break-lg-down) {
         width: calc(100%/2 - 10px);
+        margin: 0 5px 10px;
       }
     }
 
