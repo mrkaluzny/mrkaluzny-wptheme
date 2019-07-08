@@ -68,3 +68,19 @@ a {
   flex-wrap: nowrap !important;
   align-items: center;
 }
+
+
+.hr {
+  width: 70%;
+  height: 2px;
+  border: none;
+  background-color: rgba($mr-dark, 0.05);
+
+  &--left {
+    margin: 0;
+  }
+
+  &--right {
+    margin: 0 0 0 auto;
+  }
+}

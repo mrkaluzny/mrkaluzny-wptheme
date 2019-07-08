@@ -13,4 +13,5 @@
     </div>
   </div>
   <section id="clients"></section>
+  @include('partials.cta')
 @endsection

@@ -13,6 +13,8 @@
     </div>
   </section>
 
+  <hr class="hr hr--left">
+
   <section class="section services" id="services">
     <div class="container" style="position: relative;">
       <img src="@asset('images/services-image.png')" alt="" class="services__image" data-aos="fade-right">
@@ -34,14 +36,20 @@
 
   </section>
 
+  <hr class="hr hr--right">
+
 
   <section id="testimonials" class="section section--testimonials background--up"></section>
+
+  <hr class="hr hr--left">
 
   <section id="recent-projects"></section>
 
   @include('partials.cta')
 
   <section id="recent-articles"></section>
+
+  <hr class="hr hr--right">
 
   <section id="contactComponent"></section>
 

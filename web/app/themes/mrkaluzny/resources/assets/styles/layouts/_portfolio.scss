@@ -110,6 +110,10 @@
   flex-wrap: wrap;
   margin-bottom: 160px;
   justify-content: space-between;
+
+  &--partial {
+    margin-bottom: 20px;
+  }
 }
 
 .portfolio-content {
